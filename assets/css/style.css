@@ -451,6 +451,79 @@ h3 {
   text-align: center;
 }
 
+/* ── Archive table ── */
+.archive-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--shadow);
+  font-size: 0.9rem;
+}
+
+.archive-table thead {
+  background: var(--green-deep);
+  color: var(--white);
+}
+
+.archive-table th {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.archive-table td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--green-wash);
+}
+
+.archive-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.archive-table tbody tr:hover {
+  background: var(--green-wash);
+}
+
+.archive-date {
+  white-space: nowrap;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.archive-name {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.archive-venue {
+  color: var(--green-bright);
+  font-weight: 500;
+}
+
+.archive-festival {
+  display: inline-block;
+  font-size: 0.7rem;
+  background: var(--green-wash);
+  color: var(--green-deep);
+  padding: 0.1em 0.5em;
+  border-radius: 3px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+@media (max-width: 640px) {
+  .archive-table th,
+  .archive-table td {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}
+
 /* ── Venue cards ── */
 .venue-card {
   background: var(--white);
