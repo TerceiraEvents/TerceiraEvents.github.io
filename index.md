@@ -19,6 +19,9 @@ title: Angra Events - What's Happening in Angra do Heroísmo
         <div class="event-name">{{ event.name }}</div>
         <div class="event-venue">{{ event.venue }}</div>
         <div class="event-description">{{ event.description }}</div>
+        {% if event.reservations %}
+        <div class="event-reservations"><a href="{{ event.reservations }}">Make a reservation</a></div>
+        {% endif %}
       </div>
       <div class="event-time">{{ event.time }}</div>
     </div>
