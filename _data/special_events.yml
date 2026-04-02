@@ -23,6 +23,14 @@
   description: "Two days of choral music bringing together adult and youth choirs from across the Azores. Free entry."
   instagram: https://www.instagram.com/p/DWZolg4iWZN/
 
+- date: 2026-05-08
+  name: "K-9CAT Live"
+  venue: Lar Doce Livro
+  address: Rua de São João 22-24, Angra do Heroísmo
+  time: "21:30"
+  description: "K-9CAT live performance at Lar Doce Livro (Home Sweet Book)."
+  instagram: https://www.instagram.com/k9cat/
+
 # April 2026
 - date: 2026-04-30
   name: "DesaFINO — Noite de Karaoke da AMIT"
@@ -70,6 +78,14 @@
   description: "Book presentation by Eduardo Ferraz da Rosa — studies in philosophy and literary criticism. Free entry."
   instagram: https://www.instagram.com/p/DWjnHOhEpZ5/
 
+- date: 2026-04-18
+  name: "K-9CAT Live — Record Store Day"
+  venue: The Vinyl Lounge
+  address: Angra do Heroísmo
+  time: "21:00"
+  description: "K-9CAT live performance celebrating Record Store Day 2026 at The Vinyl Lounge."
+  instagram: https://www.instagram.com/k9cat/
+
 - date: 2026-04-16
   name: "DesaFINO — Noite de Karaoke da AMIT"
   venue: Auditório AMIT
@@ -84,6 +100,14 @@
   time: "21:00"
   description: "Directed by Gore Verbinski. Tickets at angradoheroismo.pt"
   instagram: https://www.instagram.com/p/DWjE7iIiXqg/?img_index=4
+
+- date: 2026-04-11
+  name: "K-9CAT Live"
+  venue: Wine Not?
+  address: Angra do Heroísmo
+  time: "21:30"
+  description: "Live music performance by K-9CAT at Wine Not? Art Food and Drinks."
+  instagram: https://www.instagram.com/k9cat/
 
 - date: 2026-04-11
   name: "Cinema: Super Mario Galaxy — O Filme"
