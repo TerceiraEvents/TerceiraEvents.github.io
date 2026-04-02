@@ -558,9 +558,6 @@ main a {
 .intro-text em {
   color: var(--green-deep);
   font-style: italic;
-  background: var(--green-wash);
-  padding: 0.1em 0.4em;
-  border-radius: 4px;
 }
 
 .homepage-buttons {
