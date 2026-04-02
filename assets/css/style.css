@@ -236,6 +236,13 @@ h3 {
   margin-top: 0.1rem;
 }
 
+.event-note {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
 .event-reservations {
   margin-top: 0.35rem;
 }

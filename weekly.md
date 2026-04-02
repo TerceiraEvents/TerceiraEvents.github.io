@@ -17,11 +17,14 @@ title: Weekly Events - Angra Events
         <div class="event-name">{{ event.name }}</div>
         <div class="event-venue">{{ event.venue }}</div>
         <div class="event-description">{{ event.description }}</div>
+        {% if event.note %}
+        <div class="event-note">{{ event.note }}</div>
+        {% endif %}
         {% if event.address %}
         <div class="event-address">{{ event.address }}</div>
         {% endif %}
         {% if event.reservations %}
-        <div class="event-reservations"><a href="{{ event.reservations }}">Make a reservation</a></div>
+        <div class="event-reservations"><a href="{{ event.reservations }}">Make a dinner reservation</a></div>
         {% endif %}
       </div>
       <div class="event-time">{{ event.time }}</div>
