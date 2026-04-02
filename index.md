@@ -60,7 +60,7 @@ title: Angra Events - What's Happening in Angra do Heroísmo
   {% if event.image %}
   <div class="event-image">
     <a href="{{ event.image | relative_url }}" target="_blank">
-      <img src="{{ event.image | relative_url }}" alt="{{ event.name }} flyer">
+      <img src="{{ event.image | relative_url }}" alt="{{ event.name | escape }} flyer">
     </a>
   </div>
   {% endif %}
