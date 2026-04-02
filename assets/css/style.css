@@ -512,6 +512,77 @@ main a {
   color: var(--white) !important;
 }
 
+/* ── Homepage ── */
+.homepage-intro {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.intro-text em {
+  color: var(--green-deep);
+  font-style: italic;
+}
+
+.homepage-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.homepage-btn {
+  display: block;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.homepage-btn:hover {
+  border-color: var(--green-bright);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+.btn-title {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  margin-bottom: 0.5rem;
+}
+
+.btn-desc {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .homepage-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .homepage-btn {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
 /* ── Footer ── */
 .site-footer {
   background: var(--green-dark);
