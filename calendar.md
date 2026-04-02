@@ -1,0 +1,36 @@
+---
+layout: default
+title: Full Events Calendar - Angra Events
+---
+
+<h2>Full Special Events Calendar</h2>
+
+<p class="section-intro">All upcoming concerts, festivals, parties, and one-off events in Angra do Heroísmo.</p>
+
+{% assign now_ts = "now" | date: "%s" | plus: 0 %}
+{% assign sorted_events = site.data.special_events | sort: "date" %}
+
+{% assign has_upcoming = false %}
+{% for event in sorted_events %}
+  {% assign event_ts = event.date | date: "%s" | plus: 0 %}
+  {% if event_ts >= now_ts %}
+    {% assign has_upcoming = true %}
+  {% endif %}
+{% endfor %}
+
+{% if has_upcoming %}
+{% for event in sorted_events %}
+  {% assign event_ts = event.date | date: "%s" | plus: 0 %}
+  {% if event_ts >= now_ts %}
+    {% include special_event_card.html event=event %}
+  {% endif %}
+{% endfor %}
+{% else %}
+<p>No upcoming events at the moment. Check back soon!</p>
+{% endif %}
+
+<div class="archive-link-section">
+  <a href="{{ '/special' | relative_url }}" class="view-all">Back to This Week</a>
+  &nbsp;&nbsp;
+  <a href="{{ '/archive' | relative_url }}" class="view-all">Event Archive</a>
+</div>
