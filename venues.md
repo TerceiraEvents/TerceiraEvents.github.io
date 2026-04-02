@@ -21,25 +21,16 @@ title: Venues - Angra Events
 </div>
 
 <div class="venue-card">
-  <h3>The Texan</h3>
-  <div class="venue-address">Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Hero%C3%ADsmo">Map</a></div>
+  <h3>The Texan / The Garden Club</h3>
+  <div class="venue-address">Rua Carreira dos Cavalos 37, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Hero%C3%ADsmo">Map</a></div>
   <div class="venue-regulars">
-    <p>Tex-Mex restaurant and bar with cocktails, large screens for sports, and a garden for events.</p>
+    <p>Tex-Mex restaurant and bar with cocktails, large screens for sports, and a garden event space. The Texan handles dinner and karaoke; The Garden Club is the outdoor garden area for brunches, parties, and events.</p>
     <p><strong>Weekly schedule:</strong></p>
     <ul>
       <li><strong>Friday</strong> &mdash; Karaoke Night</li>
       <li><strong>Saturday</strong> &mdash; Karaoke Night</li>
     </ul>
-    <p><a href="https://www.thetexan.pt">Website</a> &middot; <a href="https://www.instagram.com/thetexanbar/">Instagram</a></p>
-  </div>
-</div>
-
-<div class="venue-card">
-  <h3>The Garden Club</h3>
-  <div class="venue-address">Rua Carreira dos Cavalos 37, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=The+Garden+Club+Angra+do+Hero%C3%ADsmo">Map</a></div>
-  <div class="venue-regulars">
-    <p>Bar and event space in Angra do Heroísmo.</p>
-    <p><a href="https://www.instagram.com/thegardenclub.angra/">Instagram</a></p>
+    <p><a href="https://www.thetexan.pt">Website</a> &middot; <a href="https://www.instagram.com/thetexanbar/">Instagram (Texan)</a> &middot; <a href="https://www.instagram.com/thegardenclub.angra/">Instagram (Garden Club)</a></p>
   </div>
 </div>
 
