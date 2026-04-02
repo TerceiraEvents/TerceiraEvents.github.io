@@ -35,7 +35,6 @@
       description: "Very popular! It often fills up at the start but seats open up around 23:30–midnight, so worth checking in later or grabbing a drink at the Texan bar while you wait."
       note: "Reservations are for dinner, not karaoke — if you reserve, you are expected to order dinner. Last dinner reservation is at 21:00. Reservations are cancelled 15 minutes after the set time, so you need to arrive by 21:15 at the latest. If you reserve at 21:00 and show up at 22:30 for karaoke, your reservation will already be cancelled!"
       url: https://www.thetexan.pt
-      reservations: https://the-texan-1755256381.resos.com/booking
 
 - day: Saturday
   events:
@@ -45,4 +44,3 @@
       description: "Very popular! It often fills up at the start but seats open up around 23:30–midnight, so worth checking in later or grabbing a drink at the Texan bar while you wait."
       note: "Reservations are for dinner, not karaoke — if you reserve, you are expected to order dinner. Last dinner reservation is at 21:00. Reservations are cancelled 15 minutes after the set time, so you need to arrive by 21:15 at the latest. If you reserve at 21:00 and show up at 22:30 for karaoke, your reservation will already be cancelled!"
       url: https://www.thetexan.pt
-      reservations: https://the-texan-1755256381.resos.com/booking

@@ -23,9 +23,7 @@ title: Weekly Events - Angra Events
         {% if event.address %}
         <div class="event-address">{{ event.address }}</div>
         {% endif %}
-        {% if event.reservations %}
-        <div class="event-reservations"><a href="{{ event.reservations }}">Make a dinner reservation</a></div>
-        {% endif %}
+
       </div>
       <div class="event-time">{{ event.time }}</div>
     </div>

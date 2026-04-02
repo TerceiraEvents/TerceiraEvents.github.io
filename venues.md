@@ -31,6 +31,7 @@ title: Venues - Angra Events
       <li><strong>Saturday</strong> &mdash; Karaoke Night</li>
     </ul>
     <p><a href="https://www.thetexan.pt">Website</a> &middot; <a href="https://www.instagram.com/thetexanbar/">Instagram (Texan)</a> &middot; <a href="https://www.instagram.com/thegardenclub.angra/">Instagram (Garden Club)</a></p>
+    <div class="event-reservations"><a href="https://the-texan-1755256381.resos.com/booking">Make a dinner reservation</a></div>
   </div>
 </div>
 
