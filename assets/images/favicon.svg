@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Ears -->
+  <ellipse cx="10" cy="22" rx="10" ry="7" fill="#d4a843" transform="rotate(-20 10 22)"/>
+  <ellipse cx="54" cy="22" rx="10" ry="7" fill="#d4a843" transform="rotate(20 54 22)"/>
+  <ellipse cx="10" cy="22" rx="7" ry="5" fill="#f0c8a0" transform="rotate(-20 10 22)"/>
+  <ellipse cx="54" cy="22" rx="7" ry="5" fill="#f0c8a0" transform="rotate(20 54 22)"/>
+  <!-- Head -->
+  <ellipse cx="32" cy="32" rx="22" ry="24" fill="#f5f5f0"/>
+  <!-- Spots -->
+  <circle cx="22" cy="22" r="6" fill="#5a3e28"/>
+  <circle cx="42" cy="18" r="5" fill="#5a3e28"/>
+  <circle cx="38" cy="28" r="4" fill="#5a3e28"/>
+  <!-- Eyes -->
+  <circle cx="24" cy="30" r="3.5" fill="#1a3a2a"/>
+  <circle cx="40" cy="30" r="3.5" fill="#1a3a2a"/>
+  <circle cx="25" cy="29" r="1.2" fill="white"/>
+  <circle cx="41" cy="29" r="1.2" fill="white"/>
+  <!-- Muzzle -->
+  <ellipse cx="32" cy="44" rx="12" ry="9" fill="#f0c8a0"/>
+  <!-- Nostrils -->
+  <ellipse cx="28" cy="44" rx="2.5" ry="2" fill="#5a3e28"/>
+  <ellipse cx="36" cy="44" rx="2.5" ry="2" fill="#5a3e28"/>
+  <!-- Mouth -->
+  <path d="M28 48 Q32 51 36 48" stroke="#5a3e28" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Horns -->
+  <path d="M18 14 Q14 4 18 2" stroke="#d4a843" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M46 14 Q50 4 46 2" stroke="#d4a843" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
