@@ -25,6 +25,13 @@
 
 # April 2026
 - date: 2026-04-30
+  name: "DesaFINO — Noite de Karaoke da AMIT"
+  venue: Auditório AMIT
+  address: Angra do Heroísmo
+  description: "Cantas uma música, bebes um FINO! AMIT's karaoke night — sing a song, get a beer."
+  instagram: https://www.instagram.com/auditorioamit/
+
+- date: 2026-04-30
   name: "Cinema: Projeto Hail Mary"
   venue: CCCAH
   address: Angra do Heroísmo
@@ -62,6 +69,13 @@
   time: "20:00"
   description: "Book presentation by Eduardo Ferraz da Rosa — studies in philosophy and literary criticism. Free entry."
   instagram: https://www.instagram.com/p/DWjnHOhEpZ5/
+
+- date: 2026-04-16
+  name: "DesaFINO — Noite de Karaoke da AMIT"
+  venue: Auditório AMIT
+  address: Angra do Heroísmo
+  description: "Cantas uma música, bebes um FINO! AMIT's karaoke night — sing a song, get a beer."
+  instagram: https://www.instagram.com/auditorioamit/
 
 - date: 2026-04-16
   name: "Cinema: Good Luck Have Fun Don't Die"
@@ -140,6 +154,13 @@
   time: "21:30"
   description: "Fado concert crossing tradition with contemporary sounds. With Filarmónica Rainha Santa Isabel das Doze Ribeiras. Tickets at CCCAH, CMAH, Ticketline."
   instagram: https://www.instagram.com/p/DWjE8B9Dl50/
+
+- date: 2026-04-02
+  name: "DesaFINO — Noite de Karaoke da AMIT"
+  venue: Auditório AMIT
+  address: Angra do Heroísmo
+  description: "Cantas uma música, bebes um FINO! AMIT's karaoke night — sing a song, get a beer."
+  instagram: https://www.instagram.com/auditorioamit/
 
 - date: 2026-04-02
   name: "Havanna Easter Party"
