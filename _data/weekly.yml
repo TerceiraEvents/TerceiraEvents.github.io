@@ -9,7 +9,7 @@
   events:
     - name: Karaoke Night
       venue: Tasca do Camões
-      time: Evening
+      time: "20:30"
       description: Weekly karaoke at Camões
       address: Rua Da Rocha 64, Angra do Heroísmo
     - name: Clube de Leitura
@@ -22,7 +22,7 @@
   events:
     - name: Latin Night
       venue: Tasca do Camões
-      time: Evening
+      time: "20:30"
       description: Weekly Latin night
       address: Rua Da Rocha 64, Angra do Heroísmo
 
@@ -30,7 +30,7 @@
   events:
     - name: Karaoke Night
       venue: The Texan
-      time: Evening
+      time: "22:30"
       description: Weekly karaoke night
       url: https://www.thetexan.pt
 
@@ -38,6 +38,6 @@
   events:
     - name: Karaoke Night
       venue: The Texan
-      time: Evening
+      time: "22:30"
       description: Weekly karaoke night
       url: https://www.thetexan.pt
