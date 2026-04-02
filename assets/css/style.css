@@ -319,33 +319,62 @@ h3 {
   margin-bottom: 0.2rem;
 }
 
-/* ── Event images (flyers, posters) ── */
+/* ── Event images (flyers, posters) — thumbnails ── */
 .special-event.has-image {
   flex-wrap: wrap;
 }
 
 .event-image {
   flex: 0 0 auto;
-  max-width: 200px;
+  max-width: 90px;
   margin-left: auto;
 }
 
 .event-image img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px var(--shadow);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px var(--shadow);
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
 }
 
 .event-image img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 20px var(--shadow);
+  transform: scale(1.05);
+  box-shadow: 0 4px 14px var(--shadow);
 }
 
-.event-image a {
-  display: block;
+/* ── Lightbox overlay ── */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
+  cursor: pointer;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  transform: scale(0.92);
+  transition: transform 0.25s;
+}
+
+.lightbox-overlay.active img {
+  transform: scale(1);
 }
 
 /* ── Venue cards ── */
@@ -470,13 +499,9 @@ main a {
   }
 
   .event-image {
-    max-width: 100%;
+    max-width: 80px;
     margin-left: 0;
-    margin-top: 1rem;
-  }
-
-  .event-image img {
-    max-width: 280px;
+    margin-top: 0.75rem;
   }
 
   .event-date-badge {

@@ -25,6 +25,7 @@
         <a href="{{ '/weekly' | relative_url }}">Weekly</a>
         <a href="{{ '/special' | relative_url }}">Special Events</a>
         <a href="{{ '/venues' | relative_url }}">Venues</a>
+        <a href="{{ '/contribute' | relative_url }}">Contribute</a>
       </div>
     </nav>
   </header>
@@ -32,6 +33,35 @@
   <main class="container">
     {{ content }}
   </main>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox-overlay" id="lightbox">
+    <img src="" alt="Full-size image" id="lightbox-img">
+  </div>
+  <script>
+  (function() {
+    var overlay = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightbox-img');
+    document.addEventListener('click', function(e) {
+      if (e.target.matches('[data-lightbox]')) {
+        e.preventDefault();
+        lbImg.src = e.target.src;
+        lbImg.alt = e.target.alt;
+        overlay.classList.add('active');
+      }
+    });
+    overlay.addEventListener('click', function() {
+      overlay.classList.remove('active');
+      lbImg.src = '';
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) {
+        overlay.classList.remove('active');
+        lbImg.src = '';
+      }
+    });
+  })();
+  </script>
 
   <footer class="site-footer">
     <div class="container">
