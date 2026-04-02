@@ -435,6 +435,22 @@ h3 {
   transform: scale(1);
 }
 
+/* ── Section headings (h3 inside special events) ── */
+.section h3 {
+  font-size: 1.3rem;
+  color: var(--green-deep);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--green-wash);
+}
+
+/* ── Archive link section ── */
+.archive-link-section {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 /* ── Venue cards ── */
 .venue-card {
   background: var(--white);
