@@ -60,6 +60,21 @@ Bar and event space in Angra do Heroísmo.
 
 <div class="venue-card">
 
+### Sala 319
+
+<div class="venue-address">Praça Almeida Garrett 11, Angra do Heroísmo</div>
+
+<div class="venue-regulars">
+
+Restaurant and bar serving Portuguese and European cuisine, with events and live music.
+
+[Instagram](https://www.instagram.com/sala.319/)
+
+</div>
+</div>
+
+<div class="venue-card">
+
 ### Wine Not
 
 <div class="venue-address">Angra do Heroísmo</div>
