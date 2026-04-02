@@ -1,0 +1,65 @@
+- date: 2026-01-03
+  name: "Concerto ao Vivo - Double Trouble"
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, Angra do Heroísmo
+  description: Live concert featuring Double Trouble
+
+- date: 2025-12-27
+  name: "The Big 90's Party - Com Red Hot Tribute"
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, Angra do Heroísmo
+  description: 90s themed party with Red Hot tribute band
+
+- date: 2025-12-26
+  name: "Sexta-Feira Karaoke"
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, Angra do Heroísmo
+  description: Special Friday karaoke session
+
+- date: 2025-12-20
+  name: "Kevin Floyd: A Primeira Vez em Portugal"
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, Angra do Heroísmo
+  description: Kevin Floyd's first performance in Portugal
+
+- date: 2025-12-19
+  name: "Noite de Karaoke"
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, Angra do Heroísmo
+  description: Karaoke night
+
+- date: 2025-12-13
+  name: "Concerto ao Vivo com Regalo Reggae"
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, Angra do Heroísmo
+  description: Live reggae concert with Regalo Reggae
+
+- date: 2025-12-07
+  name: "Concerto Rock ao Vivo com 3 HP"
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, Angra do Heroísmo
+  description: Live rock concert with 3 HP
+
+- date: 2025-12-03
+  name: "Concerto Rock com 3HP"
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, Angra do Heroísmo
+  description: Rock concert with 3HP
+
+- date: 2025-11-29
+  name: "Sábado Noite de Samba"
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, Angra do Heroísmo
+  description: Saturday samba night
+
+- date: 2025-11-21
+  name: "Concerto ao Vivo com Double Trouble & DJ Cosmic Clara"
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, Angra do Heroísmo
+  description: Live concert with Double Trouble and DJ Cosmic Clara
+
+- date: 2025-02-27
+  name: "Leitura de Poetas Delirantes"
+  venue: Lar Doce Livro
+  address: Rua de São João 22-24, Angra do Heroísmo
+  description: Delirious Poets reading event

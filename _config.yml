@@ -1,0 +1,12 @@
+title: Angra Events
+description: What's happening in Angra do Heroísmo
+baseurl: ""
+url: "https://angraevents.github.io"
+timezone: Atlantic/Azores
+
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
