@@ -1,0 +1,43 @@
+- day: Monday
+  events:
+    - name: Dance Night
+      venue: Wine Not
+      time: Evening
+      description: Weekly dance event
+
+- day: Wednesday
+  events:
+    - name: Karaoke Night
+      venue: Tasca do Camões
+      time: Evening
+      description: Weekly karaoke at Camões
+      address: Rua Da Rocha 64, Angra do Heroísmo
+    - name: Clube de Leitura
+      venue: Lar Doce Livro
+      time: "18:15"
+      description: Weekly reading club
+      address: Rua de São João 22-24, Angra do Heroísmo
+
+- day: Thursday
+  events:
+    - name: Latin Night
+      venue: Tasca do Camões
+      time: Evening
+      description: Weekly Latin night
+      address: Rua Da Rocha 64, Angra do Heroísmo
+
+- day: Friday
+  events:
+    - name: Karaoke Night
+      venue: The Texan
+      time: Evening
+      description: Weekly karaoke night
+      url: https://www.thetexan.pt
+
+- day: Saturday
+  events:
+    - name: Karaoke Night
+      venue: The Texan
+      time: Evening
+      description: Weekly karaoke night
+      url: https://www.thetexan.pt
