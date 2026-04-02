@@ -46,3 +46,38 @@ title: Other Resources - Angra Events
     <p><a href="https://www.exploreterceiraisland.com/en/discover/urban-life/">exploreterceiraisland.com</a></p>
   </div>
 </div>
+
+<h2>Instagram Accounts to Follow</h2>
+
+<p class="section-intro">Follow these for event announcements, flyers, and what's happening around Angra.</p>
+
+<div class="venue-card">
+  <div class="venue-regulars">
+    <ul>
+      <li><a href="https://www.instagram.com/angradoheroismo/">@angradoheroismo</a> &mdash; C&acirc;mara Municipal de Angra do Hero&iacute;smo (official city page)</li>
+      <li><a href="https://www.instagram.com/tascadocamoes/">@tascadocamoes</a> &mdash; Tasca do Cam&otilde;es</li>
+      <li><a href="https://www.instagram.com/thetexanbar/">@thetexanbar</a> &mdash; The Texan</li>
+      <li><a href="https://www.instagram.com/thegardenclub.angra/">@thegardenclub.angra</a> &mdash; The Garden Club</li>
+      <li><a href="https://www.instagram.com/sala.319/">@sala.319</a> &mdash; Sala 319</li>
+      <li><a href="https://www.instagram.com/havannaangra/">@havannaangra</a> &mdash; Havanna Club</li>
+      <li><a href="https://www.instagram.com/livrarialardocelivro/">@livrarialardocelivro</a> &mdash; Lar Doce Livro</li>
+      <li><a href="https://www.instagram.com/fullrange_rave/">@fullrange_rave</a> &mdash; Full Range (rave/electronic events)</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Facebook Pages</h2>
+
+<p class="section-intro">Some venues and organizations post events primarily on Facebook.</p>
+
+<div class="venue-card">
+  <div class="venue-regulars">
+    <ul>
+      <li><a href="https://www.facebook.com/tascadocamoes/">Tasca do Cam&otilde;es</a> &mdash; concerts, karaoke, and event listings</li>
+      <li><a href="https://www.facebook.com/oficinadangra/">Oficina d'Angra / Casa do Sal</a> &mdash; alternative music and cultural events</li>
+      <li><a href="https://www.facebook.com/p/Havanna-Terceira-100059128671983/">Havanna Terceira</a> &mdash; party nights and DJ events</li>
+      <li><a href="https://www.facebook.com/livrarialardocelivro/">Lar Doce Livro</a> &mdash; readings, book launches, cultural events</li>
+      <li><a href="https://www.facebook.com/casadosal.angra/">Casa do Sal</a> &mdash; live music and community events</li>
+    </ul>
+  </div>
+</div>
