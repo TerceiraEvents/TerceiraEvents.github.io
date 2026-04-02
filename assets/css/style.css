@@ -236,6 +236,27 @@ h3 {
   margin-top: 0.1rem;
 }
 
+.event-reservations {
+  margin-top: 0.35rem;
+}
+
+.event-reservations a {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: var(--green-mid);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.event-reservations a:hover {
+  background: var(--green-dark);
+  color: var(--white);
+}
+
 /* ── Special event cards ── */
 .special-event {
   background: var(--white);
