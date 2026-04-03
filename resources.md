@@ -11,7 +11,7 @@ title: Other Resources - Terceira Events
   <h3>Bullfight Finder App</h3>
   <div class="venue-regulars">
     <p>The go-to app for finding <em>touradas &agrave; corda</em> (rope bullfights) across Terceira. Real-time alerts, event calendar, GPS directions, and weather updates. The bull season runs from May 1 to October 15, with over 200 events per year across the island.</p>
-    <p><a href="https://apps.apple.com/us/app/bullfight-finder/id1659230479">App Store</a> &middot; <a href="https://bullfightfinder-landing-page.web.app/">Website</a></p>
+    <p><a href="https://apps.apple.com/us/app/bullfight-finder/id1659230479">App Store</a> &middot; <a href="https://play.google.com/store/apps/details?id=com.eventfinder.bullfightfinderandroid">Google Play</a> &middot; <a href="https://bullfightfinder-landing-page.web.app/">Website</a></p>
   </div>
 </div>
 
