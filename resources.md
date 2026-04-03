@@ -47,6 +47,46 @@ title: Other Resources - Terceira Events
   </div>
 </div>
 
+<div class="venue-card">
+  <h3>Agenda da Terceira</h3>
+  <div class="venue-regulars">
+    <p>Blog publishing monthly event schedules for Terceira Island, with day-by-day listings of exhibitions, cultural activities, and events.</p>
+    <p><a href="https://agendadaterceira.blogspot.com/">agendadaterceira.blogspot.com</a></p>
+  </div>
+</div>
+
+<div class="venue-card">
+  <h3>Agenda Praia Cultural</h3>
+  <div class="venue-regulars">
+    <p>Facebook page listing cultural events and activities in Praia da Vit&oacute;ria.</p>
+    <p><a href="https://www.facebook.com/agendapraiacultural/">Facebook</a></p>
+  </div>
+</div>
+
+<div class="venue-card">
+  <h3>Azores What's On</h3>
+  <div class="venue-regulars">
+    <p>Official Azores government event platform covering sports, music, gastronomy, festivals, and more across all islands. Also available as a mobile app with event alerts and GPS directions.</p>
+    <p><a href="https://whatson.azores.gov.pt/en/agenda/">whatson.azores.gov.pt</a></p>
+  </div>
+</div>
+
+<div class="venue-card">
+  <h3>CulturA&ccedil;ores &mdash; Agenda Cultural</h3>
+  <div class="venue-regulars">
+    <p>Cultural agenda from the Azores Regional Directorate of Culture. Covers exhibitions, performances, and cultural programming across the archipelago, filterable by island.</p>
+    <p><a href="https://cultura.azores.gov.pt/agenda-cultural">cultura.azores.gov.pt</a></p>
+  </div>
+</div>
+
+<div class="venue-card">
+  <h3>Facebook Events</h3>
+  <div class="venue-regulars">
+    <p>Search Facebook Events for upcoming events on Terceira. Many local venues and organizations post events here that aren't listed elsewhere.</p>
+    <p><a href="https://www.facebook.com/events/">facebook.com/events</a></p>
+  </div>
+</div>
+
 <h2>Instagram Accounts to Follow</h2>
 
 <p class="section-intro">Follow these for event announcements, flyers, and what's happening around Angra.</p>
@@ -55,12 +95,12 @@ title: Other Resources - Terceira Events
   <div class="venue-regulars">
     <ul>
       <li><a href="https://www.instagram.com/angradoheroismo/">@angradoheroismo</a> &mdash; C&acirc;mara Municipal de Angra do Hero&iacute;smo (official city page)</li>
-      <li><a href="https://www.instagram.com/tascadocamoes/">@tascadocamoes</a> &mdash; Tasca do Cam&otilde;es</li>
+      <li><a href="https://www.instagram.com/tascadocamoes/">@tascadocamoes</a> &middot; <a href="https://www.facebook.com/tascadocamoes/">Facebook</a> &mdash; Tasca do Cam&otilde;es</li>
       <li><a href="https://www.instagram.com/thetexanbar/">@thetexanbar</a> &mdash; The Texan</li>
       <li><a href="https://www.instagram.com/thegardenclub.angra/">@thegardenclub.angra</a> &mdash; The Garden Club</li>
       <li><a href="https://www.instagram.com/sala.319/">@sala.319</a> &mdash; Sala 319</li>
-      <li><a href="https://www.instagram.com/havannaangra/">@havannaangra</a> &mdash; Havanna Club</li>
-      <li><a href="https://www.instagram.com/livrarialardocelivro/">@livrarialardocelivro</a> &mdash; Lar Doce Livro</li>
+      <li><a href="https://www.instagram.com/havannaangra/">@havannaangra</a> &middot; <a href="https://www.facebook.com/p/Havanna-Terceira-100059128671983/">Facebook</a> &mdash; Havanna Club</li>
+      <li><a href="https://www.instagram.com/livrarialardocelivro/">@livrarialardocelivro</a> &middot; <a href="https://www.facebook.com/livrarialardocelivro/">Facebook</a> &mdash; Lar Doce Livro</li>
       <li><a href="https://www.instagram.com/fullrange_rave/">@fullrange_rave</a> &mdash; Full Range (rave/electronic events)</li>
       <li><a href="https://www.instagram.com/auditorioamit/">@auditorioamit</a> &mdash; Audit&oacute;rio AMIT (Academia Musical da Ilha Terceira)</li>
     </ul>
@@ -79,6 +119,9 @@ title: Other Resources - Terceira Events
       <li><a href="https://www.facebook.com/p/Havanna-Terceira-100059128671983/">Havanna Terceira</a> &mdash; party nights and DJ events</li>
       <li><a href="https://www.facebook.com/livrarialardocelivro/">Lar Doce Livro</a> &mdash; readings, book launches, cultural events</li>
       <li><a href="https://www.facebook.com/casadosal.angra/">Casa do Sal</a> &mdash; live music and community events</li>
+      <li><a href="https://www.facebook.com/MunicipioPraiaVitoria/">Munic&iacute;pio Praia da Vit&oacute;ria</a> &mdash; official Praia da Vit&oacute;ria city council page</li>
+      <li><a href="https://www.facebook.com/profile.php?id=1414455825467398">Teatro Angrense</a> &mdash; historic theater in Angra, performances and cultural programming</li>
+      <li><a href="https://www.facebook.com/groups/308361896484142/">Ilha Terceira - Eventos</a> &mdash; community group for sharing events across the island</li>
     </ul>
   </div>
 </div>
