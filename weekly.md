@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Weekly Events - Angra Events
+title: Weekly Events - Terceira Events
 ---
 
 ## Weekly Events

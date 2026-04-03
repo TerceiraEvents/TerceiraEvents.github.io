@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Full Events Calendar - Angra Events
+title: Full Events Calendar - Terceira Events
 ---
 
 <h2>Full Special Events Calendar</h2>

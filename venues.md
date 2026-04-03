@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Venues - Angra Events
+title: Venues - Terceira Events
 ---
 
 <h2>Venues</h2>

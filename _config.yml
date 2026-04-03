@@ -1,7 +1,7 @@
-title: Angra Events
-description: What's happening in Angra do Heroísmo
+title: Terceira Events
+description: What's happening on Terceira Island
 baseurl: ""
-url: "https://angraevents.github.io"
+url: "https://terceiraevents.github.io"
 timezone: Atlantic/Azores
 
 markdown: kramdown

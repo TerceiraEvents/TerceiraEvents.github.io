@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Event Archive - Angra Events
+title: Event Archive - Terceira Events
 ---
 
 ## Event Archive

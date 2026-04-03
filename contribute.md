@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Contribute - Angra Events"
+title: "Contribute - Terceira Events"
 ---
 
 <div class="homepage-intro">
@@ -9,7 +9,7 @@ title: "Contribute - Angra Events"
 </div>
 
 <div class="homepage-buttons" style="max-width:580px;">
-  <a href="https://github.com/AngraEvents/Angraevents.github.io" class="homepage-btn btn-weekly" target="_blank" rel="noopener">
+  <a href="https://github.com/TerceiraEvents/Angraevents.github.io" class="homepage-btn btn-weekly" target="_blank" rel="noopener">
     <span class="btn-icon">&#128187;</span>
     <span class="btn-title">Open a PR</span>
     <span class="btn-desc">Submit changes directly on GitHub (if you're a nerd)</span>

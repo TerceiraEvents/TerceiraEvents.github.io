@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Other Resources - Angra Events
+title: Other Resources - Terceira Events
 ---
 
 <h2>Other Places to Find Events</h2>
