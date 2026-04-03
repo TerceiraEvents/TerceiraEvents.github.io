@@ -193,6 +193,37 @@
   description: "Thu: The Hits by Rafa & Maciel | Fri: Noite Funk com DJ Santinha | Sat: DJ Santinha"
   instagram: https://www.instagram.com/p/DWos9Vujlhq/
 
+# AMIT Events - March 2026
+- date: 2026-03-28
+  name: "Curso de Jazz com Nuno Ferreira"
+  venue: Auditório AMIT
+  address: Angra do Heroísmo
+  description: "Jazz workshop with Nuno Ferreira (Jazz Academy of Music, ex-New School NYC). 3.5h theory + 5h practice over two days. Registration: clubedejazzamit@gmail.com"
+  instagram: https://www.instagram.com/amit.academiamusical/
+
+- date: 2026-03-28
+  name: "Jazz JAM Session com Nuno Ferreira"
+  venue: Auditório AMIT
+  address: Av. Tenente Coronel José Agostinho, Angra do Heroísmo
+  time: "22:00"
+  description: "Guest: Nuno Ferreira (Jazz Academy of Music, ex-New School NYC). Open improv session, open to all. Free entry."
+  instagram: https://www.instagram.com/amit.academiamusical/
+
+- date: 2026-03-14
+  name: "Jazz JAM Session"
+  venue: Auditório AMIT
+  address: Av. Tenente Coronel José Agostinho, Angra do Heroísmo
+  time: "22:00"
+  description: "Clube de Jazz AMIT. Open improv session — bring an instrument or just listen. Café-concerto in operation. Free entry."
+  instagram: https://www.instagram.com/amit.academiamusical/
+
+- date: 2026-03-08
+  name: 'Lançamento do livro "Despertar com Alma"'
+  venue: Auditório AMIT
+  address: Ed. Rádio Clube de Angra, Angra do Heroísmo
+  description: "Book launch by Rosana Cordeiro. Presentation by Paulo Freitas, live music by João Santos. International Women's Day event. Free entry."
+  instagram: https://www.instagram.com/amit.academiamusical/
+
 # Festival de Teatro 2026 - Angra do Heroísmo
 - date: 2026-03-29
   name: '"O Melhor de Três"'
