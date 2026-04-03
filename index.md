@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Angra Events - What's Happening in Angra do Heroísmo
+title: Terceira Events - What's Happening on Terceira Island
 ---
 
 <div class="homepage-intro">
   <p class="intro-text">Terceira is known as the island in the Azores where everything is happening. <em>"There are 8 islands and 1 amusement park, and Terceira is the amusement park"</em> is what you'll hear the locals say.</p>
-  <p class="intro-text">With bull fights, musical shows, festivals, and more, there's almost always something going on in Angra. But if you're not from the island it can be difficult to figure it all out.</p>
+  <p class="intro-text">With bull fights, musical shows, festivals, and more, there's almost always something going on. But if you're not from the island it can be difficult to figure it all out.</p>
   <p class="intro-text">The purpose of this site is to help you figure out everything that's going on!</p>
 </div>
 
@@ -23,7 +23,7 @@ title: Angra Events - What's Happening in Angra do Heroísmo
   <a href="{{ '/venues' | relative_url }}" class="homepage-btn btn-venues">
     <span class="btn-icon">&#127963;</span>
     <span class="btn-title">Venues</span>
-    <span class="btn-desc">Bars, restaurants, and spaces hosting events around Angra</span>
+    <span class="btn-desc">Bars, restaurants, and spaces hosting events around Terceira</span>
   </a>
   <a href="{{ '/resources' | relative_url }}" class="homepage-btn btn-resources">
     <span class="btn-icon">&#128204;</span>

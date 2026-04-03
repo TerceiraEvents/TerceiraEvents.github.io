@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Special Events - Angra Events
+title: Special Events - Terceira Events
 ---
 
 {% assign now_ts = "now" | date: "%s" | plus: 0 %}
