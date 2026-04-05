@@ -33,6 +33,12 @@
     {% if event.instagram %}
     <a class="event-source" href="{{ event.instagram }}" target="_blank" rel="noopener">📸 View on Instagram</a>
     {% endif %}
+    <button type="button" class="event-flag-btn"
+      data-event-name="{{ event.name | escape }}"
+      data-event-date="{{ event.date }}"
+      data-event-venue="{{ event.venue | escape }}">
+      🚩 Suggest an edit
+    </button>
   </div>
   {% if event.image %}
   <div class="event-image">

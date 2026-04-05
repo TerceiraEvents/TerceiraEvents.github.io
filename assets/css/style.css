@@ -726,3 +726,150 @@ main a {
     font-size: 1.3rem;
   }
 }
+
+/* Flag / suggest edit button on event cards */
+.event-flag-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  background: transparent;
+  border: 1px solid #d8d4c4;
+  border-radius: 14px;
+  color: #777;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.event-flag-btn:hover {
+  background: #fef3e4;
+  border-color: #d93f0b;
+  color: #8a3010;
+}
+
+/* Flag modal */
+.flag-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 1rem;
+}
+.flag-overlay.active {
+  display: flex;
+}
+.flag-modal {
+  background: #faf8f0;
+  border-radius: 12px;
+  max-width: 540px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+.flag-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.flag-header h3 {
+  margin: 0;
+  color: #2d5016;
+  font-size: 1.4rem;
+  border: none;
+  padding: 0;
+}
+.flag-close {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #777;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+}
+.flag-close:hover {
+  color: #2c2c2c;
+}
+.flag-event-context {
+  background: #fff;
+  border-left: 3px solid #2d5016;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+.flag-modal .form-field {
+  margin-bottom: 1rem;
+}
+.flag-modal .form-field label {
+  display: block;
+  font-weight: 600;
+  color: #2d5016;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+.flag-modal .form-field .required {
+  color: #c0392b;
+}
+.flag-modal .form-field input,
+.flag-modal .form-field textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #d8d4c4;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fff;
+  box-sizing: border-box;
+}
+.flag-modal .form-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.flag-modal .form-submit {
+  width: 100%;
+  background: #2d5016;
+  color: #fff;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.flag-modal .form-submit:hover:not(:disabled) {
+  background: #1a3009;
+}
+.flag-modal .form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.flag-modal .form-message {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+.flag-modal .form-message.success {
+  background: #e8f5e0;
+  border-left: 3px solid #2d5016;
+  color: #1a3009;
+}
+.flag-modal .form-message.error {
+  background: #fbeaea;
+  border-left: 3px solid #c0392b;
+  color: #8a1e1e;
+}
