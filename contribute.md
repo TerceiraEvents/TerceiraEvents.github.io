@@ -9,18 +9,102 @@ title: "Contribute - Terceira Events"
 </div>
 
 <div class="homepage-buttons" style="max-width:580px;">
-  <a href="https://github.com/TerceiraEvents/Angraevents.github.io" class="homepage-btn btn-weekly" target="_blank" rel="noopener">
+  <a href="#" class="homepage-btn btn-weekly">
+    <span class="btn-icon">&#128241;</span>
+    <span class="btn-title">Use the App</span>
+    <span class="btn-desc">Tap "Suggest Event" in the Terceira Events mobile app</span>
+  </a>
+  <a href="https://github.com/TerceiraEvents/Angraevents.github.io" class="homepage-btn btn-special" target="_blank" rel="noopener">
     <span class="btn-icon">&#128187;</span>
     <span class="btn-title">Open a PR</span>
     <span class="btn-desc">Submit changes directly on GitHub (if you're a nerd)</span>
   </a>
-  <a href="https://www.instagram.com/chrisrackauckas/" class="homepage-btn btn-special" target="_blank" rel="noopener">
+  <a href="https://www.instagram.com/chrisrackauckas/" class="homepage-btn btn-venues" target="_blank" rel="noopener">
     <span class="btn-icon">&#128242;</span>
     <span class="btn-title">Message Chris</span>
     <span class="btn-desc">Send a DM on Instagram @chrisrackauckas</span>
   </a>
 </div>
 
-<div class="homepage-intro" style="margin-top:2rem;">
-  <p class="intro-text">Or just <strong>find Chris at karaoke nights</strong> &mdash; you'll know which one.</p>
+<h2>Suggesting an Event from the App</h2>
+
+<p class="section-intro">The easiest way to get an event on the site is to use the app. Here's how:</p>
+
+<div class="venue-card">
+  <div class="venue-regulars">
+    <ol>
+      <li>Open the <strong>Terceira Events</strong> app on your phone</li>
+      <li>From the Home screen, tap <strong>Suggest Event</strong></li>
+      <li>Fill in the form &mdash; only the event name, date, and venue are required</li>
+      <li>Optionally add time, address, description, Instagram link, and your name (for credit)</li>
+      <li>Tap <strong>Submit</strong></li>
+    </ol>
+    <p>Your suggestion goes straight into our review queue. Once we check it over, it shows up on the site and in the app automatically.</p>
+  </div>
+</div>
+
+<h2>Opening a Pull Request</h2>
+
+<p class="section-intro">If you're comfortable with GitHub, you can submit changes directly. This is the fastest path because you skip the review queue &mdash; your PR shows up immediately once merged.</p>
+
+<div class="venue-card">
+  <h3>For a Special Event</h3>
+  <div class="venue-regulars">
+    <p>Add an entry to <a href="https://github.com/TerceiraEvents/Angraevents.github.io/blob/main/_data/special_events.yml"><code>_data/special_events.yml</code></a>:</p>
+<pre><code>- date: 2026-06-15
+  name: "Concert at Teatro Angrense"
+  venue: Teatro Angrense
+  address: Rua da Esperan&ccedil;a 48-52, Angra do Hero&iacute;smo
+  time: "21:30"
+  description: "Live music with special guest."
+  instagram: https://www.instagram.com/p/...
+</code></pre>
+    <p>Only <code>date</code>, <code>name</code>, and <code>venue</code> are required. The <code>date</code> field must be in YYYY-MM-DD format.</p>
+  </div>
+</div>
+
+<div class="venue-card">
+  <h3>For a Weekly Recurring Event</h3>
+  <div class="venue-regulars">
+    <p>Add an entry to <a href="https://github.com/TerceiraEvents/Angraevents.github.io/blob/main/_data/weekly.yml"><code>_data/weekly.yml</code></a> under the appropriate day:</p>
+<pre><code>- day: Wednesday
+  events:
+    - name: Karaoke Night
+      venue: Tasca do Cam&otilde;es
+      time: "20:30"
+      description: Weekly karaoke at Cam&otilde;es
+      address: Rua Da Rocha 64, Angra do Hero&iacute;smo
+</code></pre>
+  </div>
+</div>
+
+<div class="venue-card">
+  <h3>For a New Venue</h3>
+  <div class="venue-regulars">
+    <p>Edit <a href="https://github.com/TerceiraEvents/Angraevents.github.io/blob/main/venues.md"><code>venues.md</code></a> and add a new <code>venue-card</code> block following the existing pattern. Include the address, a Google Maps search link, description, and any relevant social media links.</p>
+  </div>
+</div>
+
+<h2>Reaching Out Directly</h2>
+
+<p class="section-intro">Not a fan of forms or GitHub? That works too.</p>
+
+<div class="venue-card">
+  <div class="venue-regulars">
+    <ul>
+      <li><strong>Instagram DM</strong> &mdash; <a href="https://www.instagram.com/chrisrackauckas/">@chrisrackauckas</a></li>
+      <li><strong>In person</strong> &mdash; find Chris at karaoke nights. You'll know which one.</li>
+    </ul>
+    <p>Send a flyer, a description, a rough date, whatever you have. We'll sort it out.</p>
+  </div>
+</div>
+
+<h2>What We Accept</h2>
+
+<div class="venue-card">
+  <div class="venue-regulars">
+    <p>Pretty much anything happening on Terceira: concerts, festivals, bullfights, karaoke nights, dance parties, book launches, theater, cinema screenings, exhibitions, workshops, sports events, and everything in between.</p>
+    <p>Both Angra do Hero&iacute;smo and Praia da Vit&oacute;ria &mdash; and anywhere else on the island.</p>
+    <p>Events in Portuguese and English are equally welcome. If you want to promote your venue's weekly events, we'll add those too.</p>
+  </div>
 </div>
