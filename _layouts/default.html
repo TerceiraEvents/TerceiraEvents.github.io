@@ -44,6 +44,35 @@
   <div class="lightbox-overlay" id="lightbox">
     <img src="" alt="Full-size image" id="lightbox-img">
   </div>
+
+  <!-- Flag event modal -->
+  <div class="flag-overlay" id="flag-overlay" aria-hidden="true">
+    <div class="flag-modal" role="dialog" aria-modal="true" aria-labelledby="flag-title">
+      <div class="flag-header">
+        <h3 id="flag-title">Suggest an Edit</h3>
+        <button type="button" class="flag-close" id="flag-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="flag-event-context" id="flag-event-context"></div>
+      <form id="flag-form">
+        <div class="form-field">
+          <label for="flag-reason">What needs to change? <span class="required">*</span></label>
+          <textarea id="flag-reason" name="reason" rows="5" required
+            placeholder="Wrong time, wrong venue, cancelled, typo, missing details, etc."></textarea>
+        </div>
+        <div class="form-field">
+          <label for="flag-submitter">Your Name</label>
+          <input type="text" id="flag-submitter" name="submitterName" maxlength="100" placeholder="Optional">
+        </div>
+        <!-- Honeypot -->
+        <div style="position:absolute; left:-9999px; opacity:0; pointer-events:none;" aria-hidden="true">
+          <label for="flag-website">Website</label>
+          <input type="text" id="flag-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" id="flag-submit" class="form-submit">Submit</button>
+        <div id="flag-message" class="form-message" style="display:none;"></div>
+      </form>
+    </div>
+  </div>
   <script>
   (function() {
     var overlay = document.getElementById('lightbox');
@@ -64,6 +93,128 @@
       if (e.key === 'Escape' && overlay.classList.contains('active')) {
         overlay.classList.remove('active');
         lbImg.src = '';
+      }
+    });
+  })();
+
+  // --- Flag event modal ---
+  (function() {
+    var FLAG_URL = 'https://event-submit-worker.terceriaevents.workers.dev/flag-event';
+    var flagOverlay = document.getElementById('flag-overlay');
+    var flagClose = document.getElementById('flag-close');
+    var flagContext = document.getElementById('flag-event-context');
+    var flagForm = document.getElementById('flag-form');
+    var flagReason = document.getElementById('flag-reason');
+    var flagSubmitter = document.getElementById('flag-submitter');
+    var flagWebsite = document.getElementById('flag-website');
+    var flagSubmit = document.getElementById('flag-submit');
+    var flagMessage = document.getElementById('flag-message');
+    var currentEvent = null;
+
+    function openModal(eventData) {
+      currentEvent = eventData;
+      var parts = [];
+      parts.push('<strong>' + escapeHtml(eventData.name) + '</strong>');
+      if (eventData.date) parts.push(escapeHtml(eventData.date));
+      if (eventData.venue) parts.push(escapeHtml(eventData.venue));
+      flagContext.innerHTML = parts.join('<br>');
+      flagReason.value = '';
+      flagSubmitter.value = '';
+      flagWebsite.value = '';
+      flagMessage.style.display = 'none';
+      flagSubmit.disabled = false;
+      flagSubmit.textContent = 'Submit';
+      flagOverlay.classList.add('active');
+      setTimeout(function() { flagReason.focus(); }, 100);
+    }
+
+    function closeModal() {
+      flagOverlay.classList.remove('active');
+      currentEvent = null;
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function showMessage(text, type) {
+      flagMessage.textContent = text;
+      flagMessage.className = 'form-message ' + type;
+      flagMessage.style.display = 'block';
+    }
+
+    document.addEventListener('click', function(e) {
+      var btn = e.target.closest && e.target.closest('.event-flag-btn');
+      if (btn) {
+        e.preventDefault();
+        openModal({
+          name: btn.getAttribute('data-event-name'),
+          date: btn.getAttribute('data-event-date'),
+          venue: btn.getAttribute('data-event-venue'),
+        });
+      }
+    });
+
+    flagClose.addEventListener('click', closeModal);
+    flagOverlay.addEventListener('click', function(e) {
+      if (e.target === flagOverlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && flagOverlay.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    flagForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      flagMessage.style.display = 'none';
+
+      if (flagWebsite.value.trim()) {
+        // Honeypot — pretend success
+        showMessage('Thank you! Your suggestion has been submitted.', 'success');
+        setTimeout(closeModal, 1200);
+        return;
+      }
+
+      var reason = flagReason.value.trim();
+      if (!reason || !currentEvent) {
+        showMessage('Please describe what needs to change.', 'error');
+        return;
+      }
+
+      flagSubmit.disabled = true;
+      flagSubmit.textContent = 'Submitting...';
+
+      try {
+        var response = await fetch(FLAG_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            eventName: currentEvent.name,
+            eventDate: currentEvent.date,
+            eventVenue: currentEvent.venue,
+            reason: reason,
+            submitterName: flagSubmitter.value.trim() || undefined,
+          }),
+        });
+        var result = await response.json().catch(function() { return {}; });
+        if (response.ok && result.success) {
+          showMessage('Thank you! Your suggestion has been submitted.', 'success');
+          setTimeout(closeModal, 1200);
+        } else {
+          showMessage(result.error || 'Something went wrong. Please try again later.', 'error');
+          flagSubmit.disabled = false;
+          flagSubmit.textContent = 'Submit';
+        }
+      } catch (err) {
+        showMessage('Network error. Please check your connection.', 'error');
+        flagSubmit.disabled = false;
+        flagSubmit.textContent = 'Submit';
       }
     });
   })();
