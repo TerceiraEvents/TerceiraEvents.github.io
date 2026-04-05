@@ -46,6 +46,12 @@ title: "Suggest an Event - Terceira Events"
   </div>
 
   <div class="form-field">
+    <label for="image">Flyer / Poster Image URL</label>
+    <input type="url" id="image" name="image" maxlength="500" placeholder="https://...">
+    <small>Link to a flyer or poster image (e.g. from Instagram or any public URL). Please include whenever possible!</small>
+  </div>
+
+  <div class="form-field">
     <label for="submitterName">Your Name</label>
     <input type="text" id="submitterName" name="submitterName" maxlength="100" placeholder="Optional &mdash; for credit">
   </div>
