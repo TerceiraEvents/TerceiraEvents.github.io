@@ -103,6 +103,13 @@
   description: "K-9CAT live performance celebrating Record Store Day 2026 at The Vinyl Lounge."
   instagram: https://www.instagram.com/k9cat/
 
+- date: 2026-04-17
+  name: "International Day for Monuments and Sites"
+  venue: "Meeting point at Largo da Luz / Largo do Conde da Praia da Vitória"
+  time: "19:30"
+  description: "Guided tour of the city center of Praia da Vitória. Registration until April 16 at turismo@cmpv.pt. Stops: Convento da Luz, Municipal Garden, Convento de Jesus, Convento da Graça, Convento das Chagas, Convent of St. Francis, Main Church (Igreja Matriz), Noble Hall of the Town Hall, Casa das Tias, Church of Misericórdia, Vitorino Nemésio House."
+  image: https://www.facebook.com/MunicipioPraiaVitoria
+
 - name: "Balas & Bolinhos - Só Mais uma coisa"
   date: "2026-04-17"
   time: "21:00"
@@ -137,6 +144,14 @@
   instagram: https://www.instagram.com/p/DWjE7iIiXqg/?img_index=4
 
 - date: 2026-04-11
+  name: "João da Ilha ao vivo no The Vinyl Lounge"
+  venue: "The Vinyl Lounge - inside Soundstore"
+  address: "Rua da Guarita, 86, 9700-096 Angra do Heroísmo, Portugal"
+  time: "21:00"
+  description: "Live Music Night at The Vinyl Lounge. An unforgettable evening of live music celebrating the magic of vinyl and the passion of live performance! Live performances, a cozy intimate atmosphere, craft beers, cocktails, snacks, and a curated collection of vinyl records and rare finds. No tickets required — simply show up and enjoy! Seating is first-come, first-served."
+  image: https://fb.me/e/4pSYHQ8m5
+
+- date: 2026-04-11
   name: "K-9CAT Live"
   venue: Wine Not?
   address: Angra do Heroísmo
@@ -151,6 +166,13 @@
   time: "15:00"
   description: "Family screening. Tickets at angradoheroismo.pt"
   instagram: https://www.instagram.com/p/DWjE7iIiXqg/?img_index=3
+
+- date: 2026-04-10
+  name: "Expo Atlantic Terroir"
+  venue: "Parque Multissetorial da Ilha Terceira"
+  address: "Parque Multissetorial da Ilha Terceira, Angra do Heroísmo"
+  description: "An event for everyone — free entry! Admission to the Expo Atlantic Terroir is free, giving you access to different spaces, entertainment, and experiences throughout three days (April 10–12). Wine tastings with the purchase of the official glass. Wine-pairing dinners with prior registration."
+  instagram: https://www.instagram.com/expoatlanticterroir/
 
 - date: 2026-04-10
   name: "Festival Termómetro"
