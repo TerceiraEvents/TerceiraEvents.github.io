@@ -873,3 +873,90 @@ main a {
   border-left: 3px solid #c0392b;
   color: #8a1e1e;
 }
+
+/* ── Kid-friendly badge ── */
+.kid-friendly-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #f5a623, #f7b84b);
+  color: #3a2a00;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+  margin-left: 0.25rem;
+  border: 1px solid #d68f10;
+}
+.special-event.is-kid-friendly .event-date-badge {
+  box-shadow: 0 0 0 2px #f5a623;
+}
+
+/* ── Event search & filter bar ── */
+.event-search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  background: #fdfaf0;
+  border: 1px solid #e6decc;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  margin: 0.5rem 0 1.25rem;
+  box-shadow: 0 1px 3px var(--shadow);
+}
+.event-search-bar .search-input {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border: 1px solid #d8d4c4;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--green-deep);
+}
+.event-search-bar .search-input:focus {
+  outline: none;
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 2px rgba(45, 106, 79, 0.15);
+}
+.event-search-bar .filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  background: #fff;
+  border: 1px solid #d8d4c4;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s;
+}
+.event-search-bar .filter-toggle input {
+  margin: 0;
+  accent-color: #f5a623;
+}
+.event-search-bar .filter-toggle:hover {
+  background: #fff8ea;
+  border-color: #f5a623;
+}
+.event-search-bar .filter-toggle.active {
+  background: linear-gradient(135deg, #f5a623, #f7b84b);
+  border-color: #d68f10;
+  color: #3a2a00;
+}
+.event-search-empty {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  display: none;
+}
+.event-search-empty.active {
+  display: block;
+}

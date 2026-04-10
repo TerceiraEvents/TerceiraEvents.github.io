@@ -7,6 +7,8 @@ title: Event Archive - Terceira Events
 
 <p class="section-intro">Past concerts, parties, festivals, and special nights in Angra do Heroísmo.</p>
 
+{% include event_search_bar.html %}
+
 {% assign now_ts = "now" | date: "%s" | plus: 0 %}
 {% assign sorted_events = site.data.special_events | sort: "date" | reverse %}
 
@@ -28,6 +30,10 @@ title: Event Archive - Terceira Events
 {% else %}
 <p>No past events yet.</p>
 {% endif %}
+
+<p class="event-search-empty">
+  No events match your search. Try different keywords or clear the filter.
+</p>
 
 <div class="archive-link-section">
   <a href="{{ '/special' | relative_url }}" class="view-all">Back to Special Events</a>

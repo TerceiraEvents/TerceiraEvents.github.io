@@ -7,6 +7,8 @@ title: Full Events Calendar - Terceira Events
 
 <p class="section-intro">All upcoming concerts, festivals, parties, and one-off events in Angra do Heroísmo.</p>
 
+{% include event_search_bar.html %}
+
 {% assign now_ts = "now" | date: "%s" | plus: 0 %}
 {% assign sorted_events = site.data.special_events | sort: "date" %}
 
@@ -28,6 +30,10 @@ title: Full Events Calendar - Terceira Events
 {% else %}
 <p>No upcoming events at the moment. Check back soon!</p>
 {% endif %}
+
+<p class="event-search-empty">
+  No events match your search. Try different keywords or clear the filter.
+</p>
 
 <div class="archive-link-section">
   <a href="{{ '/special' | relative_url }}" class="view-all">Back to This Week</a>
