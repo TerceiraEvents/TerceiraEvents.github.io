@@ -874,24 +874,43 @@ main a {
   color: #8a1e1e;
 }
 
-/* ── Kid-friendly badge ── */
-.kid-friendly-badge {
+/* ── Event tag pills (on event cards) ── */
+.event-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+.event-tag {
   display: inline-block;
+  background: #f4efe0;
+  color: #4a3f1a;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #e0d6b8;
+  line-height: 1.4;
+}
+.event-tag.tag-kid-friendly {
   background: linear-gradient(135deg, #f5a623, #f7b84b);
   color: #3a2a00;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.6rem;
-  border-radius: 4px;
-  margin-bottom: 0.4rem;
-  margin-left: 0.25rem;
-  border: 1px solid #d68f10;
+  border-color: #d68f10;
 }
-.special-event.is-kid-friendly .event-date-badge {
-  box-shadow: 0 0 0 2px #f5a623;
-}
+.event-tag.tag-live-music { background: #e4eef8; border-color: #b9ceea; color: #214266; }
+.event-tag.tag-cinema { background: #efe6f5; border-color: #cbb6dd; color: #4a2766; }
+.event-tag.tag-theater { background: #f5e4ea; border-color: #e0b9c9; color: #66223a; }
+.event-tag.tag-dance { background: #fdeaf4; border-color: #f0b9d4; color: #74214d; }
+.event-tag.tag-nightlife { background: #2d2a3e; color: #efeaff; border-color: #423d58; }
+.event-tag.tag-karaoke { background: #f5ecfa; border-color: #d9bce6; color: #5b2c6f; }
+.event-tag.tag-food-drink { background: #f7ecd9; border-color: #e3cb9a; color: #6b4412; }
+.event-tag.tag-exhibition { background: #e9eee3; border-color: #c6d1b5; color: #3a4621; }
+.event-tag.tag-literature { background: #eae4d9; border-color: #c7bba1; color: #4d3d1e; }
+.event-tag.tag-workshop { background: #e3eeee; border-color: #b6cfcf; color: #1f4848; }
+.event-tag.tag-free { background: #e8f5e0; border-color: #b8d99f; color: #1a3009; }
+.event-tag.tag-outdoor { background: #e4f0e0; border-color: #b5d3a5; color: #26451a; }
+.event-tag.tag-bullfighting { background: #f3e4df; border-color: #d9b7a9; color: #5a1f12; }
 
 /* ── Event search & filter bar ── */
 .event-search-bar {
@@ -922,33 +941,41 @@ main a {
   border-color: var(--green-mid);
   box-shadow: 0 0 0 2px rgba(45, 106, 79, 0.15);
 }
-.event-search-bar .filter-toggle {
+.event-tag-filter-label {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 0.85rem;
+}
+.event-tag-filter {
+  padding: 0.55rem 2rem 0.55rem 0.85rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--green-deep);
   background: #fff;
   border: 1px solid #d8d4c4;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-light);
+  border-radius: 8px;
   cursor: pointer;
-  user-select: none;
-  transition: all 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%234a6a4a' d='M6 8 0 0h12z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
 }
-.event-search-bar .filter-toggle input {
-  margin: 0;
-  accent-color: #f5a623;
+.event-tag-filter:focus {
+  outline: none;
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 2px rgba(45, 106, 79, 0.15);
 }
-.event-search-bar .filter-toggle:hover {
-  background: #fff8ea;
-  border-color: #f5a623;
-}
-.event-search-bar .filter-toggle.active {
-  background: linear-gradient(135deg, #f5a623, #f7b84b);
-  border-color: #d68f10;
-  color: #3a2a00;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 .event-search-empty {
   padding: 1.5rem;

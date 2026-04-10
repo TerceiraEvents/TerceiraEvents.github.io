@@ -1,0 +1,52 @@
+# Shared tag vocabulary for special events.
+#
+# `slug` is what goes into each event's `tags:` list and is used for
+# filtering in the URL (e.g. /calendar?tag=kid-friendly). `label` and
+# `emoji` drive the UI pill and dropdown.
+#
+# Keep this list in sync with:
+#   - TerceiraEventsApp     src/utils/tags.js
+#   - event-submit-worker   src/tags.js
+#
+- slug: kid-friendly
+  label: Kid Friendly
+  emoji: 👶
+- slug: live-music
+  label: Live Music
+  emoji: 🎵
+- slug: cinema
+  label: Cinema
+  emoji: 🎬
+- slug: theater
+  label: Theater
+  emoji: 🎭
+- slug: dance
+  label: Dance
+  emoji: 💃
+- slug: nightlife
+  label: Nightlife
+  emoji: 🌙
+- slug: karaoke
+  label: Karaoke
+  emoji: 🎤
+- slug: food-drink
+  label: Food & Drink
+  emoji: 🍽️
+- slug: exhibition
+  label: Exhibition
+  emoji: 🖼️
+- slug: literature
+  label: Literature
+  emoji: 📖
+- slug: workshop
+  label: Workshop
+  emoji: 📚
+- slug: free
+  label: Free
+  emoji: 🆓
+- slug: outdoor
+  label: Outdoor
+  emoji: 🌳
+- slug: bullfighting
+  label: Bullfighting
+  emoji: 🐂
