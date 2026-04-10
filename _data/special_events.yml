@@ -14,6 +14,7 @@
   time: "20:00"
   description: "Lion King universe dance show by Makkit Dance. M/3. Tickets at angradoheroismo.pt"
   instagram: https://www.instagram.com/p/DWhQBYgj8Az/
+  kid_friendly: true
 
 - name: "ESCAMA: de dragão 2#"
   date: "2026-05-09"
@@ -39,6 +40,7 @@
   time: "21:00"
   description: "Two days of choral music bringing together adult and youth choirs from across the Azores. Free entry."
   instagram: https://www.instagram.com/p/DWZolg4iWZN/
+  kid_friendly: true
 
 - date: 2026-05-08
   name: "K-9CAT Live"
@@ -71,6 +73,7 @@
   time: "15:00"
   description: "Brass bands parade through the city celebrating Freedom Day — marking April 25th with music and tradition. Free."
   instagram: https://www.instagram.com/p/DWgmzHljRbh/
+  kid_friendly: true
 
 - date: 2026-04-23
   name: "Arraial Taurino 2026"
@@ -151,6 +154,7 @@
   time: "15:00"
   description: "Family screening. Tickets at angradoheroismo.pt"
   instagram: https://www.instagram.com/p/DWjE7iIiXqg/?img_index=3
+  kid_friendly: true
 
 - date: 2026-04-10
   name: "Festival Termómetro"

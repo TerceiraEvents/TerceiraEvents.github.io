@@ -218,6 +218,78 @@
       }
     });
   })();
+
+  // --- Event search & kid-friendly filter ---
+  (function() {
+    var bars = document.querySelectorAll('.event-search-bar');
+    if (!bars.length) return;
+
+    function normalize(s) { return (s || '').toLowerCase(); }
+
+    bars.forEach(function(bar) {
+      var input = bar.querySelector('.event-search-input');
+      var kidToggle = bar.querySelector('.event-kid-toggle');
+      var kidToggleLabel = bar.querySelector('.event-kid-toggle-label');
+
+      // Find the event list that follows this bar. Prefer an explicit
+      // wrapper with class "event-list"; otherwise use the closest
+      // container that holds .special-event cards.
+      var scope = bar.parentElement;
+      var cards = [];
+      var node = bar.nextElementSibling;
+      while (node) {
+        if (node.classList && node.classList.contains('special-event')) {
+          cards.push(node);
+        } else if (node.querySelectorAll) {
+          var inner = node.querySelectorAll('.special-event');
+          for (var i = 0; i < inner.length; i++) cards.push(inner[i]);
+        }
+        node = node.nextElementSibling;
+      }
+      if (!cards.length) return;
+
+      var empty = scope.querySelector('.event-search-empty') ||
+                  document.querySelector('.event-search-empty');
+
+      function applyFilters() {
+        var query = normalize(input.value.trim());
+        var kidOnly = kidToggle && kidToggle.checked;
+        if (kidToggleLabel) kidToggleLabel.classList.toggle('active', !!kidOnly);
+
+        var visibleCount = 0;
+        cards.forEach(function(card) {
+          var name = normalize(card.getAttribute('data-event-name'));
+          var venue = normalize(card.getAttribute('data-event-venue'));
+          var desc = normalize(card.getAttribute('data-event-description'));
+          var isKid = card.getAttribute('data-kid-friendly') === '1';
+          var matchesQuery = !query ||
+            name.indexOf(query) !== -1 ||
+            venue.indexOf(query) !== -1 ||
+            desc.indexOf(query) !== -1;
+          var matchesKid = !kidOnly || isKid;
+          var show = matchesQuery && matchesKid;
+          card.style.display = show ? '' : 'none';
+          if (show) visibleCount++;
+        });
+
+        if (empty) {
+          empty.classList.toggle('active', visibleCount === 0 && cards.length > 0);
+        }
+      }
+
+      if (input) input.addEventListener('input', applyFilters);
+      if (kidToggle) kidToggle.addEventListener('change', applyFilters);
+
+      // Read initial state from URL query: ?kid=1 or ?q=foo
+      try {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('kid') === '1' && kidToggle) kidToggle.checked = true;
+        var q = params.get('q');
+        if (q && input) input.value = q;
+        if ((kidToggle && kidToggle.checked) || (input && input.value)) applyFilters();
+      } catch (e) { /* ignore */ }
+    });
+  })();
   </script>
 
   <footer class="site-footer">

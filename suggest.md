@@ -51,6 +51,14 @@ title: "Suggest an Event - Terceira Events"
     <small>Link to a flyer or poster image (e.g. from Instagram or any public URL). Please include whenever possible!</small>
   </div>
 
+  <div class="form-field form-checkbox">
+    <label for="kid_friendly">
+      <input type="checkbox" id="kid_friendly" name="kid_friendly" value="true">
+      <span>👶 Kid Friendly &mdash; suitable for children/families</span>
+    </label>
+    <small>Check this if the event is appropriate for kids (family screenings, parades, daytime shows, etc.)</small>
+  </div>
+
   <div class="form-field">
     <label for="submitterName">Your Name</label>
     <input type="text" id="submitterName" name="submitterName" maxlength="100" placeholder="Optional &mdash; for credit">
@@ -117,6 +125,19 @@ title: "Suggest an Event - Terceira Events"
 .form-field textarea {
   resize: vertical;
   min-height: 90px;
+}
+.form-field.form-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.form-field.form-checkbox input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  accent-color: #f5a623;
+  transform: scale(1.2);
 }
 .form-field small {
   display: block;

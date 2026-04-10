@@ -63,8 +63,10 @@ title: "Contribute - Terceira Events"
   time: "21:30"
   description: "Live music with special guest."
   instagram: https://www.instagram.com/p/...
+  kid_friendly: true
 </code></pre>
     <p>Only <code>date</code>, <code>name</code>, and <code>venue</code> are required. The <code>date</code> field must be in YYYY-MM-DD format.</p>
+    <p>Set <code>kid_friendly: true</code> if the event is suitable for children (family screenings, parades, daytime shows, etc.). Kid-friendly events get a 👶 badge and show up when visitors filter the calendar for family events.</p>
   </div>
 </div>
 

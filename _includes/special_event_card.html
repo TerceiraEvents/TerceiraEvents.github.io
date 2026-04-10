@@ -1,7 +1,7 @@
 {% assign date_parts = event.date | split: "-" %}
 {% assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," %}
 {% assign month_index = date_parts[1] | plus: 0 | minus: 1 %}
-<div class="special-event {% if event.image %}has-image{% endif %} {% if event.festival %}is-festival{% endif %}">
+<div class="special-event {% if event.image %}has-image{% endif %} {% if event.festival %}is-festival{% endif %} {% if event.kid_friendly %}is-kid-friendly{% endif %}" data-kid-friendly="{% if event.kid_friendly %}1{% else %}0{% endif %}" data-event-name="{{ event.name | escape }}" data-event-venue="{{ event.venue | escape }}" data-event-description="{{ event.description | escape }}">
   <div class="event-date-badge">
     <div class="month">{{ months[month_index] }}</div>
     <div class="day">{{ date_parts[2] | plus: 0 }}</div>
@@ -10,6 +10,9 @@
   <div class="event-details">
     {% if event.festival %}
     <div class="festival-badge">🎭 {{ event.festival }}</div>
+    {% endif %}
+    {% if event.kid_friendly %}
+    <div class="kid-friendly-badge" title="Suitable for children">👶 Kid Friendly</div>
     {% endif %}
     <div class="event-name">{{ event.name }}</div>
     <div class="event-venue">{{ event.venue }}</div>
