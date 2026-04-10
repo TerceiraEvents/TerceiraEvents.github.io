@@ -63,10 +63,12 @@ title: "Contribute - Terceira Events"
   time: "21:30"
   description: "Live music with special guest."
   instagram: https://www.instagram.com/p/...
-  kid_friendly: true
+  tags:
+    - live-music
+    - kid-friendly
 </code></pre>
     <p>Only <code>date</code>, <code>name</code>, and <code>venue</code> are required. The <code>date</code> field must be in YYYY-MM-DD format.</p>
-    <p>Set <code>kid_friendly: true</code> if the event is suitable for children (family screenings, parades, daytime shows, etc.). Kid-friendly events get a 👶 badge and show up when visitors filter the calendar for family events.</p>
+    <p>Add a <code>tags</code> list to help visitors filter the calendar. Available tags are defined in <a href="https://github.com/TerceiraEvents/Angraevents.github.io/blob/main/_data/event_tags.yml"><code>_data/event_tags.yml</code></a>: <code>kid-friendly</code>, <code>live-music</code>, <code>cinema</code>, <code>theater</code>, <code>dance</code>, <code>nightlife</code>, <code>karaoke</code>, <code>food-drink</code>, <code>exhibition</code>, <code>literature</code>, <code>workshop</code>, <code>free</code>, <code>outdoor</code>, <code>bullfighting</code>.</p>
   </div>
 </div>
 

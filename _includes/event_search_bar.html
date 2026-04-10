@@ -2,8 +2,13 @@
   <input type="search" class="search-input event-search-input"
     placeholder="Search events by name, venue, or description…"
     aria-label="Search events">
-  <label class="filter-toggle event-kid-toggle-label">
-    <input type="checkbox" class="event-kid-toggle">
-    <span>👶 Kid Friendly only</span>
+  <label class="event-tag-filter-label" for="event-tag-filter">
+    <span class="visually-hidden">Filter by tag</span>
+    <select class="event-tag-filter" id="event-tag-filter" aria-label="Filter by tag">
+      <option value="">🏷️ All tags</option>
+      {% for tag in site.data.event_tags %}
+      <option value="{{ tag.slug }}">{{ tag.emoji }} {{ tag.label }}</option>
+      {% endfor %}
+    </select>
   </label>
 </div>

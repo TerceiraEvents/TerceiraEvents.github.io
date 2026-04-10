@@ -51,12 +51,17 @@ title: "Suggest an Event - Terceira Events"
     <small>Link to a flyer or poster image (e.g. from Instagram or any public URL). Please include whenever possible!</small>
   </div>
 
-  <div class="form-field form-checkbox">
-    <label for="kid_friendly">
-      <input type="checkbox" id="kid_friendly" name="kid_friendly" value="true">
-      <span>👶 Kid Friendly &mdash; suitable for children/families</span>
-    </label>
-    <small>Check this if the event is appropriate for kids (family screenings, parades, daytime shows, etc.)</small>
+  <div class="form-field form-tags">
+    <label>Tags</label>
+    <small>Pick all that apply. These help visitors filter the calendar.</small>
+    <div class="tag-chips">
+      {% for tag in site.data.event_tags %}
+      <label class="tag-chip">
+        <input type="checkbox" name="tags[]" value="{{ tag.slug }}">
+        <span>{{ tag.emoji }} {{ tag.label }}</span>
+      </label>
+      {% endfor %}
+    </div>
   </div>
 
   <div class="form-field">
@@ -126,18 +131,49 @@ title: "Suggest an Event - Terceira Events"
   resize: vertical;
   min-height: 90px;
 }
-.form-field.form-checkbox label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  font-weight: 600;
+.form-field.form-tags > label {
+  margin-bottom: 0.25rem;
 }
-.form-field.form-checkbox input[type="checkbox"] {
-  width: auto;
-  margin: 0;
-  accent-color: #f5a623;
-  transform: scale(1.2);
+.tag-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+.tag-chip {
+  display: inline-block;
+  cursor: pointer;
+}
+.tag-chip input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+.tag-chip span {
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  background: #fff;
+  border: 1px solid #d8d4c4;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.15s;
+  user-select: none;
+}
+.tag-chip:hover span {
+  border-color: var(--primary, #2d5016);
+  background: #f6f5ef;
+}
+.tag-chip input:checked + span {
+  background: var(--primary, #2d5016);
+  border-color: var(--primary, #2d5016);
+  color: #fff;
+}
+.tag-chip input:focus-visible + span {
+  box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.25);
 }
 .form-field small {
   display: block;
@@ -200,10 +236,17 @@ title: "Suggest an Event - Terceira Events"
     msgBox.style.display = 'none';
 
     var data = {};
+    var tagList = [];
     new FormData(form).forEach(function(value, key) {
+      if (key === 'tags[]') {
+        var slug = String(value).trim();
+        if (slug) tagList.push(slug);
+        return;
+      }
       var trimmed = String(value).trim();
       if (trimmed) data[key] = trimmed;
     });
+    if (tagList.length) data.tags = tagList;
 
     // Honeypot check — silently pretend success to not tip off bots
     if (data.website) {

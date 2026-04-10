@@ -1,7 +1,25 @@
 {% assign date_parts = event.date | split: "-" %}
 {% assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," %}
 {% assign month_index = date_parts[1] | plus: 0 | minus: 1 %}
-<div class="special-event {% if event.image %}has-image{% endif %} {% if event.festival %}is-festival{% endif %} {% if event.kid_friendly %}is-kid-friendly{% endif %}" data-kid-friendly="{% if event.kid_friendly %}1{% else %}0{% endif %}" data-event-name="{{ event.name | escape }}" data-event-venue="{{ event.venue | escape }}" data-event-description="{{ event.description | escape }}">
+
+{%- comment -%}
+  Normalize tags: legacy `kid_friendly: true` events get mapped to the
+  `kid-friendly` slug so old entries still filter correctly.
+{%- endcomment -%}
+{% assign event_tags = "" | split: "," %}
+{% if event.tags %}
+  {% assign event_tags = event.tags %}
+{% endif %}
+{% if event.kid_friendly and event_tags contains "kid-friendly" == false %}
+  {% assign event_tags = event_tags | push: "kid-friendly" %}
+{% endif %}
+{% assign event_tags_str = event_tags | join: " " %}
+
+<div class="special-event {% if event.image %}has-image{% endif %} {% if event.festival %}is-festival{% endif %}"
+     data-event-tags="{{ event_tags_str }}"
+     data-event-name="{{ event.name | escape }}"
+     data-event-venue="{{ event.venue | escape }}"
+     data-event-description="{{ event.description | escape }}">
   <div class="event-date-badge">
     <div class="month">{{ months[month_index] }}</div>
     <div class="day">{{ date_parts[2] | plus: 0 }}</div>
@@ -11,8 +29,17 @@
     {% if event.festival %}
     <div class="festival-badge">🎭 {{ event.festival }}</div>
     {% endif %}
-    {% if event.kid_friendly %}
-    <div class="kid-friendly-badge" title="Suitable for children">👶 Kid Friendly</div>
+    {% if event_tags.size > 0 %}
+    <div class="event-tags">
+      {% for slug in event_tags %}
+        {% assign tag_meta = site.data.event_tags | where: "slug", slug | first %}
+        {% if tag_meta %}
+          <span class="event-tag tag-{{ slug }}">{{ tag_meta.emoji }} {{ tag_meta.label }}</span>
+        {% else %}
+          <span class="event-tag tag-{{ slug }}">🏷️ {{ slug }}</span>
+        {% endif %}
+      {% endfor %}
+    </div>
     {% endif %}
     <div class="event-name">{{ event.name }}</div>
     <div class="event-venue">{{ event.venue }}</div>
