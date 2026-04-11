@@ -19,25 +19,28 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
-import html
 import logging
-import re
 import sys
-import unicodedata
-import urllib.parse
 import urllib.request
 from pathlib import Path
 
 import icalendar
-import yaml
+
+from ingest_common import (
+    DEFAULT_MAX_EVENTS,
+    LOOKAHEAD_DAYS,
+    USER_AGENT,
+    YAML_PATH,
+    build_dedup_index,
+    build_map_url,
+    clean_description,
+    format_event_yaml,
+    load_existing_yaml,
+    matches_existing,
+    normalize_name,
+)
 
 CMAH_ICAL_URL = "https://angradoheroismo.pt/events.ics"
-REPO_ROOT = Path(__file__).resolve().parent.parent
-YAML_PATH = REPO_ROOT / "_data" / "special_events.yml"
-USER_AGENT = "TerceiraEventsBot/1.0 (+https://terceiraevents.github.io)"
-DESCRIPTION_MAX_CHARS = 500
-DEFAULT_MAX_EVENTS = 20
-LOOKAHEAD_DAYS = 365
 
 # Conservative CMAH category → tag slug mapping. Anything not in this map is
 # left untagged rather than guessed at. Keep tag slugs in sync with
@@ -69,77 +72,8 @@ logger = logging.getLogger("ingest_cmah")
 
 
 # ---------------------------------------------------------------------------
-# Parsing helpers
+# CMAH-specific fetching + parsing
 # ---------------------------------------------------------------------------
-
-
-def normalize_name(name: str) -> str:
-    """Normalize a name for dedup: lowercase, strip accents, unify dashes/quotes.
-
-    Also decodes HTML entities because CMAH sometimes serializes `&` as `&amp;`
-    in iCal fields (non-standard but observed in the feed).
-    """
-    name = html.unescape(name)
-    name = unicodedata.normalize("NFKD", name)
-    name = "".join(c for c in name if not unicodedata.combining(c))
-    name = name.lower()
-    # Unify fancy quotes so "Foo" matches «Foo» (curly, guillemets, angle)
-    name = re.sub(r"[\u00ab\u00bb\u2018\u2019\u201c\u201d\u2039\u203a\"']+", '"', name)
-    # Unify dash variants (em, en, hyphen, minus, figure dash, ...) to a plain "-"
-    name = re.sub(r"[\u2010-\u2015\u2212\-]+", "-", name)
-    name = re.sub(r"\s+", " ", name).strip()
-    return name
-
-
-# Portuguese/English stopwords to ignore when comparing name similarity.
-# Small, noisy function words that don't meaningfully distinguish events.
-_DEDUP_STOPWORDS = frozenset(
-    {
-        "a", "o", "as", "os", "de", "do", "da", "dos", "das",
-        "e", "em", "no", "na", "nos", "nas", "um", "uma",
-        "the", "of", "and", "at", "in", "on", "for", "to",
-    }
-)
-
-
-def _tokenize(name: str) -> frozenset[str]:
-    """Extract non-stopword word tokens from a normalized name."""
-    tokens = re.findall(r"\w+", normalize_name(name))
-    return frozenset(t for t in tokens if t not in _DEDUP_STOPWORDS)
-
-
-def is_similar_match(a_name: str, b_name: str) -> bool:
-    """Return True if two event names look like the same event.
-
-    Uses word-level set similarity on content tokens (stopwords stripped):
-
-    - Jaccard |A∩B|/|A∪B| ≥ 0.6 catches near-identical names with small
-      differences ("do Livro" vs "de livro", Cinema "Ready or Not 2 — O Ritual"
-      vs "Ready or Not 2: O Ritual (2D)", etc).
-
-    - Overlap coefficient |A∩B|/min(|A|,|B|) ≥ 0.8 catches asymmetric cases
-      where one name is a short version and the other adds a long marketing
-      suffix ("Concerto: Notas em Movimento" vs "Concerto: Notas em
-      Movimento - quando a tradição encontra a energia académica").
-
-    Requiring each input ≥3 content tokens AND ≥3 shared content tokens
-    keeps false positives low on generic short names like "Cinema: X".
-    """
-    if normalize_name(a_name) == normalize_name(b_name):
-        return True
-    a_tokens = _tokenize(a_name)
-    b_tokens = _tokenize(b_name)
-    if len(a_tokens) < 3 or len(b_tokens) < 3:
-        return False
-    shared = a_tokens & b_tokens
-    if len(shared) < 3:
-        return False
-    union = a_tokens | b_tokens
-    jaccard = len(shared) / len(union)
-    if jaccard >= 0.6:
-        return True
-    overlap = len(shared) / min(len(a_tokens), len(b_tokens))
-    return overlap >= 0.8
 
 
 def fetch_ical(url: str) -> icalendar.Calendar:
@@ -188,27 +122,6 @@ def parse_location(loc: str) -> tuple[str, str]:
     return (venue, address)
 
 
-def clean_description(text: str) -> str:
-    """Unescape iCal, decode HTML entities, strip tags, collapse whitespace, truncate."""
-    if not text:
-        return ""
-    # iCal escape sequences
-    text = (
-        text.replace("\\n", " ")
-        .replace("\\N", " ")
-        .replace("\\,", ",")
-        .replace("\\;", ";")
-        .replace("\\\\", "\\")
-    )
-    text = html.unescape(text)
-    text = re.sub(r"<[^>]+>", "", text)
-    text = re.sub(r"\s+", " ", text).strip()
-    if len(text) > DESCRIPTION_MAX_CHARS:
-        truncated = text[:DESCRIPTION_MAX_CHARS].rsplit(" ", 1)[0]
-        text = truncated + "…"
-    return text
-
-
 def map_tags(categories) -> list[str]:
     if categories is None:
         return []
@@ -224,107 +137,6 @@ def map_tags(categories) -> list[str]:
         if slug and slug not in tags:
             tags.append(slug)
     return tags
-
-
-def build_map_url(venue: str) -> str:
-    query = urllib.parse.quote(f"{venue} Angra do Heroísmo")
-    return f"https://www.google.com/maps/search/?api=1&query={query}"
-
-
-# ---------------------------------------------------------------------------
-# YAML dedup + append
-# ---------------------------------------------------------------------------
-
-
-def load_existing_yaml(path: Path) -> list[dict]:
-    with path.open("r", encoding="utf-8") as f:
-        data = yaml.safe_load(f)
-    if not isinstance(data, list):
-        raise ValueError(
-            f"{path}: expected a top-level YAML list, got {type(data).__name__}"
-        )
-    return data
-
-
-def build_dedup_index(
-    existing: list[dict],
-) -> tuple[dict[dt.date, list[str]], set[str]]:
-    """Build a dedup index from existing events.
-
-    Returns:
-      - date_to_names: map of date → list of raw names on that date
-        (normalization happens inside is_similar_match).
-      - source_uids: set of CMAH UIDs already present.
-    """
-    date_to_names: dict[dt.date, list[str]] = {}
-    source_uids: set[str] = set()
-    for ev in existing:
-        if not isinstance(ev, dict):
-            continue
-        name = ev.get("name")
-        date = ev.get("date")
-        if name and isinstance(date, dt.date):
-            date_to_names.setdefault(date, []).append(str(name))
-        sid = ev.get("source_uid")
-        if sid:
-            source_uids.add(str(sid))
-    return date_to_names, source_uids
-
-
-def matches_existing(
-    cmah_name: str,
-    cmah_date: dt.date,
-    date_to_names: dict[dt.date, list[str]],
-) -> bool:
-    for existing_name in date_to_names.get(cmah_date, []):
-        if is_similar_match(cmah_name, existing_name):
-            return True
-    return False
-
-
-def yaml_double_quote(s: str) -> str:
-    """Double-quote a string for YAML, escaping backslashes and quotes."""
-    s = s.replace("\\", "\\\\").replace('"', '\\"')
-    return f'"{s}"'
-
-
-_BARE_UNSAFE = re.compile(r"""[:#'"\\{}\[\],&*!|>%@`]""")
-
-
-def yaml_value(s: str) -> str:
-    """Return a YAML scalar representation, quoting when needed."""
-    if s is None or s == "":
-        return '""'
-    if _BARE_UNSAFE.search(s):
-        return yaml_double_quote(s)
-    if s.startswith(("-", "?", "!")) or s != s.strip():
-        return yaml_double_quote(s)
-    return s
-
-
-def format_event_yaml(event: dict) -> str:
-    """Hand-format a single event as a YAML list item."""
-    out: list[str] = []
-    out.append(f"- date: {event['date'].isoformat()}")
-    out.append(f"  name: {yaml_double_quote(event['name'])}")
-    out.append(f"  venue: {yaml_value(event['venue'])}")
-    if event.get("address"):
-        out.append(f"  address: {yaml_value(event['address'])}")
-    if event.get("map_url"):
-        out.append(f"  map_url: {event['map_url']}")
-    if event.get("time"):
-        out.append(f'  time: "{event["time"]}"')
-    if event.get("description"):
-        out.append(f"  description: {yaml_double_quote(event['description'])}")
-    if event.get("source_url"):
-        out.append(f"  source_url: {event['source_url']}")
-    if event.get("source_uid"):
-        out.append(f'  source_uid: "{event["source_uid"]}"')
-    if event.get("tags"):
-        out.append("  tags:")
-        for t in event["tags"]:
-            out.append(f"  - {t}")
-    return "\n".join(out) + "\n"
 
 
 # ---------------------------------------------------------------------------
