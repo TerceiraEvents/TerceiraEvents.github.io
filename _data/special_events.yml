@@ -3,6 +3,7 @@
   name: "Sanjoaninas 2026"
   venue: Angra do Heroísmo
   address: Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Praça+Velha+Angra+do+Heroísmo
   description: "Annual summer festival marking 50 years of Azorean Autonomy. Bullfights on a rope, parades, music, and cultural celebrations."
   instagram: https://www.instagram.com/angradoheroismo/
 
@@ -10,20 +11,22 @@
 - date: 2026-05-29
   name: "Hakuna Matata — Espectáculo de Dança"
   venue: Teatro Angrense
-  address: Angra do Heroísmo
+  address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "20:00"
   description: "Lion King universe dance show by Makkit Dance. M/3. Tickets at angradoheroismo.pt"
   instagram: https://www.instagram.com/p/DWhQBYgj8Az/
   tags:
-    - kid-friendly
-    - dance
-    - theater
+  - kid-friendly
+  - dance
+  - theater
 
 - name: "ESCAMA: de dragão 2#"
   date: "2026-05-09"
   time: "21:00"
   venue: "AMIT"
-  address: "Avenida Tenente Coronel José Agostinho, Angra Do Heroísmo, Ilha Terceira"
+  address: "Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
   description: "O dragão volta a cuspir fogo.\n\nNo dia 9 de maio, às 21h30, o AMIT recebe mais uma edição da vertente Dragão — intensidade máxima, som cru e energia sem travão.\n\nUma noite dedicada ao thrash e death metal, com três momentos de peso:\n\nMorbid Death (São Miguel)\nFormados em 1990, são uma referência do metal açoriano. Com uma longa trajetória e várias mudanças de formação, apresentam hoje um som próximo do thrash/death melódico, marcado pela constante evolução. Regressam à Terceira para apresentar o novo álbum e a nova formação — um momento raro e imperdível.\n\nDamage Device (Terceira)\nForça local com uma presença em palco intensa e demolidora. Misturam thrash, crossover e punk, com letras diretas e afiadas.\n\nBoi (Miguel Linhares) — Playlist\nVeterano da cena punk e metal da ilha Terceira, ligado à banda Manifesto e a vários projetos culturais ao longo das últimas décadas. Fecha a noite com uma seleção poderosa entre o rock e o metal.\n\nOrganização: AAIP\nProdução: Desinsofrido\nParceria: Basalto Cultural\nApoio: AMIT\n\nA parceria com a Bela Cerveja mantém-se, com as cervejas Bela e Climax disponíveis. Parte das receitas reverte para apoiar os próximos eventos culturais da associação.\n\nEntrada (com oferta de bebida)\n5€ — sócios\n8€ — não sócios\n\nReservas: aaipazores@gmail.com\n\nFora do circuito. Dentro da ilha."
   instagram: "https://www.instagram.com/aaipazores?igsh=aTFpZnpwaWI1cnJp"
   image: "https://scontent.fpdl2-1.fna.fbcdn.net/v/t39.30808-6/661417057_1399014948935583_5406290445996528943_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7e0d18&_nc_ohc=IXRu50ILziYQ7kNvwE1KofG&_nc_oc=Adq8idT70_OivOJnG6iRRcESFkWdGkjXNforIxOVkG-SU4b4iyFhQluZvs5eElRl7PfhKmWXaxGh_91HxisLXZgG&_nc_zt=23&_nc_ht=scontent.fpdl2-1.fna&_nc_gid=ghdku2pWcRBV93e9lujfmQ&_nc_ss=7a3a8&oh=00_Af3uqcSjzVN9-voSDEGkkGkQ4LLIxlU-9eVqf2BI52pJfA&oe=69DB5394"
@@ -32,6 +35,7 @@
   name: "Gentleman's Ride 2026"
   venue: Praia da Vitória
   address: Praia da Vitória
+  map_url: https://www.google.com/maps/search/?api=1&query=Praia+da+Vitória+Terceira
   time: "16:00"
   description: "Riding for Men's Health — The Distinguished Gentleman's Ride unites classic and vintage styled motorcycle riders from all over the world to raise funds and awareness for prostate cancer research and men's mental health."
   instagram: https://gentlemansride.com/
@@ -39,19 +43,21 @@
 - date: 2026-05-16
   name: "XXXVI Encontro de Coros da Ilha Terceira"
   venue: CCCAH
-  address: Angra do Heroísmo
+  address: Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
   time: "21:00"
   description: "Two days of choral music bringing together adult and youth choirs from across the Azores. Free entry."
   instagram: https://www.instagram.com/p/DWZolg4iWZN/
   tags:
-    - kid-friendly
-    - live-music
-    - free
+  - kid-friendly
+  - live-music
+  - free
 
 - date: 2026-05-08
   name: "K-9CAT Live"
   venue: Lar Doce Livro
-  address: Rua de São João 22-24, Angra do Heroísmo
+  address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
   time: "21:30"
   description: "K-9CAT live performance at Lar Doce Livro (Home Sweet Book)."
   instagram: https://www.instagram.com/k9cat/
@@ -60,14 +66,16 @@
 - date: 2026-04-30
   name: "DesaFINO — Noite de Karaoke da AMIT"
   venue: Auditório AMIT
-  address: Angra do Heroísmo
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
   description: "Cantas uma música, bebes um FINO! AMIT's karaoke night — sing a song, get a beer."
   instagram: https://www.instagram.com/auditorioamit/
 
 - date: 2026-04-30
   name: "Cinema: Projeto Hail Mary"
   venue: CCCAH
-  address: Angra do Heroísmo
+  address: Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
   time: "21:00"
   description: "Starring Ryan Gosling. From the Spider-Verse creators. Tickets at angradoheroismo.pt"
   instagram: https://www.instagram.com/p/DWjE7iIiXqg/?img_index=6
@@ -75,27 +83,30 @@
 - date: 2026-04-25
   name: "Desfile de Filarmónicas — 25 de Abril"
   venue: Rua da Sé
-  address: Angra do Heroísmo
+  address: Rua da Sé, 9700-091 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Rua+da+Sé+Angra+do+Heroísmo
   time: "15:00"
   description: "Brass bands parade through the city celebrating Freedom Day — marking April 25th with music and tradition. Free."
   instagram: https://www.instagram.com/p/DWgmzHljRbh/
   tags:
-    - kid-friendly
-    - live-music
-    - outdoor
-    - free
+  - kid-friendly
+  - live-music
+  - outdoor
+  - free
 
 - date: 2026-04-23
   name: "Arraial Taurino 2026"
   venue: Praça de Toiros da Ilha Terceira
-  address: Angra do Heroísmo
+  address: Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Praça+de+Toiros+Ilha+Terceira
   description: "Traditional bullfighting festival."
   instagram: https://www.instagram.com/angradoheroismo/
 
 - date: 2026-04-23
   name: "Cinema: Ready or Not 2 — O Ritual"
   venue: CCCAH
-  address: Angra do Heroísmo
+  address: Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
   time: "21:00"
   description: "Páscoa 2026 screening. Tickets at angradoheroismo.pt"
   instagram: https://www.instagram.com/p/DWjE7iIiXqg/?img_index=5
@@ -103,7 +114,8 @@
 - date: 2026-04-22
   name: "Apresentação do Livro: A Lógica das Ideias"
   venue: Paços do Concelho
-  address: Angra do Heroísmo
+  address: Praça Velha, 9700-145 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Paços+do+Concelho+Angra+do+Heroísmo
   time: "20:00"
   description: "Book presentation by Eduardo Ferraz da Rosa — studies in philosophy and literary criticism. Free entry."
   instagram: https://www.instagram.com/p/DWjnHOhEpZ5/
@@ -117,12 +129,13 @@
   description: "Every Saturday from 9.30 to 13.00 you could come to collect strawberries and have fun with your kids (you can feed animals, jumping on trampoline, have a tractor ride…)"
   instagram: "https://www.instagram.com/sabores_dahort_a?igsh=bWQwcTN6OGxlaWZk"
   tags:
-    - kid-friendly
+  - kid-friendly
 
 - date: 2026-04-18
   name: "K-9CAT Live — Record Store Day"
   venue: The Vinyl Lounge
   address: Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=The+Vinyl+Lounge+Angra+do+Heroísmo
   time: "21:00"
   description: "K-9CAT live performance celebrating Record Store Day 2026 at The Vinyl Lounge."
   instagram: https://www.instagram.com/k9cat/
@@ -131,8 +144,9 @@
   date: "2026-04-17"
   time: "21:00"
   venue: "AMIT"
-  address: "Avenida Tenente Coronel José Agostinho, Angra Do Heroísmo, Ilha Terceira"
-  description: "BALAS & BOLINHOS: SÓ MAIS UMA COISA\n\nNo dia 17 de abril, pelas 21h, no Auditório do AMIT (Angra do Heroísmo), a AAIP encerra a mostra \u201c25 anos de: Balas & Bolinhos\u201d com o último filme da saga.\n\nUma sessão especial que revisita um dos fenómenos mais irreverentes do cinema português contemporâneo.\n\nEntrada\nSócios — 2€\nNão sócios — 4€"
+  address: "Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "BALAS & BOLINHOS: SÓ MAIS UMA COISA\n\nNo dia 17 de abril, pelas 21h, no Auditório do AMIT (Angra do Heroísmo), a AAIP encerra a mostra “25 anos de: Balas & Bolinhos” com o último filme da saga.\n\nUma sessão especial que revisita um dos fenómenos mais irreverentes do cinema português contemporâneo.\n\nEntrada\nSócios — 2€\nNão sócios — 4€"
   instagram: "https://www.instagram.com/aaipazores?igsh=aTFpZnpwaWI1cnJp"
   image: "https://scontent.fpdl2-1.fna.fbcdn.net/v/t39.30808-6/659878910_1394399549397123_62101908351088206_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=8DKmN1pxDFkQ7kNvwFAZ1Qj&_nc_oc=AdquKGD1CfLqNPBYWTgoFJ6-_1UOJWFnRZf7LmM8m-yiOgkj5tQQ-BHB6NnUdtAUfaebWVI0ou_8HnxD-zYXQUuB&_nc_zt=23&_nc_ht=scontent.fpdl2-1.fna&_nc_gid=sx90Rwc2f2d5KxV8p2sG3Q&_nc_ss=7a3a8&oh=00_Af3EBnJ2YH9CyQHNXt0gNIydzJmegxsweD3RhuixcxrZqA&oe=69DB5DD6"
 
@@ -140,7 +154,8 @@
   date: "2026-04-17"
   time: "23:30"
   venue: "AMIT"
-  address: "Avenida Tenente Coronel José Agostinho, Angra Do Heroísmo, Ilha Terceira"
+  address: "Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
   description: "ESCAMA: DE DRAGÃO #1\n\nA partir das 23h, a noite continua no Café-Concerto do AMIT com a primeira edição da vertente Dragão do projeto ESCAMA.\nEnergia intensa, som pesado e hipnótico.\n\nUma noite dedicada ao trance psicadélico com:\nCricket · Heise Van Hoff · Crystal Xield\n\nEntrada (com oferta de bebida)\nSócios — 3€\nNão sócios — 5€\n\nA parceria com a Bela Cerveja mantém-se, com as cervejas Bela e Climax disponíveis. As receitas revertem para apoiar os próximos eventos da associação.\n\nFora do circuito. Dentro da ilha."
   instagram: "https://www.instagram.com/aaipazores?igsh=aTFpZnpwaWI1cnJp"
   image: "https://scontent.fpdl2-1.fna.fbcdn.net/v/t39.30808-6/657657905_1394399412730470_2474619104852934208_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=13d280&_nc_ohc=eJ8iJkiBHW0Q7kNvwHAfXTq&_nc_oc=Adp20LGns9wDTxvBijbS_7NwxzxkUb6Rr49ggsLU6Or9VzExBwz0dT-bGjSMIgiy91tWUnSMsOLwQqFCPipb2G-G&_nc_zt=23&_nc_ht=scontent.fpdl2-1.fna&_nc_gid=fyh5pUdQAbiWt1Nl85AI7w&_nc_ss=7a3a8&oh=00_Af0bhZZddrWgaCH1z5liSxIvvGJhIZNCfMkaESdrTBKsUw&oe=69DB5E20"
@@ -148,14 +163,16 @@
 - date: 2026-04-16
   name: "DesaFINO — Noite de Karaoke da AMIT"
   venue: Auditório AMIT
-  address: Angra do Heroísmo
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
   description: "Cantas uma música, bebes um FINO! AMIT's karaoke night — sing a song, get a beer."
   instagram: https://www.instagram.com/auditorioamit/
 
 - date: 2026-04-16
   name: "Cinema: Good Luck Have Fun Don't Die"
   venue: CCCAH
-  address: Angra do Heroísmo
+  address: Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
   time: "21:00"
   description: "Directed by Gore Verbinski. Tickets at angradoheroismo.pt"
   instagram: https://www.instagram.com/p/DWjE7iIiXqg/?img_index=4
@@ -164,6 +181,7 @@
   name: "K-9CAT Live"
   venue: Wine Not?
   address: Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Wine+Not+Angra+do+Heroísmo
   time: "21:30"
   description: "Live music performance by K-9CAT at Wine Not? Art Food and Drinks."
   instagram: https://www.instagram.com/k9cat/
@@ -171,18 +189,20 @@
 - date: 2026-04-11
   name: "Cinema: Super Mario Galaxy — O Filme"
   venue: CCCAH
-  address: Angra do Heroísmo
+  address: Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
   time: "15:00"
   description: "Family screening. Tickets at angradoheroismo.pt"
   instagram: https://www.instagram.com/p/DWjE7iIiXqg/?img_index=3
   tags:
-    - kid-friendly
-    - cinema
+  - kid-friendly
+  - cinema
 
 - date: 2026-04-10
   name: "Festival Termómetro"
   venue: CCCAH
-  address: Angra do Heroísmo
+  address: Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
   time: "21:30"
   description: "30 years discovering new music talent. Live: Daphné Chenel, Tinta Persona, Rita Cortezão. Free entry — tickets required from Apr 6 (max 6 per person)."
   instagram: https://www.instagram.com/p/DWZa-NPjdGe/
@@ -190,7 +210,8 @@
 - date: 2026-04-09
   name: "Cinema: A Noiva!"
   venue: CCCAH
-  address: Angra do Heroísmo
+  address: Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
   time: "21:00"
   description: "Starring Christian Bale. Tickets at angradoheroismo.pt"
   instagram: https://www.instagram.com/p/DWjE7iIiXqg/?img_index=2
@@ -198,7 +219,8 @@
 - date: 2026-04-07
   name: "Exposição: Tipografias de Angra"
   venue: Paços do Concelho
-  address: Angra do Heroísmo
+  address: Praça Velha, 9700-145 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Paços+do+Concelho+Angra+do+Heroísmo
   time: "19:00"
   description: "Exhibition exploring the typographic tradition of Angra do Heroísmo — a journey through the history of printing and visual communication. Free entry."
   instagram: https://www.instagram.com/p/DWgt7yCgFci/
@@ -206,7 +228,8 @@
 - date: 2026-04-07
   name: "Jornadas Municipais da Saúde (4ª Edição)"
   venue: CCCAH
-  address: Angra do Heroísmo
+  address: Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
   time: "14:00"
   description: "\"Desafios da Nova Sociedade para o Novo Mundo\" — talks on digital inclusion, financial literacy and active ageing. Free entry."
   instagram: https://www.instagram.com/p/DWcNTNtguSx/
@@ -214,21 +237,24 @@
 - date: 2026-04-05
   name: "Brunch de Páscoa no Garden Club"
   venue: The Garden Club
-  address: Rua Carreira dos Cavalos 37, Angra do Heroísmo
+  address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Heroísmo
   description: "Special Easter Brunch with American classics: pancakes, crispy bacon, eggs, sausage and more. Reserve your table."
   instagram: https://www.instagram.com/p/DWPHWOTEqD_/
 
 - date: 2026-04-05
   name: "Almoço de Páscoa no The Texan"
   venue: The Texan
-  address: Rua Carreira dos Cavalos 37, Angra do Heroísmo
+  address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Heroísmo
   description: "Special Easter lunch — dinner menu available at lunchtime for family gathering. Reserve your table."
   instagram: https://www.instagram.com/p/DWHYG6dgN2K/
 
 - date: 2026-04-04
   name: "Macow & Gonga — Drum & Bass Session"
   venue: Casa do Sal / Oficina d'Angra
-  address: Angra do Heroísmo
+  address: Estrada Gaspar Corte-Real, Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa+do+Sal+Oficina+d'Angra+Angra+do+Heroísmo
   time: "22:00"
   description: "Drum & Bass night with the Garcia brothers duo. Sócios: 1.50€ / Não sócios: 3.00€"
   instagram: https://www.instagram.com/p/DWaA6r9CoMn/
@@ -236,7 +262,8 @@
 - date: 2026-04-04
   name: "Art'Fado convida Marco Rodrigues"
   venue: Teatro Angrense
-  address: Angra do Heroísmo
+  address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Fado concert crossing tradition with contemporary sounds. With Filarmónica Rainha Santa Isabel das Doze Ribeiras. Tickets at CCCAH, CMAH, Ticketline."
   instagram: https://www.instagram.com/p/DWjE8B9Dl50/
@@ -244,14 +271,16 @@
 - date: 2026-04-02
   name: "DesaFINO — Noite de Karaoke da AMIT"
   venue: Auditório AMIT
-  address: Angra do Heroísmo
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
   description: "Cantas uma música, bebes um FINO! AMIT's karaoke night — sing a song, get a beer."
   instagram: https://www.instagram.com/auditorioamit/
 
 - date: 2026-04-02
   name: "Havanna Easter Party"
   venue: Havanna Club
-  address: Porto das Pipas, Angra do Heroísmo
+  address: Porto das Pipas 154, 9700-167 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Havanna+Club+Angra+do+Heroísmo
   description: "Thu: The Hits by Rafa & Maciel | Fri: Noite Funk com DJ Santinha | Sat: DJ Santinha"
   instagram: https://www.instagram.com/p/DWos9Vujlhq/
 
@@ -259,14 +288,16 @@
 - date: 2026-03-28
   name: "Curso de Jazz com Nuno Ferreira"
   venue: Auditório AMIT
-  address: Angra do Heroísmo
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
   description: "Jazz workshop with Nuno Ferreira (Jazz Academy of Music, ex-New School NYC). 3.5h theory + 5h practice over two days. Registration: clubedejazzamit@gmail.com"
   instagram: https://www.instagram.com/amit.academiamusical/
 
 - date: 2026-03-28
   name: "Jazz JAM Session com Nuno Ferreira"
   venue: Auditório AMIT
-  address: Av. Tenente Coronel José Agostinho, Angra do Heroísmo
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
   time: "22:00"
   description: "Guest: Nuno Ferreira (Jazz Academy of Music, ex-New School NYC). Open improv session, open to all. Free entry."
   instagram: https://www.instagram.com/amit.academiamusical/
@@ -274,7 +305,8 @@
 - date: 2026-03-14
   name: "Jazz JAM Session"
   venue: Auditório AMIT
-  address: Av. Tenente Coronel José Agostinho, Angra do Heroísmo
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
   time: "22:00"
   description: "Clube de Jazz AMIT. Open improv session — bring an instrument or just listen. Café-concerto in operation. Free entry."
   instagram: https://www.instagram.com/amit.academiamusical/
@@ -282,7 +314,8 @@
 - date: 2026-03-08
   name: 'Lançamento do livro "Despertar com Alma"'
   venue: Auditório AMIT
-  address: Ed. Rádio Clube de Angra, Angra do Heroísmo
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
   description: "Book launch by Rosana Cordeiro. Presentation by Paulo Freitas, live music by João Santos. International Women's Day event. Free entry."
   instagram: https://www.instagram.com/amit.academiamusical/
 
@@ -290,7 +323,8 @@
 - date: 2026-03-29
   name: '"O Melhor de Três"'
   venue: Teatro Angrense
-  address: Angra do Heroísmo
+  address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Teatro de Variedades de Porto Judeu"
   festival: Festival de Teatro 2026
@@ -299,7 +333,8 @@
 - date: 2026-03-28
   name: '"O Cultivo de Flores de Plástico"'
   venue: Teatro Angrense
-  address: Angra do Heroísmo
+  address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Alpendre Grupo de Teatro"
   festival: Festival de Teatro 2026
@@ -308,7 +343,8 @@
 - date: 2026-03-27
   name: '"Álamo - a palavra encena"'
   venue: Teatro Angrense
-  address: Angra do Heroísmo
+  address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Teatrinho"
   festival: Festival de Teatro 2026
@@ -317,7 +353,8 @@
 - date: 2026-03-24
   name: '"O Chão Começou-me a Faltar"'
   venue: Teatro Angrense
-  address: Angra do Heroísmo
+  address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Gerónima"
   festival: Festival de Teatro 2026
@@ -326,7 +363,8 @@
 - date: 2026-03-21
   name: '"Cabalhau"'
   venue: CCCAH
-  address: Angra do Heroísmo
+  address: Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Heroísmo
   time: "21:30"
   description: "Cães do Mar"
   festival: Festival de Teatro 2026
@@ -335,22 +373,24 @@
 - date: 2026-03-21
   name: "Equinócio da Primavera"
   venue: Zona de Lazer de São Brás
-  address: São Brás, Terceira
+  address: 9760 São Brás, Praia da Vitória
+  map_url: https://www.google.com/maps/search/?api=1&query=Zona+de+Lazer+de+São+Brás+Praia+da+Vitória
   time: "22:00"
   description: "Full Range rave celebrating the spring equinox. Outdoor party with camping, bar on site, pet friendly. PLUR mentality — Peace, Love, Unity and Respect. First 20 ravers get a surprise kit!"
   image: /assets/images/events/fullrange-equinocio-primavera-2026.jpg
   organizer: Full Range
   features:
-    - Camping available with showers
-    - Bar on site (cash & card)
-    - Pet friendly
-    - Bring your own cup (or buy for 1€)
-    - No unaccompanied minors
+  - Camping available with showers
+  - Bar on site (cash & card)
+  - Pet friendly
+  - Bring your own cup (or buy for 1€)
+  - No unaccompanied minors
 
 - date: 2026-03-20
   name: '"José Matias - Entretém Para Quatro Mulheres"'
   venue: Teatro Angrense
-  address: Angra do Heroísmo
+  address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Pedra Mó Grupo de Teatro"
   festival: Festival de Teatro 2026
@@ -359,7 +399,8 @@
 - date: 2026-03-15
   name: '"O Chá das Freiras"'
   venue: Teatro Angrense
-  address: Angra do Heroísmo
+  address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:30"
   description: "Grupo de Teatro a Sala"
   festival: Festival de Teatro 2026
@@ -368,7 +409,8 @@
 - date: 2026-03-13
   name: '"A Viagem Artificial"'
   venue: Teatro Angrense
-  address: Angra do Heroísmo
+  address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "11:00"
   description: "Ilhas Desconhecidas"
   festival: Festival de Teatro 2026
@@ -377,7 +419,8 @@
 - date: 2026-03-11
   name: '"Toc Toc" (19h00 + 21h00)'
   venue: Teatro Angrense
-  address: Angra do Heroísmo
+  address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "19:00"
   description: "Com Daniel Dantas, Iara Jamra, Sara Freitas e Ricardo Tozzi. Two shows: 19h00 and 21h00."
   festival: Festival de Teatro 2026
@@ -386,7 +429,8 @@
 - date: 2026-03-10
   name: '"Toc Toc"'
   venue: Teatro Angrense
-  address: Angra do Heroísmo
+  address: Rua da Esperança 48-52, 9700-073 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Heroísmo
   time: "21:00"
   description: "Com Daniel Dantas, Iara Jamra, Sara Freitas e Ricardo Tozzi"
   festival: Festival de Teatro 2026
@@ -395,65 +439,76 @@
 - date: 2026-01-03
   name: "Concerto ao Vivo - Double Trouble"
   venue: Tasca do Camões
-  address: Rua Da Rocha 64, Angra do Heroísmo
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
   description: Live concert featuring Double Trouble
 
 - date: 2025-12-27
   name: "The Big 90's Party - Com Red Hot Tribute"
   venue: Tasca do Camões
-  address: Rua Da Rocha 64, Angra do Heroísmo
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
   description: 90s themed party with Red Hot tribute band
 
 - date: 2025-12-26
   name: "Sexta-Feira Karaoke"
   venue: Tasca do Camões
-  address: Rua Da Rocha 64, Angra do Heroísmo
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
   description: Special Friday karaoke session
 
 - date: 2025-12-20
   name: "Kevin Floyd: A Primeira Vez em Portugal"
   venue: Tasca do Camões
-  address: Rua Da Rocha 64, Angra do Heroísmo
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
   description: Kevin Floyd's first performance in Portugal
 
 - date: 2025-12-19
   name: "Noite de Karaoke"
   venue: Tasca do Camões
-  address: Rua Da Rocha 64, Angra do Heroísmo
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
   description: Karaoke night
 
 - date: 2025-12-13
   name: "Concerto ao Vivo com Regalo Reggae"
   venue: Tasca do Camões
-  address: Rua Da Rocha 64, Angra do Heroísmo
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
   description: Live reggae concert with Regalo Reggae
 
 - date: 2025-12-07
   name: "Concerto Rock ao Vivo com 3 HP"
   venue: Tasca do Camões
-  address: Rua Da Rocha 64, Angra do Heroísmo
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
   description: Live rock concert with 3 HP
 
 - date: 2025-12-03
   name: "Concerto Rock com 3HP"
   venue: Tasca do Camões
-  address: Rua Da Rocha 64, Angra do Heroísmo
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
   description: Rock concert with 3HP
 
 - date: 2025-11-29
   name: "Sábado Noite de Samba"
   venue: Tasca do Camões
-  address: Rua Da Rocha 64, Angra do Heroísmo
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
   description: Saturday samba night
 
 - date: 2025-11-21
   name: "Concerto ao Vivo com Double Trouble & DJ Cosmic Clara"
   venue: Tasca do Camões
-  address: Rua Da Rocha 64, Angra do Heroísmo
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
   description: Live concert with Double Trouble and DJ Cosmic Clara
 
 - date: 2025-02-27
   name: "Leitura de Poetas Delirantes"
   venue: Lar Doce Livro
-  address: Rua de São João 22-24, Angra do Heroísmo
+  address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
   description: Delirious Poets reading event

@@ -1,46 +1,54 @@
 - day: Monday
   events:
-    - name: Dance Night
-      venue: Wine Not
-      time: Evening
-      description: Weekly dance event
+  - name: Dance Night
+    venue: Wine Not
+    map_url: https://www.google.com/maps/search/?api=1&query=Wine+Not+Angra+do+Heroísmo
+    time: Evening
+    description: Weekly dance event
 
 - day: Wednesday
   events:
-    - name: Karaoke Night
-      venue: Tasca do Camões
-      time: "20:30"
-      description: Weekly karaoke at Camões
-      address: Rua Da Rocha 64, Angra do Heroísmo
-    - name: Clube de Leitura
-      venue: Lar Doce Livro
-      time: "18:15"
-      description: Weekly reading club
-      address: Rua de São João 22-24, Angra do Heroísmo
+  - name: Karaoke Night
+    venue: Tasca do Camões
+    time: "20:30"
+    description: Weekly karaoke at Camões
+    address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
+  - name: Clube de Leitura
+    venue: Lar Doce Livro
+    time: "18:15"
+    description: Weekly reading club
+    address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
 
+    map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
 - day: Thursday
   events:
-    - name: Latin Night
-      venue: Tasca do Camões
-      time: "20:30"
-      description: Weekly Latin night
-      note: "No formal class, but there are instructors present who help newcomers learn. Feel safe to come even with no prior dance experience!"
-      address: Rua Da Rocha 64, Angra do Heroísmo
+  - name: Latin Night
+    venue: Tasca do Camões
+    time: "20:30"
+    description: Weekly Latin night
+    note: "No formal class, but there are instructors present who help newcomers learn. Feel safe to come even with no prior dance experience!"
+    address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
 
+    map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
 - day: Friday
   events:
-    - name: Karaoke Night
-      venue: The Texan
-      time: "22:30"
-      description: "Very popular! It often fills up at the start but seats open up around 23:30–midnight, so worth checking in later or grabbing a drink at the Texan bar while you wait."
-      note: "Reservations are for dinner, not karaoke — if you reserve, you are expected to order dinner. Last dinner reservation is at 21:00. Reservations are cancelled 15 minutes after the set time, so you need to arrive by 21:15 at the latest. If you reserve at 21:00 and show up at 22:30 for karaoke, your reservation will already be cancelled!"
-      url: https://www.thetexan.pt
+  - name: Karaoke Night
+    venue: The Texan
+    address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Heroísmo
+    time: "22:30"
+    description: "Very popular! It often fills up at the start but seats open up around 23:30–midnight, so worth checking in later or grabbing a drink at the Texan bar while you wait."
+    note: "Reservations are for dinner, not karaoke — if you reserve, you are expected to order dinner. Last dinner reservation is at 21:00. Reservations are cancelled 15 minutes after the set time, so you need to arrive by 21:15 at the latest. If you reserve at 21:00 and show up at 22:30 for karaoke, your reservation will already be cancelled!"
+    url: https://www.thetexan.pt
 
 - day: Saturday
   events:
-    - name: Karaoke Night
-      venue: The Texan
-      time: "22:30"
-      description: "Very popular! It often fills up at the start but seats open up around 23:30–midnight, so worth checking in later or grabbing a drink at the Texan bar while you wait."
-      note: "Reservations are for dinner, not karaoke — if you reserve, you are expected to order dinner. Last dinner reservation is at 21:00. Reservations are cancelled 15 minutes after the set time, so you need to arrive by 21:15 at the latest. If you reserve at 21:00 and show up at 22:30 for karaoke, your reservation will already be cancelled!"
-      url: https://www.thetexan.pt
+  - name: Karaoke Night
+    venue: The Texan
+    address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Heroísmo
+    time: "22:30"
+    description: "Very popular! It often fills up at the start but seats open up around 23:30–midnight, so worth checking in later or grabbing a drink at the Texan bar while you wait."
+    note: "Reservations are for dinner, not karaoke — if you reserve, you are expected to order dinner. Last dinner reservation is at 21:00. Reservations are cancelled 15 minutes after the set time, so you need to arrive by 21:15 at the latest. If you reserve at 21:00 and show up at 22:30 for karaoke, your reservation will already be cancelled!"
+    url: https://www.thetexan.pt
