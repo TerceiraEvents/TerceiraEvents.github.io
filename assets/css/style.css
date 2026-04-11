@@ -236,6 +236,19 @@ h3 {
   margin-top: 0.1rem;
 }
 
+.event-map-link {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary, #2d5016);
+  text-decoration: none;
+}
+
+.event-map-link:hover {
+  text-decoration: underline;
+}
+
 .event-note {
   color: var(--text-muted);
   font-size: 0.85rem;
