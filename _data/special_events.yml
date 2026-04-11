@@ -108,6 +108,16 @@
   description: "Book presentation by Eduardo Ferraz da Rosa — studies in philosophy and literary criticism. Free entry."
   instagram: https://www.instagram.com/p/DWjnHOhEpZ5/
 
+- name: "Collecting strawberries at Sabores da Horta"
+  date: "2026-04-18"
+  time: "09:30"
+  venue: "Sabores da Horta"
+  address: "https://maps.app.goo.gl/Jqw6MqjUWzjvEhPM9?g_st=ic"
+  description: "Every Saturday from 9.30 to 13.00 you could come to collect strawberries and have fun with your kids (you can feed animals, jumping on trampoline, have a tractor ride…)"
+  instagram: "https://www.instagram.com/sabores_dahort_a?igsh=bWQwcTN6OGxlaWZk"
+  tags:
+    - kid-friendly
+
 - date: 2026-04-18
   name: "K-9CAT Live — Record Store Day"
   venue: The Vinyl Lounge
