@@ -5,3 +5,7 @@ _site/
 Gemfile.lock
 .bundle/
 vendor/
+
+# Python bytecode from scripts/
+__pycache__/
+*.pyc
