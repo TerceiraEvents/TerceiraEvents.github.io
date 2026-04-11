@@ -23,7 +23,12 @@ jobs:
         run: |
           ruby -ryaml -rdate <<'RUBY'
           path = "_data/special_events.yml"
-          data = YAML.load_file(path)
+          # Psych's safe_load (default since Ruby 3.1) refuses to instantiate
+          # Date unless it's in permitted_classes. Use safe_load explicitly
+          # with File.read so the keyword-argument form works across Ruby
+          # versions (the load_file API for permitted_classes shifted between
+          # 3.0 and 3.2).
+          data = YAML.safe_load(File.read(path), permitted_classes: [Date, Time])
 
           unless data.is_a?(Array)
             abort "#{path}: expected a top-level YAML list, got #{data.class}"
