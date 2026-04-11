@@ -22,7 +22,7 @@
   - theater
 
 - name: "ESCAMA: de dragão 2#"
-  date: "2026-05-09"
+  date: 2026-05-09
   time: "21:00"
   venue: "AMIT"
   address: "Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo"
@@ -121,7 +121,7 @@
   instagram: https://www.instagram.com/p/DWjnHOhEpZ5/
 
 - name: "Collecting strawberries at Sabores da Horta"
-  date: "2026-04-18"
+  date: 2026-04-18
   time: "09:30"
   venue: "Sabores da Horta"
   address: "Canada do Saco, 9760-123"
@@ -141,7 +141,7 @@
   instagram: https://www.instagram.com/k9cat/
 
 - name: "Balas & Bolinhos - Só Mais uma coisa"
-  date: "2026-04-17"
+  date: 2026-04-17
   time: "21:00"
   venue: "AMIT"
   address: "Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo"
@@ -151,7 +151,7 @@
   image: "https://scontent.fpdl2-1.fna.fbcdn.net/v/t39.30808-6/659878910_1394399549397123_62101908351088206_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=8DKmN1pxDFkQ7kNvwFAZ1Qj&_nc_oc=AdquKGD1CfLqNPBYWTgoFJ6-_1UOJWFnRZf7LmM8m-yiOgkj5tQQ-BHB6NnUdtAUfaebWVI0ou_8HnxD-zYXQUuB&_nc_zt=23&_nc_ht=scontent.fpdl2-1.fna&_nc_gid=sx90Rwc2f2d5KxV8p2sG3Q&_nc_ss=7a3a8&oh=00_Af3EBnJ2YH9CyQHNXt0gNIydzJmegxsweD3RhuixcxrZqA&oe=69DB5DD6"
 
 - name: "ESCAMA: de dragão 1#"
-  date: "2026-04-17"
+  date: 2026-04-17
   time: "23:30"
   venue: "AMIT"
   address: "Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo"
