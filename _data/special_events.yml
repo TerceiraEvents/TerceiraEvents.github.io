@@ -512,3 +512,8 @@
   address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
   map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
   description: Delirious Poets reading event
+
+- name: "Post-PAT-rotation smoke test (please close)"
+  date: "2099-01-02"
+  venue: "(smoke test venue)"
+  description: "Verifying the fine-grained PAT rotation. Safe to close."
