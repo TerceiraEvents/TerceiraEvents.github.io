@@ -46,6 +46,19 @@
     {% if event.address %}
     <div class="event-address">{{ event.address }}</div>
     {% endif %}
+    {% assign map_link = "" %}
+    {% if event.map_url %}
+      {% assign map_link = event.map_url %}
+    {% elsif event.address %}
+      {% assign map_query = event.address | url_encode %}
+      {% assign map_link = "https://www.google.com/maps/search/?api=1&query=" | append: map_query %}
+    {% elsif event.venue %}
+      {% assign map_query = event.venue | url_encode %}
+      {% assign map_link = "https://www.google.com/maps/search/?api=1&query=" | append: map_query %}
+    {% endif %}
+    {% if map_link != "" %}
+    <a class="event-map-link" href="{{ map_link }}" target="_blank" rel="noopener">📍 Open in Maps</a>
+    {% endif %}
     {% if event.time %}
     <div class="event-time-info">{{ event.time }}</div>
     {% endif %}

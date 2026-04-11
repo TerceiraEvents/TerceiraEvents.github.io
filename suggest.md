@@ -35,6 +35,12 @@ title: "Suggest an Event - Terceira Events"
   </div>
 
   <div class="form-field">
+    <label for="map_url">Google Maps Link</label>
+    <input type="url" id="map_url" name="map_url" maxlength="500" placeholder="https://maps.app.goo.gl/...">
+    <small>Optional &mdash; paste a Google Maps share link to pin the exact location</small>
+  </div>
+
+  <div class="form-field">
     <label for="description">Description</label>
     <textarea id="description" name="description" rows="4" maxlength="2000" placeholder="What's the event about? Ticket info, guests, anything else people should know."></textarea>
   </div>
