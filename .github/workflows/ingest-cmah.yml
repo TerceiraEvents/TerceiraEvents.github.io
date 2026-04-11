@@ -1,0 +1,95 @@
+name: ingest CMAH events
+
+# Daily ingestion of events from the Câmara Municipal de Angra do Heroísmo
+# iCal feed (https://angradoheroismo.pt/events.ics) into
+# _data/special_events.yml. Opens a pull request with any new events for
+# human review before they land on main.
+#
+# See scripts/ingest_cmah.py for dedup and parsing logic.
+
+on:
+  schedule:
+    # 06:00 UTC ≈ 06:00 Azores (winter) / 07:00 Azores (summer DST).
+    # Early enough that a reviewer finds the PR waiting in the morning.
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: ingest-cmah
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install --quiet icalendar==7.0.3 pyyaml==6.0.2
+
+      - name: Run ingestion script
+        run: python scripts/ingest_cmah.py
+
+      - name: Validate _data/special_events.yml
+        # Mirror of the check in .github/workflows/validate-events.yml so
+        # we never open a PR with a broken file. Auto-opened PRs don't
+        # trigger validate-events.yml (GITHUB_TOKEN can't trigger other
+        # workflows), so we inline the same validation here.
+        run: |
+          ruby -ryaml -rdate <<'RUBY'
+          path = "_data/special_events.yml"
+          data = YAML.safe_load(File.read(path), permitted_classes: [Date, Time])
+          abort "#{path}: expected top-level list, got #{data.class}" unless data.is_a?(Array)
+          errors = []
+          data.each_with_index do |event, i|
+            name = event["name"] || "(unnamed ##{i})"
+            date = event["date"]
+            if date.nil?
+              errors << "#{name}: missing `date` field"
+              next
+            end
+            unless date.is_a?(Date)
+              errors << "#{name}: `date` must be an unquoted ISO date, got #{date.class}"
+            end
+          end
+          if errors.any?
+            warn "event data validation failed:"
+            errors.each { |e| warn "  - #{e}" }
+            exit 1
+          end
+          puts "#{path}: OK (#{data.size} events)"
+          RUBY
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/cmah-ingest
+          delete-branch: true
+          commit-message: "Auto-ingest new events from CMAH iCal feed"
+          title: "Auto-ingest: new events from CMAH"
+          body: |
+            Automated ingestion from https://angradoheroismo.pt/events.ics
+
+            This PR was opened by `.github/workflows/ingest-cmah.yml`. Review
+            the added events, edit descriptions/tags/venues as needed, then
+            merge.
+
+            **Known limitations:**
+            - Dedup matches on CMAH `source_uid` and word-level name
+              similarity on the same date. Cross-language renames (e.g.
+              English marketing title vs Portuguese feed title) may slip
+              through and need manual merging with existing entries.
+            - Per-run cap: 20 events. Re-runs will backfill the rest.
+            - Descriptions are truncated to ~500 characters with ellipsis.
+
+            Script: `scripts/ingest_cmah.py`
+          labels: |
+            automated
+            events
