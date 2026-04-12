@@ -44,6 +44,13 @@
 
 - day: Saturday
   events:
+  - name: Collecting Strawberries at Sabores da Horta
+    venue: Sabores da Horta
+    address: Canada do Saco, 9760-123
+    map_url: https://maps.app.goo.gl/Jqw6MqjUWzjvEhPM9?g_st=ic
+    time: "09:30–13:00"
+    description: "Come collect strawberries and have fun with your kids — feed animals, jump on the trampoline, take a tractor ride…"
+    instagram: https://www.instagram.com/sabores_dahort_a?igsh=bWQwcTN6OGxlaWZk
   - name: Karaoke Night
     venue: The Texan
     address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
