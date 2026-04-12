@@ -5,7 +5,7 @@ title: Special Events - Terceira Events
 
 {% assign now_ts = "now" | date: "%s" | plus: 0 %}
 {% assign sorted_events = site.data.special_events | sort: "date" %}
-{% assign end_of_week_ts = now_ts | plus: 345600 %}
+{% assign end_of_week_ts = now_ts | plus: 604800 %}
 
 {% assign has_this_week = false %}
 
