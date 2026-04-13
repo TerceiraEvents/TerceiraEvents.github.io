@@ -7,17 +7,42 @@ on:
       - "_data/special_events.yml"
       - "_data/weekly.yml"
       - ".github/workflows/validate-events.yml"
+      - "scripts/validate_image_hosts.py"
+      - "scripts/test_validate_image_hosts.py"
+      - "scripts/rehost_image.py"
+      - "scripts/test_rehost_image.py"
   pull_request:
     paths:
       - "_data/special_events.yml"
       - "_data/weekly.yml"
       - ".github/workflows/validate-events.yml"
+      - "scripts/validate_image_hosts.py"
+      - "scripts/test_validate_image_hosts.py"
+      - "scripts/rehost_image.py"
+      - "scripts/test_rehost_image.py"
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Unit-test image-host classifier
+        run: python scripts/test_validate_image_hosts.py
+
+      - name: Unit-test image rehost helper
+        run: python scripts/test_rehost_image.py
+
+      - name: Reject rotting image hosts (fbcdn.net, fb.me, bare facebook.com pages)
+        run: python scripts/validate_image_hosts.py _data/special_events.yml
 
       - name: Validate _data/special_events.yml
         run: |
