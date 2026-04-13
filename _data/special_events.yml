@@ -145,6 +145,16 @@
 
 
 - date: 2026-04-18
+  name: "Don't Funk With My Disco — DJ Rúben Araújo"
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
+  description: "DJ Rúben Araújo e a sua orquestra de vinis — disco, funk, 70s e 80s."
+  tags:
+  - nightlife
+  - dance
+
+- date: 2026-04-18
   name: "K-9CAT Live — Record Store Day"
   venue: The Vinyl Lounge
   address: Angra do Heroísmo
@@ -200,6 +210,36 @@
   instagram: https://www.instagram.com/p/DWjE7iIiXqg/?img_index=4
   tags:
   - cinema
+
+- date: 2026-04-14
+  name: "Palestra: Quem foi, afinal, esse Silvestre Ribeiro?"
+  venue: Lar Doce Livro
+  address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "18:15"
+  description: "Palestra com Francisco Miguel Nogueira: \"Quem foi, afinal, esse Silvestre Ribeiro que deu nome à biblioteca, à rua e ao largo?\""
+  tags:
+  - literature
+
+- date: 2026-04-13
+  name: "Clube de Leitura — Sessão Especial: O Último Avô"
+  venue: Lar Doce Livro
+  address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "17:00"
+  description: "Sessão especial do Clube de Leitura, coordenada por Paula Cotter Cabral, sobre \"O Último Avô\" com a presença do autor Afonso Reis Cabral (por videoconferência)."
+  tags:
+  - literature
+
+- date: 2026-04-13
+  name: "Clube de Leitura — Filho do Pai"
+  venue: Lar Doce Livro
+  address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Clube de Leitura coordenado por Catarina Marcelino — leitura de abril: \"Filho do Pai\" de Hugo Gonçalves."
+  tags:
+  - literature
 
 - date: 2026-04-11
   name: "K-9CAT Live"
