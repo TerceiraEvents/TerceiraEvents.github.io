@@ -1,0 +1,119 @@
+name: rehost image
+
+# Two entry points, one handler:
+#
+# 1. workflow_dispatch — manual / API-triggered. The event-submit Worker
+#    (separate repo) is expected to POST to
+#    /repos/<owner>/<repo>/actions/workflows/rehost-image.yml/dispatches
+#    with {url, slug, date} inputs when an image URL arrives via the
+#    submission form.
+#
+# 2. issues — labeled with `rehost-image`. A maintainer can open an
+#    issue whose body contains key:value lines `url:`, `slug:`, `date:`
+#    (yyyy-mm-dd) and label it `rehost-image`; this workflow rehosts the
+#    image and comments the resulting releases/download/... URL back on
+#    the issue.
+#
+# Both paths run the same job, which calls scripts/rehost_image.py.
+# See issue #67 for the pipeline design and scripts/rehost_image.py for
+# the heavy lifting (fetch with browser headers, verify content-type,
+# upload as a release asset, return the permanent URL).
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Source image URL to fetch and re-host"
+        required: true
+        type: string
+      slug:
+        description: "Event slug (used in the asset filename)"
+        required: true
+        type: string
+      date:
+        description: "Event date in yyyy-mm-dd"
+        required: true
+        type: string
+  issues:
+    types: [opened, labeled, edited]
+
+permissions:
+  contents: write   # release creation + asset upload
+  issues: write     # commenting back on the issue
+
+jobs:
+  rehost:
+    runs-on: ubuntu-latest
+
+    # For the `issues` trigger, only run when the `rehost-image` label
+    # is present. workflow_dispatch always runs.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issues' &&
+       contains(github.event.issue.labels.*.name, 'rehost-image'))
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Resolve rehost inputs
+        id: resolve
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_URL: ${{ inputs.url }}
+          INPUT_SLUG: ${{ inputs.slug }}
+          INPUT_DATE: ${{ inputs.date }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          python scripts/parse_rehost_request.py \
+            --event-name "$EVENT_NAME" \
+            --url "$INPUT_URL" \
+            --slug "$INPUT_SLUG" \
+            --date "$INPUT_DATE" \
+            --issue-body "$ISSUE_BODY" \
+            >> "$GITHUB_OUTPUT"
+
+      - name: Rehost image as a release asset
+        id: rehost
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -e
+          RESULT=$(python scripts/rehost_image.py \
+            "${{ steps.resolve.outputs.url }}" \
+            "${{ steps.resolve.outputs.slug }}" \
+            "${{ steps.resolve.outputs.date }}")
+          echo "result=$RESULT" >> "$GITHUB_OUTPUT"
+          echo "Rehosted: $RESULT"
+
+      - name: Comment rehosted URL on the issue
+        if: github.event_name == 'issues'
+        uses: actions/github-script@v7
+        env:
+          REHOSTED_URL: ${{ steps.rehost.outputs.result }}
+        with:
+          script: |
+            const url = process.env.REHOSTED_URL;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: [
+                "Rehosted as a release asset. Drop this into `_data/special_events.yml`:",
+                "",
+                "```yaml",
+                `image: ${url}`,
+                "```",
+              ].join("\n"),
+            });
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ["rehosted"],
+            });
