@@ -45,6 +45,7 @@ h1, h2, h3 {
   position: relative;
   background: var(--green-dark);
   overflow: hidden;
+  min-height: 220px;
 }
 
 .hero-image {
