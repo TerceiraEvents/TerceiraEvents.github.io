@@ -150,7 +150,7 @@
   address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
   map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
   description: "DJ Rúben Araújo e a sua orquestra de vinis — disco, funk, 70s e 80s."
-  image: /assets/images/events/dont-funk-with-my-disco-2026-04-18.png
+  image: https://github.com/user-attachments/assets/f4d41d0d-bf3a-43ba-8a55-1a2953f91998
   tags:
   - nightlife
   - dance
@@ -219,7 +219,7 @@
   map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
   time: "18:15"
   description: "Palestra com Francisco Miguel Nogueira: \"Quem foi, afinal, esse Silvestre Ribeiro que deu nome à biblioteca, à rua e ao largo?\""
-  image: /assets/images/events/palestra-silvestre-ribeiro-2026-04-14.png
+  image: https://github.com/user-attachments/assets/d2c5516e-7ed7-4e80-bb96-401741f3f873
   tags:
   - literature
 
@@ -230,7 +230,7 @@
   map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
   time: "17:00"
   description: "Sessão especial do Clube de Leitura, coordenada por Paula Cotter Cabral, sobre \"O Último Avô\" com a presença do autor Afonso Reis Cabral (por videoconferência)."
-  image: /assets/images/events/clube-leitura-ultimo-avo-2026-04-13.png
+  image: https://github.com/user-attachments/assets/b025312b-9888-4fdc-b663-194d7d476706
   tags:
   - literature
 
@@ -241,7 +241,7 @@
   map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
   time: "18:30"
   description: "Clube de Leitura coordenado por Catarina Marcelino — leitura de abril: \"Filho do Pai\" de Hugo Gonçalves."
-  image: /assets/images/events/clube-leitura-filho-do-pai-2026-04-13.png
+  image: https://github.com/user-attachments/assets/6da63fcb-4cab-4cb3-89ac-32508f8e7a84
   tags:
   - literature
 
