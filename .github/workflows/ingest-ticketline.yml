@@ -1,0 +1,107 @@
+name: ingest Ticketline events
+
+# Daily ingestion of events from Ticketline's Ilha Terceira district listing
+# (https://www.ticketline.pt/pesquisa?district=29) into
+# _data/special_events.yml. Covers Teatro Angrense, CCCAH, and the
+# Auditório Ramo Grande in Praia da Vitória — the last of which CMAH's
+# municipal feed doesn't cover.
+#
+# Opens a PR for human review, same pattern as ingest-cmah.yml.
+#
+# See scripts/ingest_ticketline.py for dedup and parsing logic.
+
+on:
+  schedule:
+    # 06:30 UTC — staggered 30 minutes after the CMAH ingest so CMAH lands
+    # first and Ticketline can dedup against CMAH's source_uid entries when
+    # both feeds list the same cinema/concert event.
+    - cron: "30 6 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: ingest-ticketline
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        # icalendar isn't strictly needed for Ticketline but keeping the deps
+        # aligned with ingest-cmah.yml makes local testing uniform.
+        run: pip install --quiet icalendar==7.0.3 pyyaml==6.0.2
+
+      - name: Run ingestion script
+        run: python scripts/ingest_ticketline.py
+
+      - name: Validate _data/special_events.yml
+        # Mirror of the check in .github/workflows/validate-events.yml so we
+        # never open a PR with a broken file. Auto-opened PRs don't trigger
+        # other workflows (GITHUB_TOKEN can't trigger other workflows).
+        run: |
+          ruby -ryaml -rdate <<'RUBY'
+          path = "_data/special_events.yml"
+          data = YAML.safe_load(File.read(path), permitted_classes: [Date, Time])
+          abort "#{path}: expected top-level list, got #{data.class}" unless data.is_a?(Array)
+          errors = []
+          data.each_with_index do |event, i|
+            name = event["name"] || "(unnamed ##{i})"
+            date = event["date"]
+            if date.nil?
+              errors << "#{name}: missing `date` field"
+              next
+            end
+            unless date.is_a?(Date)
+              errors << "#{name}: `date` must be an unquoted ISO date, got #{date.class}"
+            end
+          end
+          if errors.any?
+            warn "event data validation failed:"
+            errors.each { |e| warn "  - #{e}" }
+            exit 1
+          end
+          puts "#{path}: OK (#{data.size} events)"
+          RUBY
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/ticketline-ingest
+          delete-branch: true
+          commit-message: "Auto-ingest new events from Ticketline"
+          title: "Auto-ingest: new events from Ticketline"
+          body: |
+            Automated ingestion from https://www.ticketline.pt/pesquisa?district=29
+            (Ilha Terceira district filter).
+
+            This PR was opened by `.github/workflows/ingest-ticketline.yml`.
+            Review the added events, edit descriptions/tags/venues as needed,
+            then merge.
+
+            **Coverage:** Teatro Angrense, CCCAH (both auditoriums), and the
+            Auditório Ramo Grande in Praia da Vitória. The Praia events are
+            the main unique value here — CMAH's municipal feed doesn't cover
+            them.
+
+            **Known limitations:**
+            - Ticketline titles come through in ALL CAPS. The reviewer may
+              want to apply title case before merging.
+            - Cross-language dedup against CMAH titles (Portuguese vs English
+              movie titles) may slip through. The workflow is staggered to run
+              30 minutes after the CMAH ingest so CMAH events land first.
+            - Per-run cap: 20 events. Re-runs will backfill the rest.
+            - Descriptions are truncated to ~500 characters.
+
+            Script: `scripts/ingest_ticketline.py`
+          labels: |
+            automated
+            events
