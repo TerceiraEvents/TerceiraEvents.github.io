@@ -11,6 +11,8 @@ on:
       - "scripts/test_validate_image_hosts.py"
       - "scripts/rehost_image.py"
       - "scripts/test_rehost_image.py"
+      - "scripts/parse_rehost_request.py"
+      - "scripts/test_parse_rehost_request.py"
   pull_request:
     paths:
       - "_data/special_events.yml"
@@ -20,6 +22,8 @@ on:
       - "scripts/test_validate_image_hosts.py"
       - "scripts/rehost_image.py"
       - "scripts/test_rehost_image.py"
+      - "scripts/parse_rehost_request.py"
+      - "scripts/test_parse_rehost_request.py"
 
 jobs:
   validate:
@@ -40,6 +44,9 @@ jobs:
 
       - name: Unit-test image rehost helper
         run: python scripts/test_rehost_image.py
+
+      - name: Unit-test rehost-request parser
+        run: python scripts/test_parse_rehost_request.py
 
       - name: Reject rotting image hosts (fbcdn.net, fb.me, bare facebook.com pages)
         run: python scripts/validate_image_hosts.py _data/special_events.yml
