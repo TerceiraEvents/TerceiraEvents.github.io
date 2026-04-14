@@ -217,6 +217,17 @@
   - live-music
   - nightlife
 
+- date: 2026-04-17
+  name: "Double Trouble — Concerto ao Vivo"
+  venue: Tasca do Camões
+  address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
+  description: "Live concert with Double Trouble at Tasca do Camões."
+  image: https://github.com/user-attachments/assets/31308735-a82d-4727-89ec-b192ceb17bfd
+  tags:
+  - live-music
+  - nightlife
+
 - date: 2026-04-16
   name: "DesaFINO — Noite de Karaoke da AMIT"
   venue: Auditório AMIT
