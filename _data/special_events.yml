@@ -151,7 +151,7 @@
   map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
   time: "21:00"
   description: "Traditional Americana open jam night at Lar Doce Livro (Home Sweet Book). Featuring Brenda Koenig, Drew Philips, K9 Cat, and Randy Hough."
-  image: /assets/images/events/festa-americana-fried-okra-20260418.jpg
+  image: https://github.com/user-attachments/assets/5e790ac8-6621-4605-a820-7da6b4efd32e
   tags:
   - live-music
 
