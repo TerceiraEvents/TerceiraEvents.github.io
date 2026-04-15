@@ -145,6 +145,17 @@
 
 
 - date: 2026-04-18
+  name: "III Festa Americana — Fried Okra: Traditional Americana Open Jam Night"
+  venue: Lar Doce Livro
+  address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "21:00"
+  description: "Traditional Americana open jam night at Lar Doce Livro (Home Sweet Book). Featuring Brenda Koenig, Drew Philips, K9 Cat, and Randy Hough."
+  image: /assets/images/events/festa-americana-fried-okra-20260418.jpg
+  tags:
+  - live-music
+
+- date: 2026-04-18
   name: "Don't Funk With My Disco — DJ Rúben Araújo"
   venue: Tasca do Camões
   address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
