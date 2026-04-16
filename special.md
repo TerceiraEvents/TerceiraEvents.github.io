@@ -3,7 +3,7 @@ layout: default
 title: Special Events - Terceira Events
 ---
 
-{% assign now_ts = "now" | date: "%s" | plus: 0 %}
+{% assign now_ts = "now" | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
 {% assign sorted_events = site.data.special_events | sort: "date" %}
 {% assign end_of_week_ts = now_ts | plus: 604800 %}
 

@@ -9,7 +9,7 @@ title: Full Events Calendar - Terceira Events
 
 {% include event_search_bar.html %}
 
-{% assign now_ts = "now" | date: "%s" | plus: 0 %}
+{% assign now_ts = "now" | date: "%Y-%m-%d" | date: "%s" | plus: 0 %}
 {% assign sorted_events = site.data.special_events | sort: "date" %}
 
 {% assign has_upcoming = false %}
