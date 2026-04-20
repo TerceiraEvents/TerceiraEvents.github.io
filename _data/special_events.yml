@@ -75,6 +75,92 @@
   - live-music
 
 # April 2026
+- date: 2026-04-25
+  name: "Sons da Revolução — Melo Rift"
+  venue: Auditório AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  time: "22:00"
+  description: "Uma viagem de vinyl por Melo Rift — a vinyl DJ set marking the 25 de Abril revolution anniversary."
+  instagram: https://www.instagram.com/auditorioamit/
+  image: https://github.com/user-attachments/assets/d0798b29-4c5a-4b7a-854a-e76e8637bf3c
+  tags:
+  - nightlife
+  - live-music
+
+- date: 2026-04-24
+  name: "Jantar de Angariação AMIT + Workshop de Dança + Live Music"
+  venue: Auditório AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Fundraising dinner for AMIT, dance workshop, and live music."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - food-drink
+  - dance
+  - live-music
+  - workshop
+
+- date: 2026-04-23
+  name: "Game Night: Marralhinha"
+  venue: Auditório AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Game night at AMIT — come play Marralhinha (traditional Azorean card game)."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags: []
+
+- date: 2026-04-21
+  name: "Torneio EAFC 26 — Playstation"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  time: "20:00"
+  description: "EA FC 26 PlayStation tournament at Espaço AMIT. Entrada livre!"
+  instagram: https://www.instagram.com/auditorioamit/
+  image: https://github.com/user-attachments/assets/35a9b8dc-8731-4d11-8a37-de8e00cf6a61
+  tags:
+  - free
+
+- date: 2026-04-11
+  name: "Jazz Jam Session"
+  venue: Auditório AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Jazz jam session at AMIT — musicians welcome to sit in."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - live-music
+
+- date: 2026-04-10
+  name: "Open Decks: Eu Não Sou DJ — com Guida Sabida"
+  venue: Auditório AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Open decks night — bring your records and play. This edition hosted by Guida Sabida."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - nightlife
+
+- date: 2026-04-09
+  name: "Game Night: Sueca"
+  venue: Auditório AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Game night at AMIT — come play Sueca (traditional Portuguese card game)."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags: []
+
+- date: 2026-04-03
+  name: "Open Decks: Eu Não Sou DJ — com Zé Grande"
+  venue: Auditório AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Open decks night — bring your records and play. This edition hosted by Zé Grande."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - nightlife
+
 - date: 2026-04-30
   name: "DesaFINO — Noite de Karaoke da AMIT"
   venue: Auditório AMIT
