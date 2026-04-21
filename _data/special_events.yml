@@ -819,3 +819,23 @@
   description: Delirious Poets reading event
   tags:
   - literature
+
+- name: "Festival de Sopas"
+  date: 2026-05-09
+  time: "19:30"
+  venue: "Casa do Povo de Porto Judeu"
+  address: "Caminho da Esperança nr 138, 9760-368 Porto Judeu"
+  map_url: "https://www.google.com/maps/place/Casa+do+Povo+de+Porto+Judeu/@38.6472297,-27.1242737,17z/data=!4m22!1m15!4m14!1m6!1m2!1s0xb45d4de6676d375:0x92f4e7037567b8b3!2sCasa+do+Povo+de+Porto+Judeu,+Caminho+da+Esperan%C3%A7a+nr+138,+9760-368+Porto+Judeu!2m2!1d-27.1216988!2d38.6472255!1m6!1m2!1s0xb45d4de6676d375:0x92f4e7037567b8b3!2sCasa+do+Povo+de+Porto+Judeu,+Caminho+da+Esperan%C3%A7a+nr+138,+9760-368+Porto+Judeu!2m2!1d-27.1216988!2d38.6472255!3m5!1s0xb45d4de6676d375:0x92f4e7037567b8b3!8m2!3d38.6472255!4"
+  description: "The 2026 Porto Judeu Village Festival Committee invites you to an evening full of flavor, tradition, and good spirits at our Soup Festival!There will be a soup competition with prizes for the top 3 winners.
+The public will vote for their favorite soup and help choose the winners of the night.
+Live entertainment by Artur Miranda
+
+Children up to 6 years old: free
+From 7 years old: includes 4 soups
+
+Tickets available from the committee members
+
+Come join us and support our festivities!"
+  tags:
+    - kid-friendly
+    - live-music
