@@ -74,6 +74,286 @@
   tags:
   - live-music
 
+# Calendário das Touradas à Corda — Mês de Maio 2026
+# List compiled by Daniel Nunes, Fábio Meneses, and Rogério Costa (Papelaria 96).
+# Dates, locations, or ganaderias may change — organizers are not responsible
+# for cancellations.
+- date: 2026-05-30
+  name: "Tourada à Corda — Outeiro, Conceição"
+  venue: "Outeiro, Conceição"
+  address: "Outeiro, Conceição, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Outeiro+Conceição+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiros: ER / HF."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-30
+  name: "Tourada à Corda — Rossio, Santa Cruz, Praia da Vitória"
+  venue: "Rossio, Santa Cruz"
+  address: "Rossio, Santa Cruz, 9760 Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Rossio+Santa+Cruz+Praia+da+Vitória
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: ER."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-30
+  name: "Bezerrada — Rua Recreio dos Artistas, Sé, Angra"
+  venue: "Rua Recreio dos Artistas, Sé"
+  address: "Rua Recreio dos Artistas, Sé, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Rua+Recreio+dos+Artistas+Sé+Angra+do+Heroísmo
+  time: "14:00"
+  description: "Bezerrada — street bullfighting with young bulls. Ganadeiro: MR."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-29
+  name: "Bezerrada — Rossio, Santa Cruz, Praia da Vitória"
+  venue: "Rossio, Santa Cruz"
+  address: "Rossio, Santa Cruz, 9760 Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Rossio+Santa+Cruz+Praia+da+Vitória
+  time: "18:30"
+  description: "Bezerrada — street bullfighting with young bulls. Ganadeiro: ER."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-28
+  name: "Tourada à Corda — Rossio, Santa Cruz, Praia da Vitória"
+  venue: "Rossio, Santa Cruz"
+  address: "Rossio, Santa Cruz, 9760 Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Rossio+Santa+Cruz+Praia+da+Vitória
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: ER."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-27
+  name: "Tourada à Corda — Terreiro, Vila de São Mateus"
+  venue: "Terreiro, Vila de São Mateus"
+  address: "Terreiro, Vila de São Mateus, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Vila+de+São+Mateus+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: CAJAF."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-26
+  name: "Tourada à Corda — Terreiro, São Bartolomeu"
+  venue: "Terreiro, São Bartolomeu"
+  address: "Terreiro, São Bartolomeu, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=São+Bartolomeu+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: ER."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-26
+  name: "Tourada à Corda — São Luís, São Bento"
+  venue: "São Luís, São Bento"
+  address: "São Luís, São Bento, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=São+Bento+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: MR."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-25
+  name: "Tourada à Corda — Terreiro, Terra Chã"
+  venue: "Terreiro, Terra Chã"
+  address: "Terreiro, Terra Chã, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Terra+Chã+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: GR."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-25
+  name: "Tourada à Corda — Rua Padre Alfredo Lucas, São Brás"
+  venue: "Rua Padre Alfredo Lucas, São Brás"
+  address: "Rua Padre Alfredo Lucas, São Brás, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Rua+Padre+Alfredo+Lucas+São+Brás+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: HF."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-25
+  name: "Tourada à Corda — Ao Lugar, Altares"
+  venue: "Ao Lugar, Altares"
+  address: "Ao Lugar, Altares, 9760 Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Altares+Terceira
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: RB."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-23
+  name: "Tourada à Corda — Espadim Azul, Santa Rita, Santa Cruz"
+  venue: "Espadim Azul, Santa Rita"
+  address: "Espadim Azul, Santa Rita, 9760 Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Santa+Rita+Praia+da+Vitória
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: OTT."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-23
+  name: "Tourada à Corda — Largo da Igreja, Vila de São Mateus"
+  venue: "Largo da Igreja, Vila de São Mateus"
+  address: "Largo da Igreja, Vila de São Mateus, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Largo+da+Igreja+Vila+de+São+Mateus
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: CAJAF."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-19
+  name: "Tourada à Corda — Espigão, Posto Santo"
+  venue: "Espigão, Posto Santo"
+  address: "Espigão, Posto Santo, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Posto+Santo+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: ALF."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-18
+  name: "Tourada à Corda — Pico da Urze, São Pedro, Angra"
+  venue: "Pico da Urze, São Pedro"
+  address: "Pico da Urze, São Pedro, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=São+Pedro+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: OTT."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-17
+  name: "Tourada à Corda — Canada Nova, Santa Luzia, Angra"
+  venue: "Canada Nova, Santa Luzia"
+  address: "Canada Nova, Santa Luzia, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Santa+Luzia+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: FP."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-16
+  name: "Tourada à Corda — Ladeira Branca, Santa Luzia, Angra"
+  venue: "Ladeira Branca, Santa Luzia"
+  address: "Ladeira Branca, Santa Luzia, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Ladeira+Branca+Santa+Luzia+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: HF."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-11
+  name: "Tourada à Corda — Canada de Belém, Terra Chã"
+  venue: "Canada de Belém, Terra Chã"
+  address: "Canada de Belém, Terra Chã, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Terra+Chã+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: RB."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-03
+  name: "Tourada à Corda — Terreiro, Vila de São Mateus"
+  venue: "Terreiro, Vila de São Mateus"
+  address: "Terreiro, Vila de São Mateus, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Vila+de+São+Mateus+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: FHF."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-02
+  name: "Tourada à Corda — Santa Rita, Santa Cruz"
+  venue: "Santa Rita, Santa Cruz"
+  address: "Santa Rita, Santa Cruz, 9760 Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Santa+Rita+Praia+da+Vitória
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: FHF."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-01
+  name: "Tourada à Corda — Canada de Belém, Terra Chã"
+  venue: "Canada de Belém, Terra Chã"
+  address: "Canada de Belém, Terra Chã, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Terra+Chã+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiros: HF / JG."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-01
+  name: "Tourada à Corda — Fonte, Ribeirinha"
+  venue: "Fonte, Ribeirinha"
+  address: "Fonte, Ribeirinha, 9700 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Ribeirinha+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiros: MR / JG."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
+- date: 2026-05-01
+  name: "Tourada à Corda — Cabouco, Fontinhas"
+  venue: "Cabouco, Fontinhas"
+  address: "Cabouco, Fontinhas, 9760 Praia da Vitória"
+  map_url: https://www.google.com/maps/search/?api=1&query=Fontinhas+Praia+da+Vitória
+  time: "18:30"
+  description: "Tourada à corda — traditional bullfighting on a rope. Ganadeiro: HF."
+  tags:
+  - bullfighting
+  - outdoor
+  - kid-friendly
+
 # April 2026
 - date: 2026-04-25
   name: "Sons da Revolução — Melo Rift"
