@@ -1099,3 +1099,32 @@
   description: Delirious Poets reading event
   tags:
   - literature
+
+# Auto-ingested from Ticketline (2026-04-26)
+- date: 2026-04-26
+  name: "DOCE AINDA DOCE | DOCE TRIBUTO"
+  venue: Auditório Ramo Grande - Açores
+  map_url: https://www.google.com/maps/search/?api=1&query=Audit%C3%B3rio%20Ramo%20Grande%20-%20A%C3%A7ores%20Angra%20do%20Hero%C3%ADsmo
+  time: "17:00"
+  description: "DOCE AINDA DOCE é o novo espetáculo do grupo DOCE Tributo. Presta homenagem ao grupo feminino DOCE, que marcou a história da música pop portuguesa, apresentando um espetáculo renovado que recupera a energia, ousadia e carisma que definiram um fenômeno musical dos anos 80."
+  source_url: https://www.ticketline.pt/evento/doce-ainda-doce-103447
+  source_uid: "103447@ticketline.pt"
+
+- date: 2026-04-26
+  name: "READY OR NOT 2: O RITUAL"
+  venue: C.C.C. Angra Do Heroísmo - Pequeno Auditório
+  map_url: https://www.google.com/maps/search/?api=1&query=C.C.C.%20Angra%20Do%20Hero%C3%ADsmo%20-%20Pequeno%20Audit%C3%B3rio%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:00"
+  description: "Grace (Samara Weaving) sobreviveu ao ataque brutal da família Le Doma. Julga ter acordado num hospital, mas descobre que foi levada para os terrenos de um clube de campo exclusivo. De repente, vê-se envolvida noutro jogo mortal, com quatro famílias rivais a competirem para a matar e tomar posse da sua fortuna."
+  source_url: https://www.ticketline.pt/evento/ready-or-not-2-o-ritual-103287
+  source_uid: "103287@ticketline.pt"
+
+- date: 2026-04-30
+  name: "DIA INTERNACIONAL DO JAZZ 2026"
+  venue: C.C.C. Angra Do Heroísmo - Grande Auditório
+  map_url: https://www.google.com/maps/search/?api=1&query=C.C.C.%20Angra%20Do%20Hero%C3%ADsmo%20-%20Grande%20Audit%C3%B3rio%20Angra%20do%20Hero%C3%ADsmo
+  time: "21:30"
+  description: "21:30 - WAVE JAZZ ENSEMBLE Lançamento do Álbum \"Horizonte\" Antonella Barletta - piano Rui Melo - saxofone Paulo Borges - trompete Antero Ávila - baixo elétrico Nuno Pinheiro - bateria 23:30 - SPAM COLLECTIVE Mateus Oliveira - saxofone Maria João Vieira Leite - saxofone e voz Vivente Oliveira - guitarra Francisco Melo - contrabaixo Afonso Henrique - bateria"
+  source_url: https://www.ticketline.pt/evento/dia-internacional-do-jazz-2026-103636
+  source_uid: "103636@ticketline.pt"
+
