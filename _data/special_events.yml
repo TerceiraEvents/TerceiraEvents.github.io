@@ -478,14 +478,103 @@
   - free
 
 - date: 2026-04-23
-  name: "Arraial Taurino 2026"
+  name: "Arraial Taurino 2026 — Quinta-feira (Dia 1)"
   venue: Praça de Toiros da Ilha Terceira
   address: Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo
   map_url: https://www.google.com/maps/search/?api=1&query=Praça+de+Toiros+Ilha+Terceira
-  description: "Traditional bullfighting festival."
+  time: "18:00"
+  description: |
+    Opening day of the four-day Arraial Taurino festival (23–26 April 2026) at the Praça de Toiros da Ilha Terceira.
+
+    18h00 — Abertura do Arraial
+    19h00 — Sessão de Abertura (Tenda de Expositores)
+    20h15 — Abertura da Exposição "Garraiada dos estudantes" (Corredores da Praça de Toiros)
+    20h30 — Inauguração da Exposição "Cartazes que contam histórias tauromáquicas" da Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro (Tenda de Expositores, Stand: Artes e Ofícios Taurinos)
+    21h00 — Colóquio: "Impacto mediático do IV Fórum Mundial da Cultura Taurina" — Orador: Hélder Milheiro (Salão João Borba)
+    22h00 — Atuação das Filarmónicas: Associação Filarmónica Cultural e Recreativa de Santa Bárbara da Fonte do Bastardo e Filarmónica da Associação Cultural do Porto Judeu (Palco do Arraial Taurino)
+    22h30 — Noite de Fado com Fábio Ourique e Vera Brasil, acompanhados por Pedro Morais (guitarra portuguesa), Paulo Cunha (contrabaixo), Fábio Ourique (viola de fado) e André Santos (piano) (Palco do Arraial Taurino)
+    00h00 — "Vacas para curiosos" da ganadaria FP (Praça de Toiros)
+    00h00 — DJ Cristiano (Palco do Arraial Taurino)
   instagram: https://www.instagram.com/angradoheroismo/
+  image: https://github.com/user-attachments/assets/cfcd4518-9608-4c84-be84-49f5513c854f
   tags:
   - bullfighting
+  - live-music
+  - exhibition
+  - outdoor
+
+- date: 2026-04-24
+  name: "Arraial Taurino 2026 — Sexta-feira (Dia 2)"
+  venue: Praça de Toiros da Ilha Terceira
+  address: Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Praça+de+Toiros+Ilha+Terceira
+  time: "12:00"
+  description: |
+    Day 2 of the Arraial Taurino festival.
+
+    12h00 — Abertura do Arraial
+    13h30–17h30 — "Venha conhecer o mundo dos toiros" — atividades dirigidas às crianças e jovens
+    17h30 — Mini tourada à corda com as ganadarias MJR/JG (Praça de Toiros)
+    18h30 — Atuação da Escola de Pandeiros da Casa do Povo de Santa Bárbara (Palco do Arraial Taurino)
+    21h30 — Apresentação da Quinta da Malhinha (Praça de Toiros)
+  instagram: https://www.instagram.com/angradoheroismo/
+  image: https://github.com/user-attachments/assets/cfcd4518-9608-4c84-be84-49f5513c854f
+  tags:
+  - bullfighting
+  - kid-friendly
+  - live-music
+  - outdoor
+
+- date: 2026-04-25
+  name: "Arraial Taurino 2026 — Sábado (Dia 3)"
+  venue: Praça de Toiros da Ilha Terceira
+  address: Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Praça+de+Toiros+Ilha+Terceira
+  time: "12:00"
+  description: |
+    Day 3 of the Arraial Taurino festival.
+
+    12h00 — Abertura do Arraial
+    14h00 — "Como preparar um cavalo para a corrida", pela Quinta da Malhinha (Palco do Arraial Taurino)
+    15h00 — "As diferentes sortes do toureio equestre" pelos cavaleiros Tiago Pamplona e João Pamplona, com as ganadarias RB e JAF (Praça de Toiros)
+    16h00 — "A arte de pegar toiros" pelo Grupo de Forcados Amadores da Tertúlia Tauromáquica Terceirense e Grupo de Forcados Amadores do Ramo Grande, com a ganadaria Herd. ER (Praça de Toiros Ilha Terceira)
+    18h00 — Apresentação "A vida de campino" pela Câmara Municipal de Vila Franca de Xira, com a presença do Campino João Inácio "Janica" (Tenda de Expositores, Stand: Artes e Ofícios Taurinos)
+    19h00 — AzorBrass Charanga — Animação Musical
+    20h00 — Colóquio: "O mundo dos toiros" visto por André Cunha, Bernardo Belerique, Daniela Teles, Filipa Magalhães Tavares, Jorge Freitas, Lucas Fagundes, Luís Grilo, Rui Dinis e Teresa Pamplona (Salão João Borba)
+    22h30 — "Os Imaginários" (Palco do Arraial Taurino)
+    00h00 — "Vacas para curiosos" da ganadaria OTT
+    00h00 — DJ Rodrigo do Ó (Palco do Arraial Taurino)
+  instagram: https://www.instagram.com/angradoheroismo/
+  image: https://github.com/user-attachments/assets/cfcd4518-9608-4c84-be84-49f5513c854f
+  tags:
+  - bullfighting
+  - live-music
+  - nightlife
+  - outdoor
+
+- date: 2026-04-26
+  name: "Arraial Taurino 2026 — Domingo (Dia 4)"
+  venue: Praça de Toiros da Ilha Terceira
+  address: Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Praça+de+Toiros+Ilha+Terceira
+  time: "12:00"
+  description: |
+    Closing day of the Arraial Taurino festival.
+
+    12h00 — Abertura do Arraial
+    14h00 — Tenta pública com as ganadarias RB/JAF/JG (Praça de Toiros)
+    16h00 — Demonstração de pintura em tela pelo artista José João Dutra, acompanhada por João Barros no violão e por Jerry Sousa na viola da terra (Tenda de Expositores, Stand: Artes e Ofícios Taurinos)
+    17h00 — Demonstração de artes e ofícios taurinos, Taxidermia por Vítor Parreira (Tenda de Expositores, Stand: Artes e Ofícios Taurinos)
+    20h00 — Colóquio: "Os 100 anos de Manuel dos Santos" — Orador: Manuel Jorge dos Santos (Salão João Borba)
+    22h00 — Demonstração de capinhas e recortadores com toiros das ganadarias HF/JG/FP/OTT (Praça de Toiros)
+    00h00 — Encerramento do Arraial
+  instagram: https://www.instagram.com/angradoheroismo/
+  image: https://github.com/user-attachments/assets/cfcd4518-9608-4c84-be84-49f5513c854f
+  tags:
+  - bullfighting
+  - live-music
+  - exhibition
+  - outdoor
 
 - date: 2026-04-23
   name: "Cinema: Ready or Not 2 — O Ritual"

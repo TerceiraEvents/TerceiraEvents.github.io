@@ -100,7 +100,7 @@ title: Other Resources - Terceira Events
       <li><a href="https://www.instagram.com/thegardenclub.angra/">@thegardenclub.angra</a> &mdash; The Garden Club</li>
       <li><a href="https://www.instagram.com/sala.319/">@sala.319</a> &mdash; Sala 319</li>
       <li><a href="https://www.instagram.com/havannaangra/">@havannaangra</a> &middot; <a href="https://www.facebook.com/p/Havanna-Terceira-100059128671983/">Facebook</a> &mdash; Havanna Club</li>
-      <li><a href="https://www.instagram.com/livrarialardocelivro/">@livrarialardocelivro</a> &middot; <a href="https://www.facebook.com/livrarialardocelivro/">Facebook</a> &mdash; Lar Doce Livro</li>
+      <li><a href="https://www.instagram.com/livraria_lardocelivro/">@livraria_lardocelivro</a> &middot; <a href="https://www.facebook.com/livrarialardocelivro/">Facebook</a> &mdash; Lar Doce Livro</li>
       <li><a href="https://www.instagram.com/fullrange_rave/">@fullrange_rave</a> &mdash; Full Range (rave/electronic events)</li>
       <li><a href="https://www.instagram.com/auditorioamit/">@auditorioamit</a> &mdash; Audit&oacute;rio AMIT (Academia Musical da Ilha Terceira)</li>
     </ul>
