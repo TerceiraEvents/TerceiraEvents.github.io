@@ -26,6 +26,19 @@
   - dance
   - theater
 
+- date: 2026-05-09
+  name: "Oficina de Danças Tradicionais do Mundo — Miguel Lopes"
+  venue: Casa do Sal / Oficina d'Angra
+  address: Estrada Gaspar Corte-Real, Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Casa+do+Sal+Oficina+d'Angra+Angra+do+Heroísmo
+  time: "18:00"
+  description: "Traditional dances of the world workshop with Miguel Lopes. Free registration."
+  image: https://github.com/user-attachments/assets/28d7ab17-d271-4dba-b119-e749172bf6f4
+  tags:
+  - dance
+  - workshop
+  - free
+
 - name: "ESCAMA: de dragão 2#"
   date: 2026-05-09
   time: "21:00"
