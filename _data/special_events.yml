@@ -87,6 +87,125 @@
   tags:
   - live-music
 
+# Espaço AMIT — Maio 2026 program (open Thu/Fri/Sat 20:00–02:00).
+# May 9 ESCAMA: de dragão 2# (Morbid Death / Damage Device / Boi) is
+# already listed above.
+- date: 2026-05-30
+  name: "DesaFINO — Noite de Karaoke da AMIT"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Cantas uma música, bebes um FINO! AMIT's karaoke night — sing a song, get a beer."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - karaoke
+
+- date: 2026-05-29
+  name: "Open Decks: Eu Não Sou DJ — com Gira a Goiaba"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Open decks night — bring your records and play. This edition hosted by Gira a Goiaba."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - nightlife
+
+- date: 2026-05-28
+  name: "Game Night: Jogos de Tabuleiro"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Board game night at Espaço AMIT — bring friends and play."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags: []
+
+- date: 2026-05-23
+  name: "Jazz Jam Session"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Jazz jam session at AMIT — musicians welcome to sit in."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - live-music
+
+- date: 2026-05-22
+  name: "Fado: Denise Guilherme"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Fado evening at Espaço AMIT with Denise Guilherme."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - live-music
+
+- date: 2026-05-21
+  name: "Game Night: Noite de Playstation"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "PlayStation game night at Espaço AMIT."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags: []
+
+- date: 2026-05-17
+  name: "Dia Internacional Contra a Homofobia, Transfobia e Bifobia — Espaço AMIT"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Espaço AMIT marks IDAHOTB (International Day Against Homophobia, Transphobia and Biphobia) with a two-day celebration on May 16–17."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags: []
+
+- date: 2026-05-16
+  name: "Dia Internacional Contra a Homofobia, Transfobia e Bifobia — Espaço AMIT"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Espaço AMIT marks IDAHOTB (International Day Against Homophobia, Transphobia and Biphobia) with a two-day celebration on May 16–17."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags: []
+
+- date: 2026-05-15
+  name: "DesaFINO — Noite de Karaoke da AMIT"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Cantas uma música, bebes um FINO! AMIT's karaoke night — sing a song, get a beer."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - karaoke
+
+- date: 2026-05-08
+  name: "Documentary: Zeitgeist — The Movie"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Documentary screening of Zeitgeist — The Movie at Espaço AMIT."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - cinema
+
+- date: 2026-05-02
+  name: "DJ Set: LINO — British Music"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "British music DJ set with LINO at Espaço AMIT."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - nightlife
+
+- date: 2026-05-01
+  name: "Open Decks: Eu Não Sou DJ — com Henriqve"
+  venue: Espaço AMIT
+  address: Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo
+  map_url: https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Heroísmo
+  description: "Open decks night — bring your records and play. This edition hosted by Henriqve."
+  instagram: https://www.instagram.com/auditorioamit/
+  tags:
+  - nightlife
+
 # Calendário das Touradas à Corda — Mês de Maio 2026
 # List compiled by Daniel Nunes, Fábio Meneses, and Rogério Costa (Papelaria 96).
 # Dates, locations, or ganaderias may change — organizers are not responsible
