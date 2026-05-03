@@ -5,6 +5,18 @@
     map_url: https://www.google.com/maps/search/?api=1&query=Wine+Not+Angra+do+Heroísmo
     time: Evening
     description: Weekly dance event
+  - name: Poesia/Prosa ao Crepúsculo
+    venue: Lar Doce Livro
+    time: "18:15"
+    description: "Monthly (sometimes fortnightly) poetry and prose sessions at sunset. Madalena Ávila selects and reads poems, accompanied on guitar by Jonathan Afonso. Themes vary — Abril, women writers, anniversary tributes. One of the bookshop's most beloved recurring events. Free entry."
+    address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+    instagram: https://www.instagram.com/livraria_lardocelivro/
+    note: "Not every Monday — check @livraria_lardocelivro on Instagram for the current month's schedule."
+    tags:
+    - free
+    - poetry
+    - music
 
 - day: Wednesday
   events:
@@ -17,10 +29,14 @@
   - name: Clube de Leitura
     venue: Lar Doce Livro
     time: "18:15"
-    description: Weekly reading club
+    description: "Recurring book club sessions at Lar Doce Livro, meeting on various weekdays (often Monday, Wednesday, and Thursday) for different books. Each session focuses on a current title — recent reads include *Filho do Pai* by Hugo Gonçalves and *O Último Avô* by Afonso Reis Cabral. Sessions are coordinated by guest hosts and sometimes feature the authors themselves, live or by video call. Free entry."
     address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
-
     map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+    instagram: https://www.instagram.com/livraria_lardocelivro/
+    note: "Multiple sessions per month on different days — check @livraria_lardocelivro on Instagram for the current schedule."
+    tags:
+    - free
+    - books
 - day: Thursday
   events:
   - name: Latin Night
