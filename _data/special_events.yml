@@ -13,6 +13,90 @@
   - kid-friendly
 
 # May 2026
+- date: 2026-05-02
+  name: "DJ Night — The Hits of 2000's"
+  venue: "Havanna"
+  address: "Rua de São João 48, 9700-195 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Havanna+Angra+do+Heroísmo
+  time: "23:00"
+  description: "Noite de DJ com os maiores hits dos anos 2000. Com DJ Santinha e Rafa."
+  instagram: https://www.instagram.com/p/DXuUlklgMj5/
+  tags:
+  - nightlife
+  - live-music
+
+- date: 2026-05-07
+  name: "Lançamento de Livro"
+  venue: "Lar Doce Livro"
+  address: "Rua da Rosa 67, 9700-162 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "18:30"
+  description: "Lançamento de livro com sessão de autógrafos."
+  instagram: https://www.instagram.com/p/DXxAh0EjAW7/
+  tags:
+  - literature
+  - free
+
+- date: 2026-05-09
+  name: "Clube de Leitura"
+  venue: "Lar Doce Livro"
+  address: "Rua da Rosa 67, 9700-162 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "17:00"
+  description: "Sessão do Clube de Leitura. Debate do livro do mês em ambiente acolhedor."
+  instagram: https://www.instagram.com/p/DXxAh0EjAW7/
+  tags:
+  - literature
+  - free
+
+- date: 2026-05-14
+  name: "Poesia/Prosa ao Crepúsculo"
+  venue: "Lar Doce Livro"
+  address: "Rua da Rosa 67, 9700-162 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "19:00"
+  description: "Tarde de leitura em voz alta — poesia e prosa. Participação aberta ao público."
+  instagram: https://www.instagram.com/p/DXxAh0EjAW7/
+  tags:
+  - literature
+  - free
+
+- date: 2026-05-16
+  name: "Workshop de Escrita Criativa"
+  venue: "Lar Doce Livro"
+  address: "Rua da Rosa 67, 9700-162 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "10:00"
+  description: "Workshop de escrita criativa para adultos. Inscrição prévia obrigatória na livraria."
+  instagram: https://www.instagram.com/p/DXxAh0EjAW7/
+  tags:
+  - literature
+  - workshop
+
+- date: 2026-05-21
+  name: "Noite de Contos"
+  venue: "Lar Doce Livro"
+  address: "Rua da Rosa 67, 9700-162 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "21:00"
+  description: "Noite dedicada à leitura de contos. Contadores de histórias convidados."
+  instagram: https://www.instagram.com/p/DXxAh0EjAW7/
+  tags:
+  - literature
+  - free
+
+- date: 2026-05-28
+  name: "Prosa ao Crepúsculo — Maio"
+  venue: "Lar Doce Livro"
+  address: "Rua da Rosa 67, 9700-162 Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+  time: "19:00"
+  description: "Sessão de leitura de prosa em voz alta. Participação aberta ao público."
+  instagram: https://www.instagram.com/p/DXxAh0EjAW7/
+  tags:
+  - literature
+  - free
+
 - date: 2026-05-29
   name: "Hakuna Matata — Espectáculo de Dança"
   venue: Teatro Angrense
