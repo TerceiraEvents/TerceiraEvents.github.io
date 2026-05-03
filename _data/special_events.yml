@@ -1320,3 +1320,9 @@
   description: Delirious Poets reading event
   tags:
   - literature
+
+- name: "TEST SUBMISSION — please close (Claude Code health check)"
+  date: 2099-12-31
+  time: "23:59"
+  venue: "TEST VENUE — not a real event"
+  description: "Automated test submission verifying the event-submit-worker is still wired to GitHub correctly. Safe to close."
