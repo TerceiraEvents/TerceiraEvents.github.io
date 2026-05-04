@@ -8,140 +8,102 @@ description: Bars, restaurants, cultural spaces, and other venues hosting events
 
 <p class="section-intro">Bars, restaurants, cultural spaces, and other venues hosting events in Angra do Heroísmo.</p>
 
+{% for venue in site.data.venues %}
 <div class="venue-card">
-  <h3>Tasca do Camões</h3>
-  <div class="venue-address">Rua Da Rocha 64, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Tasca+do+Cam%C3%B5es+Angra+do+Hero%C3%ADsmo">Map</a></div>
+  <h3>{{ venue.name }}</h3>
+  <div class="venue-address">{{ venue.address }}{% if venue.map_url %} · <a href="{{ venue.map_url }}">Map</a>{% endif %}</div>
   <div class="venue-regulars">
+    {% if venue.description %}
+    <p>{{ venue.description }}</p>
+    {% endif %}
+    {% if venue.weekly %}
     <p><strong>Weekly schedule:</strong></p>
     <ul>
-      <li><strong>Wednesday</strong> &mdash; Karaoke Night</li>
-      <li><strong>Thursday</strong> &mdash; Latin Night</li>
+      {% for entry in venue.weekly %}{% assign day_str = entry.day | strip %}{% assign day_len = day_str | size | minus: 1 %}{% assign day_last = day_str | slice: day_len, 1 %}
+      <li><strong>{{ entry.day }}</strong>{% if day_last == ":" %} {{ entry.name }}{% else %} — {{ entry.name }}{% endif %}</li>
+      {% endfor %}
     </ul>
-    <p>Also hosts live concerts and special events throughout the year.</p>
+    {% endif %}
+    {% if venue.description_after_weekly %}
+    <p>{{ venue.description_after_weekly }}</p>
+    {% endif %}
+    {% if venue.links or venue.reservation_phone %}
+    <p>{% if venue.links %}{% for link in venue.links %}{% unless forloop.first %} · {% endunless %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}{% endif %}{% if venue.links and venue.reservation_phone %} · {% endif %}{% if venue.reservation_phone %}Reservations: {{ venue.reservation_phone }}{% endif %}</p>
+    {% endif %}
+    {% if venue.reservation_url %}
+    <div class="event-reservations"><a href="{{ venue.reservation_url }}">{{ venue.reservation_label | default: "Make a dinner reservation" }}</a></div>
+    {% endif %}
   </div>
 </div>
 
-<div class="venue-card">
-  <h3>The Texan / The Garden Club</h3>
-  <div class="venue-address">Rua Carreira dos Cavalos 37, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Hero%C3%ADsmo">Map</a></div>
-  <div class="venue-regulars">
-    <p>Tex-Mex restaurant and bar with cocktails, large screens for sports, and a garden event space. The Texan handles dinner and karaoke; The Garden Club is the outdoor garden area for brunches, parties, and events.</p>
-    <p><strong>Weekly schedule:</strong></p>
-    <ul>
-      <li><strong>Friday</strong> &mdash; Karaoke Night</li>
-      <li><strong>Saturday</strong> &mdash; Karaoke Night</li>
-    </ul>
-    <p><a href="https://www.thetexan.pt">Website</a> &middot; <a href="https://www.instagram.com/thetexanbar/">Instagram (Texan)</a> &middot; <a href="https://www.instagram.com/thegardenclub.angra/">Instagram (Garden Club)</a></p>
-    <div class="event-reservations"><a href="https://the-texan-1755256381.resos.com/booking">Make a dinner reservation</a></div>
-  </div>
-</div>
+{%- comment -%}
+  JSON-LD `LocalBusiness` (or more specific subtype) per venue card.
+  Address: parsed into `PostalAddress` when a Portuguese 9700-/9760-
+  postal code is present; otherwise the raw address string becomes
+  the `addressLocality`. `addressCountry` is always "PT".
+  `sameAs` collects every URL from `links` (no mailto, etc.).
+{%- endcomment -%}
 
-<div class="venue-card">
-  <h3>Sala 319</h3>
-  <div class="venue-address">Praça Almeida Garrett 11, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Sala+319+Angra+do+Hero%C3%ADsmo">Map</a></div>
-  <div class="venue-regulars">
-    <p>Restaurant and bar serving Portuguese and European cuisine, with events and live music.</p>
-    <p><a href="https://www.instagram.com/sala.319/">Instagram</a> &middot; Reservations: +351 967 021 868</p>
-  </div>
-</div>
-
-<div class="venue-card">
-  <h3>Wine Not</h3>
-  <div class="venue-address">Rua Direita 8, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Wine+Not+Angra+do+Hero%C3%ADsmo">Map</a></div>
-  <div class="venue-regulars">
-    <p>Wine bar with weekly live music nights bringing in solo artists or DJs.</p>
-    <p><strong>Weekly schedule:</strong></p>
-    <ul>
-      <li><strong>Monday:</strong> Live music, around 21:30 (rotating themed nights: Crazy Monday, Ya Monday for reggae, etc.)</li>
-    </ul>
-    <p><a href="https://www.instagram.com/winenot.terceira/">Instagram</a></p>
-  </div>
-</div>
-
-<div class="venue-card">
-  <h3>Porta 42</h3>
-  <div class="venue-address">Rua de São João, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Porta+42+Angra+do+Hero%C3%ADsmo">Map</a></div>
-  <div class="venue-regulars">
-    <p>Bar specialising in 90s and 2000s music. Doors at 21:30. Themed banners rotate week to week (Rock/Pop Rock, 90s &amp; 2000s Vibes, etc.); check Instagram for the current week.</p>
-    <p><strong>Weekly schedule:</strong></p>
-    <ul>
-      <li><strong>Friday:</strong> 90s &amp; 2000s Night</li>
-      <li><strong>Saturday:</strong> 90s &amp; 2000s Night</li>
-    </ul>
-    <p>Sometimes closed when Friday falls on a holiday; on long weekends they occasionally shift to a Thursday instead. Saturday is the most consistent slot.</p>
-    <p><a href="https://www.instagram.com/porta_42/">Instagram</a></p>
-  </div>
-</div>
-
-<div class="venue-card">
-  <h3>Lar Doce Livro</h3>
-  <div class="venue-address">Rua de São João 22-24, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo">Map</a></div>
-  <div class="venue-regulars">
-    <p>A bookstore-cafe in the historic center hosting cultural events, readings, and the weekly reading club.</p>
-    <p><strong>Weekly schedule:</strong></p>
-    <ul>
-      <li><strong>Wednesday</strong> &mdash; Clube de Leitura (Reading Club) at 18:15</li>
-    </ul>
-  </div>
-</div>
-
-<div class="venue-card">
-  <h3>Teatro Angrense</h3>
-  <div class="venue-address">Rua da Esperança 48-52, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Hero%C3%ADsmo">Map</a></div>
-  <div class="venue-regulars">
-    <p>Historic theater in the UNESCO-listed city center. Hosts plays, concerts, fado nights, and the annual Festival de Teatro. One of the main cultural venues on Terceira.</p>
-    <p><a href="https://angradoheroismo.pt/local/teatro-angrense-2/">Website</a> &middot; <a href="https://ticketline.sapo.pt/en/salas/sala/1293">Tickets (Ticketline)</a></p>
-  </div>
-</div>
-
-<div class="venue-card">
-  <h3>CCCAH (Centro Cultural e de Congressos)</h3>
-  <div class="venue-address">Canada Nova, Santa Luzia, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Hero%C3%ADsmo">Map</a></div>
-  <div class="venue-regulars">
-    <p>Angra's main cultural and conference center, converted from the former bullring. Hosts cinema screenings, music festivals, exhibitions, and conferences. Home to Festival Term&oacute;metro and regular film programming.</p>
-    <p><a href="https://angradoheroismo.pt/local/centro-cultural-e-de-congressos-de-angra-do-heroismo/">Website</a> &middot; <a href="https://ticketline.sapo.pt/en/salas/sala/1294">Tickets (Ticketline)</a></p>
-  </div>
-</div>
-
-<div class="venue-card">
-  <h3>Havanna Club</h3>
-  <div class="venue-address">Porto das Pipas 154, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Havanna+Club+Angra+do+Hero%C3%ADsmo">Map</a></div>
-  <div class="venue-regulars">
-    <p>One of the busiest bars at the marina. DJ nights, karaoke-to-dancing Saturdays, and themed party events. Covered terrace with sea views.</p>
-    <p><a href="https://www.instagram.com/havannaangra/">Instagram</a> &middot; Reservations: 917 746 773</p>
-  </div>
-</div>
-
-<div class="venue-card">
-  <h3>Casa do Sal / Oficina d'Angra</h3>
-  <div class="venue-address">Estrada Gaspar Corte-Real, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Casa+do+Sal+Oficina+Angra+do+Hero%C3%ADsmo">Map</a></div>
-  <div class="venue-regulars">
-    <p>Cultural association and event space hosting live music nights, DJ sessions, and alternative cultural events.</p>
-    <p><a href="https://www.facebook.com/oficinadangra/">Facebook</a></p>
-  </div>
-</div>
-
-<div class="venue-card">
-  <h3>Pa&ccedil;os do Concelho (Town Hall)</h3>
-  <div class="venue-address">Pra&ccedil;a Velha, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os+do+Concelho+Angra+do+Hero%C3%ADsmo">Map</a></div>
-  <div class="venue-regulars">
-    <p>The historic town hall at Pra&ccedil;a Velha square. Hosts book presentations, exhibitions, and civic cultural events.</p>
-  </div>
-</div>
-
-<div class="venue-card">
-  <h3>Pra&ccedil;a de Toiros da Ilha Terceira</h3>
-  <div class="venue-address">Av. de J&aacute;come de Bruges, 9700-102 Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a+de+Toiros+Ilha+Terceira">Map</a></div>
-  <div class="venue-regulars">
-    <p>Terceira's bullring, home to the Arraial Taurino and traditional bullfighting festivals during the season (May&ndash;October).</p>
-  </div>
-</div>
-
-<div class="venue-card">
-  <h3>Audit&oacute;rio AMIT (Academia Musical da Ilha Terceira)</h3>
-  <div class="venue-address">Av. Tenente Coronel Jos&eacute; Agostinho 6-A, 9700-108 Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Hero%C3%ADsmo">Map</a></div>
-  <div class="venue-regulars">
-    <p>Auditorium of the Musical Academy of Terceira Island. Hosts concerts, recitals, jazz courses, and choral performances.</p>
-    <p><a href="https://www.instagram.com/auditorioamit/">Instagram</a></p>
-  </div>
-</div>
+{%- assign schema_type = venue.schema_type | default: "LocalBusiness" -%}
+{%- assign addr = venue.address -%}
+{%- assign has_postal = false -%}
+{%- assign postal_prefix = "" -%}
+{%- if addr contains "9700-" -%}
+  {%- assign has_postal = true -%}
+  {%- assign postal_prefix = "9700-" -%}
+{%- elsif addr contains "9760-" -%}
+  {%- assign has_postal = true -%}
+  {%- assign postal_prefix = "9760-" -%}
+{%- endif -%}
+{%- if has_postal -%}
+  {%- assign addr_parts = addr | split: postal_prefix -%}
+  {%- comment -%} Strip the trailing ", " between street and postal code. {%- endcomment -%}
+  {%- assign street_raw = addr_parts[0] | strip -%}
+  {%- assign street_len = street_raw | size | minus: 1 -%}
+  {%- assign last_char = street_raw | slice: street_len, 1 -%}
+  {%- if last_char == "," -%}
+    {%- assign street_address = street_raw | slice: 0, street_len -%}
+  {%- else -%}
+    {%- assign street_address = street_raw -%}
+  {%- endif -%}
+  {%- assign tail = addr_parts[1] | strip -%}
+  {%- assign code_digits = tail | slice: 0, 3 -%}
+  {%- assign locality = tail | slice: 3, 1000 | strip -%}
+  {%- assign postal_code = postal_prefix | append: code_digits -%}
+{%- endif -%}
+{%- comment -%}
+  Build sameAs as a delimited string (Liquid 4.0.4 lacks the `push`
+  filter). Filter out mailto: links, then split back to an array for
+  jsonify. A trailing delimiter is fine — Liquid's `split` drops the
+  empty trailing element.
+{%- endcomment -%}
+{%- assign sameas_buf = "" -%}
+{%- if venue.links -%}
+  {%- for link in venue.links -%}
+    {%- assign url = link.url | strip -%}
+    {%- unless url contains "mailto:" or url == "" -%}
+      {%- assign sameas_buf = sameas_buf | append: url | append: "|||" -%}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- assign sameas = sameas_buf | split: "|||" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": {{ schema_type | jsonify }},
+  "name": {{ venue.name | jsonify }},
+  "address": {
+    "@type": "PostalAddress",{% if has_postal %}
+    "streetAddress": {{ street_address | jsonify }},
+    "postalCode": {{ postal_code | jsonify }},
+    "addressLocality": {{ locality | jsonify }},{% else %}
+    "addressLocality": {{ addr | jsonify }},{% endif %}
+    "addressCountry": "PT"
+  },
+  "url": "{{ site.url }}{{ site.baseurl }}/venues/"{% if venue.map_url %},
+  "hasMap": {{ venue.map_url | jsonify }}{% endif %}{% if venue.telephone %},
+  "telephone": {{ venue.telephone | jsonify }}{% endif %}{% if sameas.size > 0 %},
+  "sameAs": {{ sameas | jsonify }}{% endif %}
+}
+</script>
+{% endfor %}
