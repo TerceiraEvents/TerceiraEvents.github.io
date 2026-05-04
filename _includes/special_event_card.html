@@ -96,23 +96,131 @@
 {%- comment -%}
   JSON-LD `Event` schema per card. Powers Google's Event rich result
   (date / venue / time directly in the SERP). Required fields: name,
-  startDate, location. We omit time-of-day from startDate because
-  `event.time` is free-form (e.g. "21:30", "09:30–13:00", "Evening")
-  and a malformed ISO string is worse than a date-only one.
+  startDate, location.
+
+  Time-of-day: `event.time` is free-form (e.g. "21:30", "09:30–13:00",
+  "Evening"). When it parses cleanly as HH:MM we append it to startDate
+  as a local-time ISO string (no TZ offset — Atlantic/Azores observes
+  DST and Google interprets bare ISO times as event-local, which is
+  correct for Terceira). Anything else falls back to date-only.
+
+  Address: parsed into a `PostalAddress` when a Portuguese 9700-/9760-
+  postal code is present; otherwise the raw string becomes the
+  `addressLocality`. `addressCountry` is always "PT".
 {%- endcomment -%}
+
+{%- comment -%} -- Parse event.time into HH:MM:SS if possible. -- {%- endcomment -%}
+{%- assign time_iso = "" -%}
+{%- if event.time -%}
+  {%- assign t_raw = event.time | strip -%}
+  {%- assign t_parts = t_raw | split: ":" -%}
+  {%- if t_parts.size >= 2 -%}
+    {%- assign hh = t_parts[0] | strip -%}
+    {%- assign mm_raw = t_parts[1] | slice: 0, 2 -%}
+    {%- assign digits = "0123456789" -%}
+    {%- assign hh_ok = true -%}
+    {%- if hh.size == 0 or hh.size > 2 -%}{%- assign hh_ok = false -%}{%- endif -%}
+    {%- if hh_ok -%}
+      {%- for i in (0..1) -%}
+        {%- if i < hh.size -%}
+          {%- assign ch = hh | slice: i, 1 -%}
+          {%- unless digits contains ch -%}{%- assign hh_ok = false -%}{%- endunless -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+    {%- assign mm_ok = true -%}
+    {%- if mm_raw.size != 2 -%}{%- assign mm_ok = false -%}{%- endif -%}
+    {%- if mm_ok -%}
+      {%- for i in (0..1) -%}
+        {%- assign ch = mm_raw | slice: i, 1 -%}
+        {%- unless digits contains ch -%}{%- assign mm_ok = false -%}{%- endunless -%}
+      {%- endfor -%}
+    {%- endif -%}
+    {%- if hh_ok and mm_ok -%}
+      {%- assign hh_n = hh | plus: 0 -%}
+      {%- assign mm_n = mm_raw | plus: 0 -%}
+      {%- if hh_n >= 0 and hh_n <= 23 and mm_n >= 0 and mm_n <= 59 -%}
+        {%- assign hh_pad = hh -%}
+        {%- if hh.size == 1 -%}{%- assign hh_pad = "0" | append: hh -%}{%- endif -%}
+        {%- assign time_iso = hh_pad | append: ":" | append: mm_raw | append: ":00" -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%} -- Parse event.address into PostalAddress fields. -- {%- endcomment -%}
+{%- assign addr_postal_code = "" -%}
+{%- assign addr_street = "" -%}
+{%- assign addr_locality = "" -%}
+{%- if event.address -%}
+  {%- assign addr_clean = event.address | strip -%}
+  {%- assign addr_locality = addr_clean -%}
+  {%- comment -%} Try the two Terceira postal-code prefixes. {%- endcomment -%}
+  {%- assign prefix_list = "9700-,9760-" | split: "," -%}
+  {%- for prefix in prefix_list -%}
+    {%- if addr_clean contains prefix -%}
+      {%- assign before_raw = addr_clean | split: prefix | first | strip -%}
+      {%- assign after_raw = addr_clean | split: prefix | last -%}
+      {%- assign suffix3 = after_raw | slice: 0, 3 -%}
+      {%- assign digits = "0123456789" -%}
+      {%- assign suffix_ok = true -%}
+      {%- if suffix3.size != 3 -%}{%- assign suffix_ok = false -%}{%- endif -%}
+      {%- if suffix_ok -%}
+        {%- for i in (0..2) -%}
+          {%- assign ch = suffix3 | slice: i, 1 -%}
+          {%- unless digits contains ch -%}{%- assign suffix_ok = false -%}{%- endunless -%}
+        {%- endfor -%}
+      {%- endif -%}
+      {%- if suffix_ok -%}
+        {%- assign addr_postal_code = prefix | append: suffix3 -%}
+        {%- assign rest = after_raw | slice: 3, 500 | strip -%}
+        {%- comment -%} Strip a leading comma if present. {%- endcomment -%}
+        {%- if rest != "" -%}
+          {%- assign rest_first = rest | slice: 0, 1 -%}
+          {%- if rest_first == "," -%}
+            {%- assign rest = rest | slice: 1, 500 | strip -%}
+          {%- endif -%}
+        {%- endif -%}
+        {%- comment -%} Strip a trailing comma from the street part. {%- endcomment -%}
+        {%- assign street_clean = before_raw -%}
+        {%- if street_clean != "" -%}
+          {%- assign last_pos = street_clean.size | minus: 1 -%}
+          {%- assign last_ch = street_clean | slice: last_pos, 1 -%}
+          {%- if last_ch == "," -%}
+            {%- assign street_clean = street_clean | slice: 0, last_pos | strip -%}
+          {%- endif -%}
+        {%- endif -%}
+        {%- assign addr_street = street_clean -%}
+        {%- if rest != "" -%}
+          {%- assign addr_locality = rest -%}
+        {%- else -%}
+          {%- assign addr_locality = "" -%}
+        {%- endif -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Event",
   "name": {{ event.name | jsonify }},
-  "startDate": "{{ event.date | date: '%Y-%m-%d' }}",
-  "endDate": "{{ event.date | date: '%Y-%m-%d' }}",
+  "startDate": "{{ event.date | date: '%Y-%m-%d' }}{% if time_iso != '' %}T{{ time_iso }}{% endif %}",
+  "endDate": "{{ event.date | date: '%Y-%m-%d' }}{% if time_iso != '' %}T{{ time_iso }}{% endif %}",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "location": {
     "@type": "Place",
     "name": {{ event.venue | jsonify }}{% if event.address %},
-    "address": {{ event.address | jsonify }}{% endif %}
+    "address": {
+      "@type": "PostalAddress"{% if addr_street != "" %},
+      "streetAddress": {{ addr_street | jsonify }}{% endif %}{% if addr_locality != "" %},
+      "addressLocality": {{ addr_locality | jsonify }}{% endif %}{% if addr_postal_code != "" %},
+      "postalCode": {{ addr_postal_code | jsonify }}{% endif %},
+      "addressCountry": "PT"
+    }{% endif %}
   }{% if event.description %},
   "description": {{ event.description | strip_html | strip | jsonify }}{% endif %}{% if event.image %},
   "image": "{{ event.image | absolute_url }}"{% endif %}{% if event.instagram %},
