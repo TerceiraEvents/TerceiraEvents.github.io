@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Other Resources - Terceira Events
+description: "External resources for finding events on Terceira: official city pages, Bullfight Finder, ticket sites, and more."
 ---
 
 <h2>Other Places to Find Events</h2>

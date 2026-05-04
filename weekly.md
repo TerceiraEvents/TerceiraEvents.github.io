@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Weekly Events - Terceira Events
+description: Karaoke, dance nights, and other recurring events happening every week in Angra do Heroísmo, Terceira.
 ---
 
 ## Weekly Events

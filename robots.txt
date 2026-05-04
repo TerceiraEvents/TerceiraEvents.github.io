@@ -1,0 +1,7 @@
+---
+# Front matter so Jekyll runs Liquid on this file and resolves site.url.
+---
+User-agent: *
+Allow: /
+
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
