@@ -36,7 +36,5 @@ title: Special Events - Terceira Events
 </p>
 
 <div class="archive-link-section">
-  <a href="{{ '/calendar' | relative_url }}" class="view-all">All Upcoming Events</a>
-  &nbsp;&nbsp;
   <a href="{{ '/archive' | relative_url }}" class="view-all">Event Archive</a>
 </div>

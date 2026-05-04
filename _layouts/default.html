@@ -296,7 +296,9 @@
             venue.indexOf(query) !== -1 ||
             desc.indexOf(query) !== -1;
           var matchesTag = !selectedTag || tags.indexOf(selectedTag) !== -1;
-          var matchesRange = inRange(cardDates[i], range);
+          // Skip range filtering on pages without a range select (e.g. /archive,
+          // which is past-only and would otherwise be hidden by the >= today guard).
+          var matchesRange = !rangeSelect || inRange(cardDates[i], range);
           var show = matchesQuery && matchesTag && matchesRange;
           card.style.display = show ? '' : 'none';
           if (show) visibleCount++;

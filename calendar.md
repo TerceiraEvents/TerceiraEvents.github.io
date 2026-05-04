@@ -36,7 +36,5 @@ title: Full Events Calendar - Terceira Events
 </p>
 
 <div class="archive-link-section">
-  <a href="{{ '/special' | relative_url }}" class="view-all">This Week</a>
-  &nbsp;&nbsp;
   <a href="{{ '/archive' | relative_url }}" class="view-all">Event Archive</a>
 </div>
