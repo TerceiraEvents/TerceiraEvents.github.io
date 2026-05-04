@@ -47,6 +47,12 @@ title: Weekly Events - Terceira Events
         {% if event.url %}
         <a class="event-source" href="{{ event.url }}" target="_blank" rel="noopener">🌐 Website</a>
         {% endif %}
+        <button type="button" class="event-flag-btn"
+          data-event-name="{{ event.name | escape }}"
+          data-event-date="{{ day.day }} (weekly)"
+          data-event-venue="{{ event.venue | escape }}">
+          🚩 Suggest an edit
+        </button>
       </div>
       <div class="event-time">{{ event.time }}</div>
     </div>
