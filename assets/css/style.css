@@ -568,6 +568,23 @@ h3 {
   border-radius: 8px;
   margin: 1rem 0;
 }
+.post-body blockquote {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--green-bright);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px var(--shadow);
+  color: var(--text);
+  font-style: normal;
+}
+.post-body blockquote p {
+  margin-bottom: 0.75rem;
+}
+.post-body blockquote p:last-child {
+  margin-bottom: 0;
+}
 .post-source {
   font-size: 0.95rem;
   color: var(--text-muted);
