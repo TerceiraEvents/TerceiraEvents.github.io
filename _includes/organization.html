@@ -1,0 +1,19 @@
+{%- comment -%}
+  Renders the Schema.org `Organization` block representing Terceira
+  Events itself. Used as `organizer` (Event), `publisher` (BlogPosting),
+  and `author` where appropriate. Includes the publisher logo so Google
+  Article rich results have a logo to display.
+
+  Usage (paste inline as the value of an Organization-typed key):
+
+      "publisher": {% include organization.html %}
+{%- endcomment -%}
+{
+  "@type": "Organization",
+  "name": "Terceira Events",
+  "url": "{{ site.url }}{{ site.baseurl }}",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "{{ '/assets/images/apple-touch-icon.png' | absolute_url }}"
+  }
+}

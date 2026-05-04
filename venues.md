@@ -45,44 +45,23 @@ description: Bars, restaurants, cultural spaces, and other venues hosting events
 {%- endcomment -%}
 
 {%- assign schema_type = venue.schema_type | default: "LocalBusiness" -%}
-{%- assign addr = venue.address -%}
-{%- assign has_postal = false -%}
-{%- assign postal_prefix = "" -%}
-{%- if addr contains "9700-" -%}
-  {%- assign has_postal = true -%}
-  {%- assign postal_prefix = "9700-" -%}
-{%- elsif addr contains "9760-" -%}
-  {%- assign has_postal = true -%}
-  {%- assign postal_prefix = "9760-" -%}
-{%- endif -%}
-{%- if has_postal -%}
-  {%- assign addr_parts = addr | split: postal_prefix -%}
-  {%- comment -%} Strip the trailing ", " between street and postal code. {%- endcomment -%}
-  {%- assign street_raw = addr_parts[0] | strip -%}
-  {%- assign street_len = street_raw | size | minus: 1 -%}
-  {%- assign last_char = street_raw | slice: street_len, 1 -%}
-  {%- if last_char == "," -%}
-    {%- assign street_address = street_raw | slice: 0, street_len -%}
-  {%- else -%}
-    {%- assign street_address = street_raw -%}
-  {%- endif -%}
-  {%- assign tail = addr_parts[1] | strip -%}
-  {%- assign code_digits = tail | slice: 0, 3 -%}
-  {%- assign locality = tail | slice: 3, 1000 | strip -%}
-  {%- assign postal_code = postal_prefix | append: code_digits -%}
-{%- endif -%}
 {%- comment -%}
-  Build sameAs as a delimited string (Liquid 4.0.4 lacks the `push`
-  filter). Filter out mailto: links, then split back to an array for
-  jsonify. A trailing delimiter is fine — Liquid's `split` drops the
-  empty trailing element.
+  Build sameAs from venue.links, and pull out a "Website" link as the
+  business's canonical URL if one exists. Liquid 4.0.4 lacks `push`
+  so sameAs is built as a delimited string then split back. Trailing
+  delimiter is fine — Liquid's `split` drops the empty trailing element.
 {%- endcomment -%}
 {%- assign sameas_buf = "" -%}
+{%- assign business_url = "" -%}
 {%- if venue.links -%}
   {%- for link in venue.links -%}
-    {%- assign url = link.url | strip -%}
-    {%- unless url contains "mailto:" or url == "" -%}
-      {%- assign sameas_buf = sameas_buf | append: url | append: "|||" -%}
+    {%- assign link_url = link.url | strip -%}
+    {%- unless link_url contains "mailto:" or link_url == "" -%}
+      {%- assign sameas_buf = sameas_buf | append: link_url | append: "|||" -%}
+      {%- comment -%} First "Website" link wins. {%- endcomment -%}
+      {%- if business_url == "" and link.label == "Website" -%}
+        {%- assign business_url = link_url -%}
+      {%- endif -%}
     {%- endunless -%}
   {%- endfor -%}
 {%- endif -%}
@@ -92,15 +71,8 @@ description: Bars, restaurants, cultural spaces, and other venues hosting events
   "@context": "https://schema.org",
   "@type": {{ schema_type | jsonify }},
   "name": {{ venue.name | jsonify }},
-  "address": {
-    "@type": "PostalAddress",{% if has_postal %}
-    "streetAddress": {{ street_address | jsonify }},
-    "postalCode": {{ postal_code | jsonify }},
-    "addressLocality": {{ locality | jsonify }},{% else %}
-    "addressLocality": {{ addr | jsonify }},{% endif %}
-    "addressCountry": "PT"
-  },
-  "url": "{{ site.url }}{{ site.baseurl }}/venues/"{% if venue.map_url %},
+  "address": {% include postal_address.html address=venue.address %}{% if business_url != "" %},
+  "url": {{ business_url | jsonify }}{% endif %}{% if venue.map_url %},
   "hasMap": {{ venue.map_url | jsonify }}{% endif %}{% if venue.telephone %},
   "telephone": {{ venue.telephone | jsonify }}{% endif %}{% if sameas.size > 0 %},
   "sameAs": {{ sameas | jsonify }}{% endif %}
