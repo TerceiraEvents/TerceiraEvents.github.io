@@ -1,8 +1,13 @@
-{% assign default_range = include.default_range | default: "all" %}
-<div class="event-search-bar" role="search" data-default-range="{{ default_range }}">
+{%- comment -%}
+  Pages that want a date-range selector pass `default_range` (week | month |
+  year | all). Pages without a default_range (e.g. /archive) get a search +
+  tag bar with no range control, and the JS skips range filtering entirely.
+{%- endcomment -%}
+<div class="event-search-bar" role="search"{% if include.default_range %} data-default-range="{{ include.default_range }}"{% endif %}>
   <input type="search" class="search-input event-search-input"
     placeholder="Search events by name, venue, or description…"
     aria-label="Search events">
+  {% if include.default_range %}
   <label class="event-filter-label" for="event-range-filter">
     <span class="visually-hidden">Date range</span>
     <select class="event-range-filter" id="event-range-filter" aria-label="Date range">
@@ -12,6 +17,7 @@
       <option value="all">∞ All Upcoming</option>
     </select>
   </label>
+  {% endif %}
   <label class="event-filter-label" for="event-tag-filter">
     <span class="visually-hidden">Filter by tag</span>
     <select class="event-tag-filter" id="event-tag-filter" aria-label="Filter by tag">
