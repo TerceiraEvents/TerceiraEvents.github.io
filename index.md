@@ -31,3 +31,23 @@ title: Terceira Events - What's Happening on Terceira Island
     <span class="btn-desc">Bullfight Finder, city event pages, and more</span>
   </a>
 </div>
+
+{% if site.posts.size > 0 %}
+<section class="home-blog-preview">
+  <h3 class="home-blog-heading">From the blog</h3>
+  <ul class="home-blog-list">
+    {% for post in site.posts limit:3 %}
+    <li class="home-blog-item">
+      <a href="{{ post.url | relative_url }}">
+        <span class="home-blog-meta">
+          {% if post.category %}<span class="post-category post-category-{{ post.category }}">{{ post.category }}</span>{% endif %}
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>
+        </span>
+        <span class="home-blog-title">{{ post.title }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <a class="home-blog-all" href="{{ '/blog' | relative_url }}">All posts →</a>
+</section>
+{% endif %}
