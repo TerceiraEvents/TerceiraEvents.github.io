@@ -1,5 +1,14 @@
 - day: Monday
   events:
+  - name: Clube de Leitura
+    venue: Lar Doce Livro
+    address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+    time: "18:00"
+    description: "Weekly book club. The book and exact start time vary each month (start typically falls between 18:00 and 18:30); the coordinator rotates monthly."
+    note: "Check Instagram for the current month's book and exact start time. Their pinned monthly Agenda Cultural also lists it."
+    instagram: https://www.instagram.com/livraria_lardocelivro/
+    url: https://www.lardocelivro.pt
   - name: Live Music Night
     venue: Wine Not
     address: Rua Direita 8, Angra do Heroísmo
@@ -7,6 +16,18 @@
     time: "21:30"
     description: "Weekly live music: solo artists or DJs every Monday under rotating themed banners (Crazy Monday, Ya Monday for reggae, etc.). Check their Instagram for the week's lineup."
     instagram: https://www.instagram.com/winenot.terceira/
+
+- day: Tuesday
+  events:
+  - name: O Novo Normal
+    venue: Lar Doce Livro
+    address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+    time: "18:15"
+    description: "Live podcast and debate with Pedro Pereira, Francisco Simões, Joel Neto, and Luciano Barcelos. Same team every week; episodes also released on Spotify and Apple Podcasts (search 'O Novo Normal LDL')."
+    note: "Lar Doce Livro posts a dedicated graphic the day before. Check Instagram for the week's topic."
+    instagram: https://www.instagram.com/livraria_lardocelivro/
+    url: https://www.lardocelivro.pt
 
 - day: Wednesday
   events:
@@ -16,13 +37,6 @@
     description: Weekly karaoke at Camões
     address: Rua Da Rocha 64, 9700-169 Angra do Heroísmo
     map_url: https://www.google.com/maps/search/?api=1&query=Tasca+do+Camões+Angra+do+Heroísmo
-  - name: Clube de Leitura
-    venue: Lar Doce Livro
-    time: "18:15"
-    description: Weekly reading club
-    address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
-
-    map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
 - day: Thursday
   events:
   - name: Latin Night
@@ -59,6 +73,15 @@
     description: "Bar specialising in 90s and 2000s music. Themed banner varies week to week (Rock/Pop Rock, 90s & 2000s Vibes, etc.). Check Instagram for the week's lineup."
     note: "Doors at 21:30. Sometimes closed when Friday is a holiday; on long weekends they occasionally shift the slot to a Thursday instead."
     instagram: https://www.instagram.com/porta_42/
+  - name: Concerto ao Vivo
+    venue: Lar Doce Livro
+    address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+    time: "21:00"
+    description: "Weekly live music. House artists rotate (Pedro Xavier and João da Ilha both play regularly); the specific artist varies week to week."
+    note: "Check Instagram for this week's artist; usually posted 1 to 2 days in advance."
+    instagram: https://www.instagram.com/livraria_lardocelivro/
+    url: https://www.lardocelivro.pt
 
 - day: Saturday
   events:
@@ -92,3 +115,15 @@
     time: "21:30"
     description: "Bar specialising in 90s and 2000s music. The most consistent slot of the week. Themed banner varies (Rock/Pop Rock, 90s & 2000s Vibes, etc.); check Instagram for this week's."
     instagram: https://www.instagram.com/porta_42/
+
+- day: Sunday
+  events:
+  - name: Poesia/Prosa ao Crepúsculo
+    venue: Lar Doce Livro
+    address: Rua de São João 22-24, 9700-184 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Heroísmo
+    time: "18:00"
+    description: "Weekly literary gathering coordinated by Valter Peres with a regular group. The name alternates between Poesia (poetry) and Prosa (prose) depending on the week's format, but it's the same recurring event. Lar Doce Livro describes it as the gathering that defines them most."
+    note: "Posted a few days in advance on Instagram."
+    instagram: https://www.instagram.com/livraria_lardocelivro/
+    url: https://www.lardocelivro.pt
