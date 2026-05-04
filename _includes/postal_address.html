@@ -20,8 +20,8 @@
   {%- assign pa_locality = pa_clean -%}
   {%- assign pa_digits = "0123456789" -%}
   {%- comment -%}
-    Assign prefixes to a variable first — some Liquid versions don't
-    evaluate inline filter chains in `{% for %}` correctly.
+    Assign prefixes to a variable first; bare for-loops over inline
+    filter chains aren't reliable across Liquid versions.
   {%- endcomment -%}
   {%- assign pa_prefixes = "9700-,9760-" | split: "," -%}
   {%- for prefix in pa_prefixes -%}
