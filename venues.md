@@ -61,13 +61,13 @@ title: Venues - Terceira Events
   <h3>Porta 42</h3>
   <div class="venue-address">Rua de São João, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Porta+42+Angra+do+Hero%C3%ADsmo">Map</a></div>
   <div class="venue-regulars">
-    <p>Bar specialising in 90s and 2000s music. Doors at 21:30, with resident DJs and rotating themed banners (Rock/Pop Rock, 90s &amp; 2000s Vibes, etc.).</p>
+    <p>Bar specialising in 90s and 2000s music. Doors at 21:30. Themed banners rotate week to week (Rock/Pop Rock, 90s &amp; 2000s Vibes, etc.); check Instagram for the current week.</p>
     <p><strong>Weekly schedule:</strong></p>
     <ul>
-      <li><strong>Friday:</strong> DJ Adrix, 90s &amp; 2000s</li>
-      <li><strong>Saturday:</strong> DJ Artur M, 90s &amp; 2000s vibes</li>
+      <li><strong>Friday:</strong> 90s &amp; 2000s Night</li>
+      <li><strong>Saturday:</strong> 90s &amp; 2000s Night</li>
     </ul>
-    <p>Sometimes closed when Friday falls on a holiday; on long weekends they occasionally shift to a Thursday instead. Saturday is rock-solid.</p>
+    <p>Sometimes closed when Friday falls on a holiday; on long weekends they occasionally shift to a Thursday instead. Saturday is the most consistent slot.</p>
     <p><a href="https://www.instagram.com/porta_42/">Instagram</a></p>
   </div>
 </div>
