@@ -1,8 +1,18 @@
-<div class="event-search-bar" role="search">
+{% assign default_range = include.default_range | default: "all" %}
+<div class="event-search-bar" role="search" data-default-range="{{ default_range }}">
   <input type="search" class="search-input event-search-input"
     placeholder="Search events by name, venue, or description…"
     aria-label="Search events">
-  <label class="event-tag-filter-label" for="event-tag-filter">
+  <label class="event-filter-label" for="event-range-filter">
+    <span class="visually-hidden">Date range</span>
+    <select class="event-range-filter" id="event-range-filter" aria-label="Date range">
+      <option value="week">📅 This Week</option>
+      <option value="month">📆 This Month</option>
+      <option value="year">🗓️ This Year</option>
+      <option value="all">∞ All Upcoming</option>
+    </select>
+  </label>
+  <label class="event-filter-label" for="event-tag-filter">
     <span class="visually-hidden">Filter by tag</span>
     <select class="event-tag-filter" id="event-tag-filter" aria-label="Filter by tag">
       <option value="">🏷️ All tags</option>

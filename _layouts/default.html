@@ -219,16 +219,38 @@
     });
   })();
 
-  // --- Event search & tag filter ---
+  // --- Event search, range, and tag filter ---
   (function() {
     var bars = document.querySelectorAll('.event-search-bar');
     if (!bars.length) return;
 
+    var RANGE_DAYS = { week: 7, month: 31, year: 365 };
+    var VALID_RANGES = { week: 1, month: 1, year: 1, all: 1 };
+
     function normalize(s) { return (s || '').toLowerCase(); }
+
+    function parseEventDate(s) {
+      var m = (s || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+      if (!m) return null;
+      return new Date(+m[1], +m[2] - 1, +m[3]);
+    }
+
+    function inRange(eventDate, range) {
+      if (!eventDate) return true;
+      var today = new Date();
+      today.setHours(0, 0, 0, 0);
+      if (eventDate < today) return false;
+      if (range === 'all' || !RANGE_DAYS[range]) return true;
+      var end = new Date(today);
+      end.setDate(end.getDate() + RANGE_DAYS[range]);
+      return eventDate < end;
+    }
 
     bars.forEach(function(bar) {
       var input = bar.querySelector('.event-search-input');
       var tagSelect = bar.querySelector('.event-tag-filter');
+      var rangeSelect = bar.querySelector('.event-range-filter');
+      var defaultRange = bar.getAttribute('data-default-range') || 'all';
 
       // Find the event cards that follow this bar.
       var scope = bar.parentElement;
@@ -248,6 +270,11 @@
       var empty = scope.querySelector('.event-search-empty') ||
                   document.querySelector('.event-search-empty');
 
+      // Cache parsed dates so we don't re-parse on every keystroke.
+      var cardDates = cards.map(function(card) {
+        return parseEventDate(card.getAttribute('data-event-date'));
+      });
+
       function cardTags(card) {
         var raw = card.getAttribute('data-event-tags') || '';
         return raw.trim() ? raw.trim().split(/\s+/) : [];
@@ -256,9 +283,10 @@
       function applyFilters() {
         var query = normalize(input ? input.value.trim() : '');
         var selectedTag = tagSelect ? tagSelect.value : '';
+        var range = rangeSelect ? rangeSelect.value : 'all';
 
         var visibleCount = 0;
-        cards.forEach(function(card) {
+        cards.forEach(function(card, i) {
           var name = normalize(card.getAttribute('data-event-name'));
           var venue = normalize(card.getAttribute('data-event-venue'));
           var desc = normalize(card.getAttribute('data-event-description'));
@@ -268,7 +296,8 @@
             venue.indexOf(query) !== -1 ||
             desc.indexOf(query) !== -1;
           var matchesTag = !selectedTag || tags.indexOf(selectedTag) !== -1;
-          var show = matchesQuery && matchesTag;
+          var matchesRange = inRange(cardDates[i], range);
+          var show = matchesQuery && matchesTag && matchesRange;
           card.style.display = show ? '' : 'none';
           if (show) visibleCount++;
         });
@@ -280,9 +309,12 @@
 
       if (input) input.addEventListener('input', applyFilters);
       if (tagSelect) tagSelect.addEventListener('change', applyFilters);
+      if (rangeSelect) rangeSelect.addEventListener('change', applyFilters);
 
-      // Initial state from URL: ?q=foo, ?tag=kid-friendly
-      // Also accept legacy ?kid=1 as ?tag=kid-friendly.
+      // Initial state: pick range from URL ?range=, falling back to the
+      // page default. URL also seeds search and tag filters.
+      // Legacy ?kid=1 is honoured as ?tag=kid-friendly.
+      var initialRange = defaultRange;
       try {
         var params = new URLSearchParams(window.location.search);
         var q = params.get('q');
@@ -290,7 +322,6 @@
         var tag = params.get('tag');
         if (!tag && params.get('kid') === '1') tag = 'kid-friendly';
         if (tag && tagSelect) {
-          // Only set if the option exists.
           for (var i = 0; i < tagSelect.options.length; i++) {
             if (tagSelect.options[i].value === tag) {
               tagSelect.value = tag;
@@ -298,8 +329,13 @@
             }
           }
         }
-        if ((input && input.value) || (tagSelect && tagSelect.value)) applyFilters();
+        var rangeParam = params.get('range');
+        if (rangeParam && VALID_RANGES[rangeParam]) initialRange = rangeParam;
       } catch (e) { /* ignore */ }
+
+      if (rangeSelect) rangeSelect.value = initialRange;
+      // Always run once so the default range filter is applied on load.
+      applyFilters();
     });
   })();
   </script>
