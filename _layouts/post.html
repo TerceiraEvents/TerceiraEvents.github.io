@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="post-page">
+  <p class="post-meta">
+    {% if page.category %}<span class="post-category post-category-{{ page.category }}">{{ page.category }}</span>{% endif %}
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %b %Y" }}</time>
+  </p>
+  <h2 class="post-title">{{ page.title }}</h2>
+  {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  {% if page.source_url %}
+  <p class="post-source">
+    Source:
+    <a href="{{ page.source_url }}" target="_blank" rel="noopener">
+      {{ page.source_name | default: page.source_url }}
+    </a>
+  </p>
+  {% endif %}
+
+  <div class="archive-link-section">
+    <a href="{{ '/blog' | relative_url }}" class="view-all">← Back to Blog</a>
+  </div>
+</article>

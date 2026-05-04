@@ -469,6 +469,117 @@ h3 {
   border-bottom: 2px solid var(--green-wash);
 }
 
+/* ── Blog list & post page ── */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1rem 0 2rem;
+}
+.post-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 8px var(--shadow);
+  border-left: 4px solid var(--green-bright);
+}
+.post-card-title {
+  font-size: 1.25rem;
+  margin: 0.25rem 0 0.5rem;
+  line-height: 1.3;
+}
+.post-card-title a {
+  color: var(--green-deep);
+  text-decoration: none;
+}
+.post-card-title a:hover {
+  color: var(--green-mid);
+  text-decoration: underline;
+}
+.post-card-excerpt {
+  color: var(--text-light);
+  margin: 0.25rem 0 0.75rem;
+  line-height: 1.5;
+}
+.post-card-readmore {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  text-decoration: none;
+}
+.post-card-readmore:hover {
+  text-decoration: underline;
+}
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+.post-category {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--green-wash);
+  color: var(--green-deep);
+}
+.post-category-news    { background: #fce8c8; color: #6b4a0a; }
+.post-category-guide   { background: #d8f3dc; color: #1a3a2a; }
+.post-category-advice  { background: #e3eaff; color: #2a3a6b; }
+.post-page {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.post-page .post-title {
+  margin: 0.4rem 0 0.5rem;
+  line-height: 1.2;
+}
+.post-page .post-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin: 0 0 1.25rem;
+  font-style: italic;
+}
+.post-body {
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.post-body p,
+.post-body ul,
+.post-body ol {
+  margin-bottom: 1rem;
+}
+.post-body h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--green-deep);
+}
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+.post-source {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--green-wash);
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+.post-source a {
+  color: var(--green-mid);
+  font-weight: 600;
+}
+
 /* ── Archive link section ── */
 .archive-link-section {
   margin-top: 2rem;
