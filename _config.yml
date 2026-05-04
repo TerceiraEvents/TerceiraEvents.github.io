@@ -5,6 +5,7 @@ url: "https://terceiraevents.github.io"
 timezone: Atlantic/Azores
 
 markdown: kramdown
+permalink: /blog/:year/:slug/
 
 exclude:
   - Gemfile
