@@ -43,6 +43,14 @@
     description: "Very popular! It often fills up at the start but seats open up around 23:30–midnight, so worth checking in later or grabbing a drink at the Texan bar while you wait."
     note: "Reservations are for dinner, not karaoke — if you reserve, you are expected to order dinner. Last dinner reservation is at 21:00. Reservations are cancelled 15 minutes after the set time, so you need to arrive by 21:15 at the latest. If you reserve at 21:00 and show up at 22:30 for karaoke, your reservation will already be cancelled!"
     url: https://www.thetexan.pt
+  - name: Live Act Night
+    venue: Havanna Club Terceira
+    address: Porto das Pipas, 9700 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=Havanna+Club+Terceira+Angra+do+Heroísmo
+    time: "21:30"
+    description: Weekly live DJ night at Havanna Club. Each week features a warm-up DJ plus a headline live act.
+    note: "The lineup changes every week — check their Instagram (@havannaangra) to see who's playing."
+    instagram: https://www.instagram.com/havannaangra/
   - name: 90s & 2000s Night
     venue: Porta 42
     address: Rua de São João, Angra do Heroísmo
@@ -61,6 +69,14 @@
     time: "09:30–13:00"
     description: "Come collect strawberries and have fun with your kids — feed animals, jump on the trampoline, take a tractor ride…"
     instagram: https://www.instagram.com/sabores_dahort_a?igsh=bWQwcTN6OGxlaWZk
+  - name: Live Act Night
+    venue: Havanna Club Terceira
+    address: Porto das Pipas, 9700 Angra do Heroísmo
+    map_url: https://www.google.com/maps/search/?api=1&query=Havanna+Club+Terceira+Angra+do+Heroísmo
+    time: "21:30"
+    description: Weekly live DJ night at Havanna Club. Each week features a warm-up DJ plus a headline live act.
+    note: "The lineup changes every week — check their Instagram (@havannaangra) to see who's playing."
+    instagram: https://www.instagram.com/havannaangra/
   - name: Karaoke Night
     venue: The Texan
     address: Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo
