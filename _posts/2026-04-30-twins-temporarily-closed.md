@@ -9,7 +9,7 @@ source_name: "Twins on Instagram"
 excerpt: "Twins (the Angra nightlife spot) is closed for now. The team posted a heartfelt message on Instagram saying they'll be back 'very soon' — no specific reopening date yet."
 ---
 
-If you've walked past **Twins** in Angra recently and found the doors closed, you're not imagining it — they're on a temporary closure with no reopening date announced.
+Twins is temporarily closed with no reopening date announced.
 
 The team posted a statement on [Instagram](https://www.instagram.com/p/DVRbiLSDDg7/) acknowledging the silence and promising a return. They say it's not an ending — it's a pause — and that when the doors open again, it'll be impossible to stay indifferent.
 
