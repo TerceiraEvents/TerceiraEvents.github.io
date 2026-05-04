@@ -57,6 +57,5 @@ English translation *(unofficial, by Terceira Events — corrections welcome)*:
 
 ### What this means for now
 
-- **Don't plan a night around Twins** until they confirm they're back open.
 - Their [Instagram](https://www.instagram.com/p/DVRbiLSDDg7/) is the place to watch for the actual reopening announcement.
 - If you see a flyer or hear they're back, [let us know](https://github.com/TerceiraEvents/TerceiraEvents.github.io/issues) and we'll update this post.
