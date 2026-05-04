@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Twins is temporarily closed — but they say they're 'arriving very soon'"
+title: "Twins is temporarily closed, but they say they're 'arriving very soon'"
 subtitle: "No reopening date confirmed. The team posted a message on Instagram acknowledging the silence and promising a return."
 date: 2026-04-30
 category: news
 source_url: "https://www.instagram.com/p/DVRbiLSDDg7/"
 source_name: "Twins on Instagram"
-excerpt: "Twins (the Angra nightlife spot) is closed for now. The team posted a heartfelt message on Instagram saying they'll be back 'very soon' — no specific reopening date yet."
+excerpt: "Twins (the Angra nightlife spot) is closed for now. The team posted a heartfelt message on Instagram saying they'll be back 'very soon', with no specific reopening date yet."
 ---
 
-If you've walked past **Twins** in Angra recently and found the doors closed, you're not imagining it — they're on a temporary closure with no reopening date announced.
+If you've walked past **Twins** in Angra recently and found the doors closed, you're not imagining it. They're on a temporary closure with no reopening date announced.
 
-The team posted a statement on [Instagram](https://www.instagram.com/p/DVRbiLSDDg7/) acknowledging the silence and promising a return. They say it's not an ending — it's a pause — and that when the doors open again, it'll be impossible to stay indifferent.
+The team posted a statement on [Instagram](https://www.instagram.com/p/DVRbiLSDDg7/) acknowledging the silence and promising a return. They say it's not an ending but a pause, and that when the doors open again, it'll be impossible to stay indifferent.
 
 ### The full statement
 
@@ -35,7 +35,7 @@ Original Portuguese:
 >
 > **Preparem-se. ✨ Estamos a chegar.**
 
-English translation *(unofficial, by Terceira Events — corrections welcome)*:
+English translation *(unofficial, by Terceira Events; corrections welcome)*:
 
 > FRIENDS…
 >
@@ -45,11 +45,11 @@ English translation *(unofficial, by Terceira Events — corrections welcome)*:
 >
 > But not a day has passed without us feeling your absence. We've missed the tight hugs, the knowing glances, the toasts that start shyly and end in unforgettable celebrations. We've missed the energy that turns a night into an eternal moment.
 >
-> Our absence has been physical… but the feeling never left here. Because this house doesn't live off its walls — it lives off you.
+> Our absence has been physical… but the feeling never left here. Because this house doesn't live off its walls. It lives off you.
 >
 > If you've felt our absence, know that we've felt it doubled. And if there's been silence, it was only so we could prepare something that'll make your hearts beat even harder.
 >
-> We're sorry for the distance. It was never an ending. It was a pause — so we could come back bigger, more intense, more alive.
+> We're sorry for the distance. It was never an ending. It was a pause, so we could come back bigger, more intense, more alive.
 >
 > We're arriving. Very soon. And when the doors open… it'll be impossible to stay indifferent.
 >
