@@ -46,12 +46,29 @@ title: Venues - Terceira Events
 
 <div class="venue-card">
   <h3>Wine Not</h3>
-  <div class="venue-address">Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Wine+Not+Angra+do+Hero%C3%ADsmo">Map</a></div>
+  <div class="venue-address">Rua Direita 8, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Wine+Not+Angra+do+Hero%C3%ADsmo">Map</a></div>
   <div class="venue-regulars">
+    <p>Wine bar with weekly live music nights bringing in solo artists or DJs.</p>
     <p><strong>Weekly schedule:</strong></p>
     <ul>
-      <li><strong>Monday</strong> &mdash; Dance Night</li>
+      <li><strong>Monday:</strong> Live music, around 21:30 (rotating themed nights: Crazy Monday, Ya Monday for reggae, etc.)</li>
     </ul>
+    <p><a href="https://www.instagram.com/winenot.terceira/">Instagram</a></p>
+  </div>
+</div>
+
+<div class="venue-card">
+  <h3>Porta 42</h3>
+  <div class="venue-address">Rua de São João, Angra do Heroísmo &middot; <a href="https://www.google.com/maps/search/?api=1&query=Porta+42+Angra+do+Hero%C3%ADsmo">Map</a></div>
+  <div class="venue-regulars">
+    <p>Bar specialising in 90s and 2000s music. Doors at 21:30, with resident DJs and rotating themed banners (Rock/Pop Rock, 90s &amp; 2000s Vibes, etc.).</p>
+    <p><strong>Weekly schedule:</strong></p>
+    <ul>
+      <li><strong>Friday:</strong> DJ Adrix, 90s &amp; 2000s</li>
+      <li><strong>Saturday:</strong> DJ Artur M, 90s &amp; 2000s vibes</li>
+    </ul>
+    <p>Sometimes closed when Friday falls on a holiday; on long weekends they occasionally shift to a Thursday instead. Saturday is rock-solid.</p>
+    <p><a href="https://www.instagram.com/porta_42/">Instagram</a></p>
   </div>
 </div>
 
