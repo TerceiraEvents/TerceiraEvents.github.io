@@ -56,8 +56,8 @@ title: Terceira Events - What's Happening on Terceira Island
     <li class="home-events-item">
       <a href="{{ '/special' | relative_url }}">
         <span class="home-events-meta">
-          <time datetime="{{ event.date | date: '%Y-%m-%d' }}">{{ event.date | date: "%-d %b" }}</time>
-          {% if event.time %}<span class="home-events-time">· {{ event.time }}</span>{% endif %}
+          <time class="home-events-date" datetime="{{ event.date | date: '%Y-%m-%d' }}">{{ event.date | date: "%-d %b" }}</time>
+          {% if event.time %}<span class="home-events-time">{{ event.time }}</span>{% endif %}
         </span>
         <span class="home-events-title">{{ event.name }}</span>
         {% if event.venue %}<span class="home-events-venue">{{ event.venue }}</span>{% endif %}
