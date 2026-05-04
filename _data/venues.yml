@@ -1,0 +1,143 @@
+# Venues hosting events in Angra do Heroísmo, Terceira.
+#
+# Schema (all fields optional except `name` and `address`):
+#   name              — venue display name (required)
+#   address           — full street address (required, used for the venue-address line)
+#   map_url           — Google Maps URL for the "Map" link
+#   description       — main descriptive prose paragraph (rendered before the weekly schedule)
+#   description_after_weekly — optional second paragraph rendered after the weekly schedule
+#   weekly            — list of {day, name} for the weekly schedule UL (rendered between description and description_after_weekly)
+#   links             — list of {label, url} rendered as a paragraph joined by ` · `
+#   reservation_phone — phone number rendered after links: "Reservations: <phone>"
+#   reservation_url   — URL for an event-reservations CTA button
+#   reservation_label — button text (default "Make a dinner reservation")
+#   schema_type       — Schema.org subtype for JSON-LD (default LocalBusiness)
+#   telephone         — E.164 phone for JSON-LD (used when reservation_phone is set, defaults to a normalised reservation_phone)
+
+- name: "Tasca do Camões"
+  address: "Rua Da Rocha 64, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Tasca+do+Cam%C3%B5es+Angra+do+Hero%C3%ADsmo"
+  weekly:
+    - day: Wednesday
+      name: Karaoke Night
+    - day: Thursday
+      name: Latin Night
+  description_after_weekly: "Also hosts live concerts and special events throughout the year."
+  schema_type: BarOrPub
+
+- name: "The Texan / The Garden Club"
+  address: "Rua Carreira dos Cavalos 37, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Hero%C3%ADsmo"
+  description: "Tex-Mex restaurant and bar with cocktails, large screens for sports, and a garden event space. The Texan handles dinner and karaoke; The Garden Club is the outdoor garden area for brunches, parties, and events."
+  weekly:
+    - day: Friday
+      name: Karaoke Night
+    - day: Saturday
+      name: Karaoke Night
+  links:
+    - { label: "Website", url: "https://www.thetexan.pt" }
+    - { label: "Instagram (Texan)", url: "https://www.instagram.com/thetexanbar/" }
+    - { label: "Instagram (Garden Club)", url: "https://www.instagram.com/thegardenclub.angra/" }
+  reservation_url: "https://the-texan-1755256381.resos.com/booking"
+  reservation_label: "Make a dinner reservation"
+  schema_type: Restaurant
+
+- name: "Sala 319"
+  address: "Praça Almeida Garrett 11, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Sala+319+Angra+do+Hero%C3%ADsmo"
+  description: "Restaurant and bar serving Portuguese and European cuisine, with events and live music."
+  links:
+    - { label: "Instagram", url: "https://www.instagram.com/sala.319/" }
+  reservation_phone: "+351 967 021 868"
+  telephone: "+351967021868"
+  schema_type: Restaurant
+
+- name: "Wine Not"
+  address: "Rua Direita 8, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Wine+Not+Angra+do+Hero%C3%ADsmo"
+  description: "Wine bar with weekly live music nights bringing in solo artists or DJs."
+  weekly:
+    - day: "Monday:"
+      name: "Live music, around 21:30 (rotating themed nights: Crazy Monday, Ya Monday for reggae, etc.)"
+  links:
+    - { label: "Instagram", url: "https://www.instagram.com/winenot.terceira/" }
+  schema_type: BarOrPub
+
+- name: "Porta 42"
+  address: "Rua de São João, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Porta+42+Angra+do+Hero%C3%ADsmo"
+  description: "Bar specialising in 90s and 2000s music. Doors at 21:30. Themed banners rotate week to week (Rock/Pop Rock, 90s & 2000s Vibes, etc.); check Instagram for the current week."
+  weekly:
+    - day: "Friday:"
+      name: "90s & 2000s Night"
+    - day: "Saturday:"
+      name: "90s & 2000s Night"
+  description_after_weekly: "Sometimes closed when Friday falls on a holiday; on long weekends they occasionally shift to a Thursday instead. Saturday is the most consistent slot."
+  links:
+    - { label: "Instagram", url: "https://www.instagram.com/porta_42/" }
+  schema_type: BarOrPub
+
+- name: "Lar Doce Livro"
+  address: "Rua de São João 22-24, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo"
+  description: "A bookstore-cafe in the historic center hosting cultural events, readings, and the weekly reading club."
+  weekly:
+    - day: Wednesday
+      name: "Clube de Leitura (Reading Club) at 18:15"
+  schema_type: Store
+
+- name: "Teatro Angrense"
+  address: "Rua da Esperança 48-52, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Hero%C3%ADsmo"
+  description: "Historic theater in the UNESCO-listed city center. Hosts plays, concerts, fado nights, and the annual Festival de Teatro. One of the main cultural venues on Terceira."
+  links:
+    - { label: "Website", url: "https://angradoheroismo.pt/local/teatro-angrense-2/" }
+    - { label: "Tickets (Ticketline)", url: "https://ticketline.sapo.pt/en/salas/sala/1293" }
+  schema_type: PerformingArtsTheater
+
+- name: "CCCAH (Centro Cultural e de Congressos)"
+  address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Hero%C3%ADsmo"
+  description: "Angra's main cultural and conference center, converted from the former bullring. Hosts cinema screenings, music festivals, exhibitions, and conferences. Home to Festival Termómetro and regular film programming."
+  links:
+    - { label: "Website", url: "https://angradoheroismo.pt/local/centro-cultural-e-de-congressos-de-angra-do-heroismo/" }
+    - { label: "Tickets (Ticketline)", url: "https://ticketline.sapo.pt/en/salas/sala/1294" }
+  schema_type: PerformingArtsTheater
+
+- name: "Havanna Club"
+  address: "Porto das Pipas 154, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Havanna+Club+Angra+do+Hero%C3%ADsmo"
+  description: "One of the busiest bars at the marina. DJ nights, karaoke-to-dancing Saturdays, and themed party events. Covered terrace with sea views."
+  links:
+    - { label: "Instagram", url: "https://www.instagram.com/havannaangra/" }
+  reservation_phone: "917 746 773"
+  telephone: "+351917746773"
+  schema_type: BarOrPub
+
+- name: "Casa do Sal / Oficina d'Angra"
+  address: "Estrada Gaspar Corte-Real, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Casa+do+Sal+Oficina+Angra+do+Hero%C3%ADsmo"
+  description: "Cultural association and event space hosting live music nights, DJ sessions, and alternative cultural events."
+  links:
+    - { label: "Facebook", url: "https://www.facebook.com/oficinadangra/" }
+  schema_type: LocalBusiness
+
+- name: "Paços do Concelho (Town Hall)"
+  address: "Praça Velha, Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os+do+Concelho+Angra+do+Hero%C3%ADsmo"
+  description: "The historic town hall at Praça Velha square. Hosts book presentations, exhibitions, and civic cultural events."
+  schema_type: GovernmentBuilding
+
+- name: "Praça de Toiros da Ilha Terceira"
+  address: "Av. de Jácome de Bruges, 9700-102 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a+de+Toiros+Ilha+Terceira"
+  description: "Terceira's bullring, home to the Arraial Taurino and traditional bullfighting festivals during the season (May–October)."
+  schema_type: StadiumOrArena
+
+- name: "Auditório AMIT (Academia Musical da Ilha Terceira)"
+  address: "Av. Tenente Coronel José Agostinho 6-A, 9700-108 Angra do Heroísmo"
+  map_url: "https://www.google.com/maps/search/?api=1&query=Academia+Musical+Ilha+Terceira+Angra+do+Hero%C3%ADsmo"
+  description: "Auditorium of the Musical Academy of Terceira Island. Hosts concerts, recitals, jazz courses, and choral performances."
+  links:
+    - { label: "Instagram", url: "https://www.instagram.com/auditorioamit/" }
+  schema_type: PerformingArtsTheater
