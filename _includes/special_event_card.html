@@ -148,60 +148,6 @@
   {%- endif -%}
 {%- endif -%}
 
-{%- comment -%} -- Parse event.address into PostalAddress fields. -- {%- endcomment -%}
-{%- assign addr_postal_code = "" -%}
-{%- assign addr_street = "" -%}
-{%- assign addr_locality = "" -%}
-{%- if event.address -%}
-  {%- assign addr_clean = event.address | strip -%}
-  {%- assign addr_locality = addr_clean -%}
-  {%- comment -%} Try the two Terceira postal-code prefixes. {%- endcomment -%}
-  {%- assign prefix_list = "9700-,9760-" | split: "," -%}
-  {%- for prefix in prefix_list -%}
-    {%- if addr_clean contains prefix -%}
-      {%- assign before_raw = addr_clean | split: prefix | first | strip -%}
-      {%- assign after_raw = addr_clean | split: prefix | last -%}
-      {%- assign suffix3 = after_raw | slice: 0, 3 -%}
-      {%- assign digits = "0123456789" -%}
-      {%- assign suffix_ok = true -%}
-      {%- if suffix3.size != 3 -%}{%- assign suffix_ok = false -%}{%- endif -%}
-      {%- if suffix_ok -%}
-        {%- for i in (0..2) -%}
-          {%- assign ch = suffix3 | slice: i, 1 -%}
-          {%- unless digits contains ch -%}{%- assign suffix_ok = false -%}{%- endunless -%}
-        {%- endfor -%}
-      {%- endif -%}
-      {%- if suffix_ok -%}
-        {%- assign addr_postal_code = prefix | append: suffix3 -%}
-        {%- assign rest = after_raw | slice: 3, 500 | strip -%}
-        {%- comment -%} Strip a leading comma if present. {%- endcomment -%}
-        {%- if rest != "" -%}
-          {%- assign rest_first = rest | slice: 0, 1 -%}
-          {%- if rest_first == "," -%}
-            {%- assign rest = rest | slice: 1, 500 | strip -%}
-          {%- endif -%}
-        {%- endif -%}
-        {%- comment -%} Strip a trailing comma from the street part. {%- endcomment -%}
-        {%- assign street_clean = before_raw -%}
-        {%- if street_clean != "" -%}
-          {%- assign last_pos = street_clean.size | minus: 1 -%}
-          {%- assign last_ch = street_clean | slice: last_pos, 1 -%}
-          {%- if last_ch == "," -%}
-            {%- assign street_clean = street_clean | slice: 0, last_pos | strip -%}
-          {%- endif -%}
-        {%- endif -%}
-        {%- assign addr_street = street_clean -%}
-        {%- if rest != "" -%}
-          {%- assign addr_locality = rest -%}
-        {%- else -%}
-          {%- assign addr_locality = "" -%}
-        {%- endif -%}
-        {%- break -%}
-      {%- endif -%}
-    {%- endif -%}
-  {%- endfor -%}
-{%- endif -%}
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -214,21 +160,11 @@
   "location": {
     "@type": "Place",
     "name": {{ event.venue | jsonify }}{% if event.address %},
-    "address": {
-      "@type": "PostalAddress"{% if addr_street != "" %},
-      "streetAddress": {{ addr_street | jsonify }}{% endif %}{% if addr_locality != "" %},
-      "addressLocality": {{ addr_locality | jsonify }}{% endif %}{% if addr_postal_code != "" %},
-      "postalCode": {{ addr_postal_code | jsonify }}{% endif %},
-      "addressCountry": "PT"
-    }{% endif %}
+    "address": {% include postal_address.html address=event.address %}{% endif %}
   }{% if event.description %},
   "description": {{ event.description | strip_html | strip | jsonify }}{% endif %}{% if event.image %},
   "image": "{{ event.image | absolute_url }}"{% endif %}{% if event.instagram %},
   "url": {{ event.instagram | jsonify }}{% endif %},
-  "organizer": {
-    "@type": "Organization",
-    "name": "Terceira Events",
-    "url": "{{ site.url }}{{ site.baseurl }}"
-  }
+  "organizer": {% include organization.html %}
 }
 </script>

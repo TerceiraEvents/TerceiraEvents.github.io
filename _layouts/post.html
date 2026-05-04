@@ -40,20 +40,8 @@ layout: default
   "headline": {{ page.title | jsonify }},
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-  "author": {
-    "@type": "Organization",
-    "name": "Terceira Events",
-    "url": "{{ site.url }}{{ site.baseurl }}"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Terceira Events",
-    "url": "{{ site.url }}{{ site.baseurl }}",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ '/assets/images/apple-touch-icon.png' | absolute_url }}"
-    }
-  },
+  "author": {% include organization.html %},
+  "publisher": {% include organization.html %},
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ page.url | absolute_url }}"

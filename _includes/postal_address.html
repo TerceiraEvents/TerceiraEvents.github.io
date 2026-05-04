@@ -1,0 +1,70 @@
+{%- comment -%}
+  Renders a Schema.org `PostalAddress` JSON object for an Angra/Terceira
+  postal address string. Parses Portuguese 9700-NNN / 9760-NNN postal
+  codes and validates the 3-digit suffix before splitting; falls back to
+  `addressLocality`-only when no postal code is present.
+
+  Usage (the caller pastes the result inline as the value of an
+  `address` key in a JSON-LD object):
+
+      "address": {% include postal_address.html address=event.address %}
+
+  The output begins with `{` and ends with `}`. Whitespace inside the
+  object is fine for JSON. `addressCountry` is always `"PT"`.
+{%- endcomment -%}
+{%- assign pa_street = "" -%}
+{%- assign pa_postal_code = "" -%}
+{%- assign pa_locality = "" -%}
+{%- if include.address -%}
+  {%- assign pa_clean = include.address | strip -%}
+  {%- assign pa_locality = pa_clean -%}
+  {%- assign pa_digits = "0123456789" -%}
+  {%- comment -%}
+    Assign prefixes to a variable first — some Liquid versions don't
+    evaluate inline filter chains in `{% for %}` correctly.
+  {%- endcomment -%}
+  {%- assign pa_prefixes = "9700-,9760-" | split: "," -%}
+  {%- for prefix in pa_prefixes -%}
+    {%- if pa_clean contains prefix -%}
+      {%- assign before_raw = pa_clean | split: prefix | first | strip -%}
+      {%- assign after_raw = pa_clean | split: prefix | last -%}
+      {%- assign suffix3 = after_raw | slice: 0, 3 -%}
+      {%- assign suffix_ok = true -%}
+      {%- if suffix3.size != 3 -%}{%- assign suffix_ok = false -%}{%- endif -%}
+      {%- if suffix_ok -%}
+        {%- for i in (0..2) -%}
+          {%- assign ch = suffix3 | slice: i, 1 -%}
+          {%- unless pa_digits contains ch -%}{%- assign suffix_ok = false -%}{%- endunless -%}
+        {%- endfor -%}
+      {%- endif -%}
+      {%- if suffix_ok -%}
+        {%- assign pa_postal_code = prefix | append: suffix3 -%}
+        {%- assign rest = after_raw | slice: 3, 500 | strip -%}
+        {%- if rest != "" -%}
+          {%- assign rest_first = rest | slice: 0, 1 -%}
+          {%- if rest_first == "," -%}
+            {%- assign rest = rest | slice: 1, 500 | strip -%}
+          {%- endif -%}
+        {%- endif -%}
+        {%- assign street_clean = before_raw -%}
+        {%- if street_clean != "" -%}
+          {%- assign last_pos = street_clean.size | minus: 1 -%}
+          {%- assign last_ch = street_clean | slice: last_pos, 1 -%}
+          {%- if last_ch == "," -%}
+            {%- assign street_clean = street_clean | slice: 0, last_pos | strip -%}
+          {%- endif -%}
+        {%- endif -%}
+        {%- assign pa_street = street_clean -%}
+        {%- if rest != "" -%}{%- assign pa_locality = rest -%}{%- else -%}{%- assign pa_locality = "" -%}{%- endif -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{
+  "@type": "PostalAddress"{% if pa_street != "" %},
+  "streetAddress": {{ pa_street | jsonify }}{% endif %}{% if pa_locality != "" %},
+  "addressLocality": {{ pa_locality | jsonify }}{% endif %}{% if pa_postal_code != "" %},
+  "postalCode": {{ pa_postal_code | jsonify }}{% endif %},
+  "addressCountry": "PT"
+}
