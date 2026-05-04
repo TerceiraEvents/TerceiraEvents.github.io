@@ -15,7 +15,7 @@
 #   telephone         — E.164 phone for JSON-LD (used when reservation_phone is set, defaults to a normalised reservation_phone)
 
 - name: "Tasca do Camões"
-  address: "Rua Da Rocha 64, Angra do Heroísmo"
+  address: "Rua Da Rocha 64, 9700-169 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Tasca+do+Cam%C3%B5es+Angra+do+Hero%C3%ADsmo"
   weekly:
     - day: Wednesday
@@ -26,7 +26,7 @@
   schema_type: BarOrPub
 
 - name: "The Texan / The Garden Club"
-  address: "Rua Carreira dos Cavalos 37, Angra do Heroísmo"
+  address: "Rua Carreira dos Cavalos 37, 9700-167 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=The+Texan+Angra+do+Hero%C3%ADsmo"
   description: "Tex-Mex restaurant and bar with cocktails, large screens for sports, and a garden event space. The Texan handles dinner and karaoke; The Garden Club is the outdoor garden area for brunches, parties, and events."
   weekly:
@@ -78,7 +78,7 @@
   schema_type: BarOrPub
 
 - name: "Lar Doce Livro"
-  address: "Rua de São João 22-24, Angra do Heroísmo"
+  address: "Rua de São João 22-24, 9700-182 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Lar+Doce+Livro+Angra+do+Hero%C3%ADsmo"
   description: "A bookstore-cafe in the historic center hosting cultural events, readings, and the weekly reading club."
   weekly:
@@ -87,7 +87,7 @@
   schema_type: Store
 
 - name: "Teatro Angrense"
-  address: "Rua da Esperança 48-52, Angra do Heroísmo"
+  address: "Rua da Esperança 48-52, 9700-073 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Teatro+Angrense+Angra+do+Hero%C3%ADsmo"
   description: "Historic theater in the UNESCO-listed city center. Hosts plays, concerts, fado nights, and the annual Festival de Teatro. One of the main cultural venues on Terceira."
   links:
@@ -96,7 +96,7 @@
   schema_type: PerformingArtsTheater
 
 - name: "CCCAH (Centro Cultural e de Congressos)"
-  address: "Canada Nova, Santa Luzia, Angra do Heroísmo"
+  address: "Canada Nova, Santa Luzia, 9700-178 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+e+de+Congressos+Angra+do+Hero%C3%ADsmo"
   description: "Angra's main cultural and conference center, converted from the former bullring. Hosts cinema screenings, music festivals, exhibitions, and conferences. Home to Festival Termómetro and regular film programming."
   links:
@@ -105,7 +105,7 @@
   schema_type: PerformingArtsTheater
 
 - name: "Havanna Club"
-  address: "Porto das Pipas 154, Angra do Heroísmo"
+  address: "Porto das Pipas 154, 9700-167 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Havanna+Club+Angra+do+Hero%C3%ADsmo"
   description: "One of the busiest bars at the marina. DJ nights, karaoke-to-dancing Saturdays, and themed party events. Covered terrace with sea views."
   links:
@@ -123,7 +123,7 @@
   schema_type: LocalBusiness
 
 - name: "Paços do Concelho (Town Hall)"
-  address: "Praça Velha, Angra do Heroísmo"
+  address: "Praça Velha, 9700-145 Angra do Heroísmo"
   map_url: "https://www.google.com/maps/search/?api=1&query=Pa%C3%A7os+do+Concelho+Angra+do+Hero%C3%ADsmo"
   description: "The historic town hall at Praça Velha square. Hosts book presentations, exhibitions, and civic cultural events."
   schema_type: GovernmentBuilding
