@@ -26,3 +26,40 @@ layout: default
     <a href="{{ '/blog' | relative_url }}" class="view-all">← Back to Blog</a>
   </div>
 </article>
+
+{%- comment -%}
+  JSON-LD `BlogPosting` schema for the post. Powers Google's Article
+  rich result (headline, date, publisher logo). The publisher logo
+  is the apple-touch-icon for now — same fallback as `_config.yml`
+  `logo:` for OG images.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Terceira Events",
+    "url": "{{ site.url }}{{ site.baseurl }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Terceira Events",
+    "url": "{{ site.url }}{{ site.baseurl }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/assets/images/apple-touch-icon.png' | absolute_url }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }{% if page.subtitle %},
+  "alternativeHeadline": {{ page.subtitle | jsonify }}{% endif %}{% if page.excerpt %},
+  "description": {{ page.excerpt | strip_html | strip | jsonify }}{% endif %}{% if page.source_url %},
+  "isBasedOn": {{ page.source_url | jsonify }}{% endif %}
+}
+</script>
