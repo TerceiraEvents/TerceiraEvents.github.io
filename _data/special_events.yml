@@ -207,6 +207,16 @@
   - live-music
   - free
 
+- date: 2026-05-30
+  name: "III Azores Comedy Session"
+  venue: "Sociedade Recreativa de São Bento"
+  address: "São Bento, Angra do Heroísmo"
+  map_url: https://www.google.com/maps/search/?api=1&query=Sociedade+Recreativa+de+São+Bento+Angra+do+Heroísmo
+  time: "21:30"
+  description: "Noite de stand-up comedy com Miro Vemba, Helfimed, Airton e JARC. Apresentado por Patrício Vieira. Bilhetes disponíveis em azorica.pt. Uma produção AZORICA."
+  tags:
+  - theater
+
 - date: 2026-05-02
   name: "DJ Night — The Hits of 2000's"
   venue: "Havanna"
