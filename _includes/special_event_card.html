@@ -17,6 +17,7 @@
 
 <div class="special-event {% if event.image %}has-image{% endif %} {% if event.festival %}is-festival{% endif %}"
      data-event-tags="{{ event_tags_str }}"
+     data-event-date="{{ event.date | date: "%Y-%m-%d" }}"
      data-event-name="{{ event.name | escape }}"
      data-event-venue="{{ event.venue | escape }}"
      data-event-description="{{ event.description | escape }}">
