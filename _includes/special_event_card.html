@@ -92,3 +92,35 @@
   </div>
   {% endif %}
 </div>
+
+{%- comment -%}
+  JSON-LD `Event` schema per card. Powers Google's Event rich result
+  (date / venue / time directly in the SERP). Required fields: name,
+  startDate, location. We omit time-of-day from startDate because
+  `event.time` is free-form (e.g. "21:30", "09:30–13:00", "Evening")
+  and a malformed ISO string is worse than a date-only one.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": {{ event.name | jsonify }},
+  "startDate": "{{ event.date | date: '%Y-%m-%d' }}",
+  "endDate": "{{ event.date | date: '%Y-%m-%d' }}",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": {{ event.venue | jsonify }}{% if event.address %},
+    "address": {{ event.address | jsonify }}{% endif %}
+  }{% if event.description %},
+  "description": {{ event.description | strip_html | strip | jsonify }}{% endif %}{% if event.image %},
+  "image": "{{ event.image | absolute_url }}"{% endif %}{% if event.instagram %},
+  "url": {{ event.instagram | jsonify }}{% endif %},
+  "organizer": {
+    "@type": "Organization",
+    "name": "Terceira Events",
+    "url": "{{ site.url }}{{ site.baseurl }}"
+  }
+}
+</script>
