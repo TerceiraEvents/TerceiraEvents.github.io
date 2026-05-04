@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Suggest an Event - Terceira Events"
+description: Submit a special event for inclusion in the Terceira Events calendar.
 ---
 
 <h2>Suggest an Event</h2>

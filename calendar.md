@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Full Events Calendar - Terceira Events
+description: Full calendar of upcoming concerts, festivals, parties, and one-off events in Angra do Heroísmo, Terceira.
 ---
 
 <h2>Full Special Events Calendar</h2>

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Contribute - Terceira Events"
+description: How to contribute to Terceira Events. Suggest a venue, fix an event listing, or help build the project.
 ---
 
 <div class="homepage-intro">

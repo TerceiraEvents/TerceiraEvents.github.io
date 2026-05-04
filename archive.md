@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Event Archive - Terceira Events
+description: Past concerts, parties, festivals, and special nights in Angra do Heroísmo, Terceira.
 ---
 
 ## Event Archive

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Privacy Policy - Terceira Events"
+description: Privacy policy for the Terceira Events website and app.
 ---
 
 <h2>Privacy Policy</h2>

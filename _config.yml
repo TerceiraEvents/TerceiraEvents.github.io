@@ -1,11 +1,29 @@
 title: Terceira Events
-description: What's happening on Terceira Island
+description: >-
+  Karaoke nights, concerts, festivals, and one-off events happening in
+  Angra do Heroísmo and across Terceira Island, Açores. A community guide
+  curated weekly.
+tagline: What's happening on Terceira Island, Açores
+author: Terceira Events
 baseurl: ""
 url: "https://terceiraevents.github.io"
 timezone: Atlantic/Azores
+lang: en
 
 markdown: kramdown
 permalink: /blog/:year/:slug/
+
+# `jekyll-seo-tag` reads these for the social-card image used by Open
+# Graph and Twitter Card. Apple touch icon is square (180×180) so it's
+# not ideal — Google/Facebook prefer 1200×630 — but it's a workable
+# default until a proper OG image is designed.
+logo: /assets/images/apple-touch-icon.png
+
+# Plugins. Both are on the github-pages allowlist, so they'll run on
+# the live site without any pages-build configuration changes.
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - Gemfile
